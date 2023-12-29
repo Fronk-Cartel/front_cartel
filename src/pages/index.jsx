@@ -13,23 +13,23 @@ export default function Home() {
 
         <section className="pb-20">
           <div className="image-gallery mt-10">
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
-            <div className="bg-white h-48">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
+            <div className="">hellos</div>
           </div>
 
           <div className="flex justify-center items-center mt-14 space-x-5">
