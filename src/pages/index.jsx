@@ -5,7 +5,7 @@ export default function Home() {
     <Layout title="Search" className={` bg-primary`}>
       <div className="container mx-auto bg-blac">
         <section>
-          <div className="flex flex-col  justify-center items-center mt-10 px-8">
+          <div className="flex flex-col  justify-center items-center mt-10 px-4">
             <h2 className="text-xl textcenter mt-0 mb-5">Search NFT rarity</h2>
             <input type="text" placeholder="Type keyword" />
           </div>
