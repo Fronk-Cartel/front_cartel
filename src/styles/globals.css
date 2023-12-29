@@ -1,27 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: transparent;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* > * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: transparent;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Silkscreen", sans-serif;
+  @apply bg-primary text-white;
+}
+
+nav li {
+  @apply py-0.5 px-2;
+}
+nav li a {
+  @apply hover:scale-105 duration-300 inline-block;
+}
+
+input {
+  /* border-radius: 4px; */
+  /* border: 1px solid #fff; */
+  background: white;
+  /* background: rgba(255, 255, 255, 0.03); */
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  @apply h-12 w-full md:w-1/2 lg:w-2/5 px-3 text-base text-black outline-none focus:border focus:outline-none focus:shadow-md   duration-300   mb-1;
+}
+
+.image-gallery {
+  display: grid;
+  /* padding: 0% 15%; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  @apply px-[10%] md:px-[10%] lg:px-[5%] ;
+}
+.image-gallery div {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md;
 }
