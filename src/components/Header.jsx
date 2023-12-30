@@ -1,19 +1,23 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function Header() {
-const navRef = useRef(null)
+  const navRef = useRef(null);
 
-useEffect(()=>{
-    const reveal = gsap.fromTo(navRef.current,{opacity: 0, translateY: -20},{opacity:1, translateY: 0, duration: 1, ease:'power2.inOut'})
-    return ()=>{
-        reveal.kill()
-    }
-},[])
+  useEffect(() => {
+    const reveal = gsap.fromTo(
+      navRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1, ease: "power2.inOut" }
+    );
+    return () => {
+      reveal.kill();
+    };
+  }, []);
 
   return (
     <header className="min-h-[10vh] flex items-center justify-center">
-      <nav  className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-sm">
+      <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-sm">
         <ul ref={navRef} className="flex gap-10 bg-red-0">
           <li>
             <a href="https://fronk-cartel.vercel.app/">HOME</a>
