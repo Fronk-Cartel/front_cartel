@@ -45,7 +45,7 @@ input {
   /* @apply px-[10%] md:px-[10%] lg:px-[5%] ; */
   @apply px-4;
 }
-.image-gallery div {
+.cards {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
   align-self: center;
   @apply rounded-md bg-white h-36;

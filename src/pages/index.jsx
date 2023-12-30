@@ -1,6 +1,26 @@
 import Layout from "@/Layout";
+import { gsap } from "gsap";
+import Cards from "@/components/Cards";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const reveal = gsap.fromTo(
+      "input, h2",
+      {  opacity: 0, translateY: -20 },
+      {
+        // scale: 1,
+        opacity: 1,
+        translateY: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        stagger: 0.1,
+      }
+    );
+    return () => {
+      reveal.kill();
+    };
+  }, []);
   return (
     <Layout title="Search" className={` bg-primary`}>
       <div className="container mx-auto bg-blac">
@@ -13,23 +33,22 @@ export default function Home() {
 
         <section className="pb-20">
           <div className="image-gallery mt-10">
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
-            <div className="">hellos</div>
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
           </div>
 
           <div className="flex justify-center items-center mt-14 space-x-5">
