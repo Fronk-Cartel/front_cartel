@@ -1,13 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
 import { gsap } from "gsap";
 import Cards from "@/components/Cards";
 import { useEffect, useState } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Home() {
   const [data, setData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
   const ITEMS_PER_PAGE = 100;
 
   useEffect(() => {
@@ -17,15 +18,25 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
 
+  useEffect(() => {
+    fetchData(currentPage, searchTerm);
+  }, [currentPage, searchTerm]);
+
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
-  const fetchData = async (page) => {
+  const fetchData = async (page, term = "") => {
     try {
       const response = await fetch("/_metadata.json");
       const jsonData = await response.json();
       setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
-      setData(jsonData);
+
+      // Filter data based on the search term
+      const filteredData = jsonData.filter((item) =>
+        item.name.toString().includes(term)
+      );
+
+      setData(filteredData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -75,9 +86,21 @@ export default function Home() {
     <Layout title="Search" className={` bg-primary`}>
       <div className="container mx-auto bg-blac">
         <section>
-          <div className="flex flex-col justify-center items-center mt-10 px-4">
-            <h2 className="text-xl textcenter mt-0 mb-5">Search NFT rarity</h2>
-            <input type="text" placeholder="Type keyword" />
+          <div className="flex flex-col justify-center items-center mt-10 px-4 ">
+            <h2 className="text-xl textcenter mt-0 mb-5">
+              Search NFT rarity by number
+            </h2>
+            <div className="w-full relative">
+              <input
+                type="text"
+                placeholder="Type Number"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <div className="absolute top-3 right-2 text-primary ">
+                <AiOutlineSearch size={28} />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -96,8 +119,8 @@ export default function Home() {
               </div>
             </>
           ) : (
-            <div className="text-center mt-20 text-xl animate-pulse">
-              Loading...
+            <div className="text-center mt-20 text-xl">
+              {searchTerm ? "No results found." : <div className="animate-pulse">Loading...</div>}
             </div>
           )}
         </section>
