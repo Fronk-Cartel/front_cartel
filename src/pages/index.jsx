@@ -32,9 +32,14 @@ export default function Home() {
       setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
 
       // Filter data based on the search term
-      const filteredData = jsonData.filter((item) =>
-        item.name.toString().includes(term)
-      );
+      const filteredData = jsonData
+        .filter((item) => item.dna.toString().includes(term))
+        .sort((a, b) => {
+          // Extract numbers from names and compare
+          const numA = parseInt(a.name.match(/\d+/)[0], 10);
+          const numB = parseInt(b.name.match(/\d+/)[0], 10);
+          return numA - numB;
+        });
 
       setData(filteredData);
     } catch (error) {
@@ -120,7 +125,11 @@ export default function Home() {
             </>
           ) : (
             <div className="text-center mt-20 text-xl">
-              {searchTerm ? "No results found." : <div className="animate-pulse">Loading...</div>}
+              {searchTerm ? (
+                "No results found."
+              ) : (
+                <div className="animate-pulse">Loading...</div>
+              )}
             </div>
           )}
         </section>
