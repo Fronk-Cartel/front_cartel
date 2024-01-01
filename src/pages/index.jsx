@@ -33,7 +33,7 @@ export default function Home() {
 
       // Filter data based on the search term
       const filteredData = jsonData
-        .filter((item) => item.name.toString().includes(term))
+        .filter((item) => item.name.toString().includes(`#${term}`))
         .sort((a, b) => {
           // Extract numbers from names and compare
           const numA = parseInt(a.name.match(/\d+/)[0], 10);
