@@ -50,3 +50,7 @@ input {
   align-self: center;
   @apply rounded-md bg-white min-h-36;
 }
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
