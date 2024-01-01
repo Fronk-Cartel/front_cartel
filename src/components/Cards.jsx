@@ -23,9 +23,11 @@ export default function Cards({ info }) {
     };
   }, []);
   return (
-    <div ref={cardRef} className="cards overflow-hidden">
+    <div ref={cardRef} className="cards overflow-hidden opacity-0">
       <div>
-        <p className="text-primary font-bold px-2 py-1 text-sm text-center">{info.name}</p>
+        <p className="text-primary font-bold px-2 py-1 text-sm text-center">
+          {info.name}
+        </p>
       </div>
       <div>
         <Image
