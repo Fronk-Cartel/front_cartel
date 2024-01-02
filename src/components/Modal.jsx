@@ -1,9 +1,23 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Traits from "./Traits";
+import { MdOutlineContentCopy } from "react-icons/md";
 
 export default function Modal({ info }) {
   const [data, setData] = useState(null);
+  const [ins, setIns] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText(ins);
+    setCopied(true);
+
+    // Reset the "Copied!" message after a brief delay
+    setTimeout(() => {
+      setCopied(false);
+    }, 1500);
+  };
+
   const renderTraits = () => {
     return info?.attributes.map((a, i) => {
       // Use logical AND (&&) instead of OR (||) in the condition
@@ -31,14 +45,17 @@ export default function Modal({ info }) {
     fetchInscription();
   }, []);
 
-  const renderInscription = () => {
-    return data?.map((d) => {
-      if (d.name === info.name) {
-        return d.inscriptionId;
-      }
-    });
-  };
+  useEffect(() => {
+    const renderInscription = () => {
+      return data?.map((d) => {
+        if (d.name === info.name) {
+          setIns(d.inscriptionId);
+        }
+      });
+    };
 
+    renderInscription();
+  }, [data, info.name]);
   return (
     <div className="fixed z-50 top-0 left-0 right-0 bottom-0 bg-[#00000090] backdrop-blur-sm min-h-screen flex p-4 items-center justify-center ">
       <div className="px-4 py-4 bg-green-900 w-full md:max-w-md  max-h-[98vh] overflow-auto hide-scroll rounded-lg ">
@@ -59,10 +76,18 @@ export default function Modal({ info }) {
             />
           </div>
           <div className="text-center">
-            <marquee className="whitespace-wrap">
-              Inscription ID: {renderInscription()}
-            </marquee>
-            <marquee className="whitespace-wrap">dna: {info.dna}</marquee>
+            <button onClick={handleCopyClick} className=" ">
+              {copied ? (
+                "Copied Inscriptional ID!"
+              ) : (
+                <div className="flex items-center space-x-2">
+                  {" "}
+                  <MdOutlineContentCopy size={20} /> <span>copy Id</span>
+                </div>
+              )}
+            </button>
+            <marquee className="whitespace-wrap">Inscription ID: {ins}</marquee>
+            <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee>
           </div>
         </div>
 
