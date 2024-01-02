@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import Cards from "@/components/Cards";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { FiFilter } from "react-icons/fi";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -92,18 +93,22 @@ export default function Home() {
       <div className="container mx-auto bg-blac">
         <section>
           <div className="flex flex-col justify-center items-center mt-10 px-4 ">
-            <h2 className="text-xl textcenter mt-0 mb-5">
+            <h2 className="text-xl text-center mt-0 mb-5">
               Search NFT rarity by number
             </h2>
-            <div className="w-full relative">
+            <div className="w-full relative flex space-x-2">
               <input
                 type="text"
                 placeholder="Type Number"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                
               />
-              <div className="absolute top-3 right-2 text-primary ">
+              <div className="absolute top-3 right-16 text-primary ">
                 <AiOutlineSearch size={28} />
+              </div>
+              <div className="flex justify-center items-center h-12 rounded-md bg-white text-primary w-12">
+                <FiFilter size={24} />
               </div>
             </div>
           </div>

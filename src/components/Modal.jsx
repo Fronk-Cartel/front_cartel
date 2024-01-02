@@ -1,15 +1,43 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Traits from "./Traits";
 
-export default function Modal({ info, show }) {
+export default function Modal({ info }) {
+  const [data, setData] = useState(null);
   const renderTraits = () => {
-    return info?.attributes.map((a) => {
-      //   console.log(a.trait_type);
-      return <Traits key={info.value} trait={a.trait_type} value={a.value} />;
+    return info?.attributes.map((a, i) => {
+      // Use logical AND (&&) instead of OR (||) in the condition
+      if (
+        a.trait_type.toLowerCase() !== "1 background" &&
+        a.trait_type.toLowerCase() !== "2 base"
+      ) {
+        return <Traits key={i} trait={a.trait_type.slice(1)} value={a.value} />;
+      }
+      return null; // Return null if the condition is not met
     });
   };
-  //   console.log(info.attributes);
+
+  useEffect(() => {
+    const fetchInscription = async () => {
+      try {
+        const response = await fetch("/fronkcartel.json");
+        const jsonData = await response.json();
+        setData(jsonData);
+        // console.log(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchInscription();
+  }, []);
+
+  const renderInscription = () => {
+    return data?.map((d) => {
+      if (d.name === info.name) {
+        return d.inscriptionId;
+      }
+    });
+  };
 
   return (
     <div className="fixed z-50 top-0 left-0 right-0 bottom-0 bg-[#00000090] backdrop-blur-sm min-h-screen flex p-4 items-center justify-center ">
@@ -29,20 +57,12 @@ export default function Modal({ info, show }) {
               loading="lazy"
               className="w-full h-full object-contain"
             />
-            {/* <Image
-                src={`/assets/images/234.png`}
-                width={500}
-                height={500}
-                alt="hello"
-                //   priority
-                loading="lazy"
-                className="w-full h-full object-contain"
-                /> */}
           </div>
           <div className="text-center">
+            <marquee className="whitespace-wrap">
+              Inscription ID: {renderInscription()}
+            </marquee>
             <marquee className="whitespace-wrap">dna: {info.dna}</marquee>
-            <p> edition: {info.edition} </p>
-            <p>date: {info.date}</p>
           </div>
         </div>
 
@@ -54,17 +74,6 @@ export default function Modal({ info, show }) {
               <div className="text-end flex-1">Value</div>
             </div>
             {renderTraits()}
-            {/* <Traits trait="1 Background" value="Doge" />
-            <Traits trait="2 Base" value="Genesis" />
-            <Traits trait="3 Body" value="Jacket" />
-            <Traits trait="3 Body" value="Jacket" />
-            <Traits trait="3 Body" value="Jacket" />
-            <Traits trait="3 Body" value="Jacket" /> */}
-          </div>
-
-          <div className="flex flex-col mb-2 justify-between items-start mt-5">
-            <div className="text-xs">Compiler</div>
-            <div>{info.compiler}</div>
           </div>
         </div>
       </div>
