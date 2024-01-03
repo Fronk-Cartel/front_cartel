@@ -8,6 +8,7 @@ import { FiFilter } from "react-icons/fi";
 
 export default function Home() {
   const [data, setData] = useState(null);
+  const [dataFilter, setDataFilter] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,6 +19,7 @@ export default function Home() {
 
   const handleSelectChange = (e) => {
     setAttr(e.target.value);
+    showFilter();
   };
 
   const showFilter = () => {
@@ -33,12 +35,13 @@ export default function Home() {
 
   useEffect(() => {
     fetchData(currentPage, searchTerm);
-  }, [currentPage, searchTerm]);
+    fetchDataFilter();
+  }, [currentPage, searchTerm, attr]);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
+  // ...
 
-  
   const fetchData = async (page, term = "") => {
     try {
       const response = await fetch("/_metadata.json");
@@ -47,14 +50,17 @@ export default function Home() {
 
       // Filter data based on the search term and selected attribute
       const filteredData = jsonData
-        .filter((item) => item.name.toString().includes(`#${term}`))
         .filter((item) => {
-          if (attr) {
+          // Always include all items when there is no search term
+          return term === "" || item.name.toString().includes(`#${term}`);
+        })
+        .filter((item) => {
+          if (attr !== null) {
+            // Check if attr is not null
             // If an attribute is selected, filter based on it
             return item.attributes.some(
               (attribute) =>
-                attribute.trait_type.slice(2).toLowerCase() ===
-                attr.toLowerCase()
+                attribute.value.toLowerCase() === attr.toLowerCase()
             );
           }
           return true; // No attribute selected, include all items
@@ -72,9 +78,20 @@ export default function Home() {
     }
   };
 
+  const fetchDataFilter = async () => {
+    try {
+      const response = await fetch("/_metadata.json");
+      const jsonData = await response.json();
+
+      setDataFilter(jsonData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   const traitSet = new Set();
 
-  data?.forEach((d) => {
+  dataFilter?.forEach((d) => {
     d.attributes?.forEach((attribute) => {
       // Add both trait type and value to the set
       traitSet.add(`${attribute.trait_type}`);
@@ -87,7 +104,7 @@ export default function Home() {
   // const uniqueValues = Array.from(valueSet);
   const getValues = (trait) => {
     const valueSet = new Set();
-    data?.forEach((d) => {
+    dataFilter?.forEach((d) => {
       d.attributes?.forEach((attribute) => {
         if (attribute.trait_type.slice(2).toLowerCase() === trait) {
           valueSet.add(`${attribute.value}`);
@@ -107,14 +124,17 @@ export default function Home() {
       //  console.log(`Trait: ${t.slice(2)}, Values: ${Array.from(trait_values)}`);
 
       return (
-        <select key={t} onChange={handleSelectChange}>
-          <option value="">{t.slice(1)}</option>
-          {Array.from(trait_values)?.map((v) => (
-            <option key={v} value={v}>
-              {v}
-            </option>
-          ))}
-        </select>
+        <div key={t}>
+          <label htmlFor={t}>{t.slice(1)}</label>
+          <select onChange={handleSelectChange}>
+            <option value="">Select Value</option>
+            {Array.from(trait_values)?.map((v) => (
+              <option key={v} value={v}>
+                {v}
+              </option>
+            ))}
+          </select>
+        </div>
       );
     });
   };
