@@ -10,7 +10,12 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [filter, setFilter] = useState(false);
   const ITEMS_PER_PAGE = 100;
+
+  const showFilter = () => {
+    setFilter(!filter);
+  };
 
   useEffect(() => {
     fetchData(currentPage);
@@ -48,6 +53,15 @@ export default function Home() {
     }
   };
 
+  const renderSelect = () => {
+    return data?.map((d) => {
+      return d?.attributes?.map((a) => {
+        // console.log(a?.trait_types);
+      });
+    });
+  };
+  renderSelect();
+
   const renderData = () => {
     return data?.slice(startIndex, endIndex).map((d) => {
       return <Cards key={d.dna} info={d} />;
@@ -74,7 +88,7 @@ export default function Home() {
 
   useEffect(() => {
     const reveal = gsap.fromTo(
-      "input, h2",
+      "input, h2, .filter",
       { opacity: 0 },
       {
         opacity: 1,
@@ -90,7 +104,7 @@ export default function Home() {
 
   return (
     <Layout title="Search" className={` bg-primary`}>
-      <div className="container mx-auto bg-blac">
+      <div className="container mx-auto ">
         <section>
           <div className="flex flex-col justify-center items-center mt-10 px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">
@@ -102,12 +116,14 @@ export default function Home() {
                 placeholder="Type Number"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                
               />
               <div className="absolute top-3 right-16 text-primary ">
                 <AiOutlineSearch size={28} />
               </div>
-              <div className="flex justify-center items-center h-12 rounded-md bg-white text-primary w-12">
+              <div
+                onClick={showFilter}
+                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
+              >
                 <FiFilter size={24} />
               </div>
             </div>
@@ -138,6 +154,61 @@ export default function Home() {
             </div>
           )}
         </section>
+
+        <div
+          className={`${
+            filter
+              ? "translate-y-0  md:translate-x-0"
+              : "-translate-y-full md:translate-y-0 md:translate-x-full"
+          } duration-300 h-screen bg-[#44444450] backdrop-blur-sm fixed z-40 top-0 bottom-0 right-0 md:w-[50vw] w-[100vw]`}
+        >
+          <div className="bg-white text-primary py-10 relative">
+            <div
+              onClick={showFilter}
+              className="cursor-pointer text-2xl fixed z-[100] right-7 top-2"
+            >
+              X
+            </div>
+            <h3 className="text-xl text-center mb-5 text-primary font-medium">
+              Filter By Traits
+            </h3>
+            <div className="pl-4 pr-8">
+              <div>
+                <select>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                </select>
+
+                <select>
+                  <option value="Body">Face</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                </select>
+
+                <select>
+                  <option value="Body">Face</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                </select>
+
+                <select>
+                  <option value="Body">Face</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                  <option value="Body">Body</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

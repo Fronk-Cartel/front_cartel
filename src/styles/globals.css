@@ -55,3 +55,6 @@ input {
   display: none;
 }
 
+select {
+  @apply h-10 border rounded-md px-1 mb-3 w-full;
+}
