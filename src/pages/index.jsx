@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
 import { gsap } from "gsap";
 import Cards from "@/components/Cards";
@@ -12,6 +13,12 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
   const ITEMS_PER_PAGE = 100;
+
+  const [attr, setAttr] = useState(null);
+
+  const handleSelectChange = (e) => {
+    setAttr(e.target.value);
+  };
 
   const showFilter = () => {
     setFilter(!filter);
@@ -31,36 +38,59 @@ export default function Home() {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
-  const fetchData = async (page, term = "") => {
-    try {
-      const response = await fetch("/_metadata.json");
-      const jsonData = await response.json();
-      setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
+  
+const fetchData = async (page, term = "") => {
+  try {
+    const response = await fetch("/_metadata.json");
+    const jsonData = await response.json();
+    setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
 
-      // Filter data based on the search term
-      const filteredData = jsonData
-        .filter((item) => item.name.toString().includes(`#${term}`))
-        .sort((a, b) => {
-          // Extract numbers from names and compare
-          const numA = parseInt(a.name.match(/\d+/)[0], 10);
-          const numB = parseInt(b.name.match(/\d+/)[0], 10);
-          return numA - numB;
-        });
-
-      setData(filteredData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  const renderSelect = () => {
-    return data?.map((d) => {
-      return d?.attributes?.map((a) => {
-        // console.log(a?.trait_types);
+    // Filter data based on the search term and selected attribute
+    const filteredData = jsonData
+      .filter((item) => item.name.toString().includes(`#${term}`))
+      .filter((item) => {
+        if (attr) {
+          // If an attribute is selected, filter based on it
+          return item.attributes.some((attribute) =>
+            attribute.trait_type.slice(2).toLowerCase() === attr.toLowerCase()
+          );
+        }
+        return true; // No attribute selected, include all items
+      })
+      .sort((a, b) => {
+        // Extract numbers from names and compare
+        const numA = parseInt(a.name.match(/\d+/)[0], 10);
+        const numB = parseInt(b.name.match(/\d+/)[0], 10);
+        return numA - numB;
       });
-    });
-  };
-  renderSelect();
+
+    setData(filteredData);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+const renderSelect = () => {
+  return uniqueTraits?.map((t) => {
+    const trait_values = getValues(t.slice(2).toLowerCase());
+
+    return (
+      <select key={t} onChange={handleSelectChange}>
+        <option value="">{t.slice(1)}</option>
+        {Array.from(trait_values)?.map((v) => (
+          <option key={v} value={v}>
+            {v}
+          </option>
+        ))}
+      </select>
+    );
+  });
+};
+
+useEffect(() => {
+  fetchData(currentPage, searchTerm);
+}, [currentPage, searchTerm, attr]);
+  console.log(attr);
 
   const renderData = () => {
     return data?.slice(startIndex, endIndex).map((d) => {
@@ -172,9 +202,10 @@ export default function Home() {
             <h3 className="text-xl text-center mb-5 text-primary font-medium">
               Filter By Traits
             </h3>
-            <div className="pl-4 pr-8">
+            <div className="pl-8 pr-8">
               <div>
-                <select>
+                {renderSelect()}
+                {/* <select>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
@@ -196,15 +227,14 @@ export default function Home() {
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
-                </select>
-
-                <select>
+                </select> */}
+                {/* <select>
                   <option value="Body">Face</option>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
                   <option value="Body">Body</option>
-                </select>
+                </select> */}
               </div>
             </div>
           </div>
