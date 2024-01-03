@@ -285,6 +285,17 @@ export default function Home() {
                   <option value="Body">Body</option>
                 </select> */}
               </div>
+              <div className="mt-2 text-end ">
+                <button
+                  onClick={(e) => {
+                    setAttr(null);
+                    setFilter(!filter);
+                  }}
+                  className="border-2 border-primary hover:bg-primary hover:text-white duration-300 px-2 rounded-md"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
           </div>
         </div>
