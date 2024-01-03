@@ -39,57 +39,86 @@ export default function Home() {
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
   
-const fetchData = async (page, term = "") => {
-  try {
-    const response = await fetch("/_metadata.json");
-    const jsonData = await response.json();
-    setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
+  const fetchData = async (page, term = "") => {
+    try {
+      const response = await fetch("/_metadata.json");
+      const jsonData = await response.json();
+      setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
 
-    // Filter data based on the search term and selected attribute
-    const filteredData = jsonData
-      .filter((item) => item.name.toString().includes(`#${term}`))
-      .filter((item) => {
-        if (attr) {
-          // If an attribute is selected, filter based on it
-          return item.attributes.some((attribute) =>
-            attribute.trait_type.slice(2).toLowerCase() === attr.toLowerCase()
-          );
-        }
-        return true; // No attribute selected, include all items
-      })
-      .sort((a, b) => {
-        // Extract numbers from names and compare
-        const numA = parseInt(a.name.match(/\d+/)[0], 10);
-        const numB = parseInt(b.name.match(/\d+/)[0], 10);
-        return numA - numB;
-      });
+      // Filter data based on the search term and selected attribute
+      const filteredData = jsonData
+        .filter((item) => item.name.toString().includes(`#${term}`))
+        .filter((item) => {
+          if (attr) {
+            // If an attribute is selected, filter based on it
+            return item.attributes.some(
+              (attribute) =>
+                attribute.trait_type.slice(2).toLowerCase() ===
+                attr.toLowerCase()
+            );
+          }
+          return true; // No attribute selected, include all items
+        })
+        .sort((a, b) => {
+          // Extract numbers from names and compare
+          const numA = parseInt(a.name.match(/\d+/)[0], 10);
+          const numB = parseInt(b.name.match(/\d+/)[0], 10);
+          return numA - numB;
+        });
 
-    setData(filteredData);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-};
+      setData(filteredData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-const renderSelect = () => {
-  return uniqueTraits?.map((t) => {
-    const trait_values = getValues(t.slice(2).toLowerCase());
+  const traitSet = new Set();
 
-    return (
-      <select key={t} onChange={handleSelectChange}>
-        <option value="">{t.slice(1)}</option>
-        {Array.from(trait_values)?.map((v) => (
-          <option key={v} value={v}>
-            {v}
-          </option>
-        ))}
-      </select>
-    );
+  data?.forEach((d) => {
+    d.attributes?.forEach((attribute) => {
+      // Add both trait type and value to the set
+      traitSet.add(`${attribute.trait_type}`);
+      // valueSet.add(`${attribute.value}`);
+    });
   });
-};
 
-useEffect(() => {
-  fetchData(currentPage, searchTerm);
-}, [currentPage, searchTerm, attr]);
+  // Convert the set to an array
+  const uniqueTraits = Array.from(traitSet).slice(2);
+  // const uniqueValues = Array.from(valueSet);
+  const getValues = (trait) => {
+    const valueSet = new Set();
+    data?.forEach((d) => {
+      d.attributes?.forEach((attribute) => {
+        if (attribute.trait_type.slice(2).toLowerCase() === trait) {
+          valueSet.add(`${attribute.value}`);
+        }
+      });
+    });
+    return valueSet;
+  };
+
+  // console.log(getValues("body"));
+
+  const renderSelect = () => {
+    return uniqueTraits?.map((t) => {
+      const trait_values = getValues(t.slice(2).toLowerCase());
+      // console.log(t);
+
+      //  console.log(`Trait: ${t.slice(2)}, Values: ${Array.from(trait_values)}`);
+
+      return (
+        <select key={t} onChange={handleSelectChange}>
+          <option value="">{t.slice(1)}</option>
+          {Array.from(trait_values)?.map((v) => (
+            <option key={v} value={v}>
+              {v}
+            </option>
+          ))}
+        </select>
+      );
+    });
+  };
+
   console.log(attr);
 
   const renderData = () => {
