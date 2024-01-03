@@ -36,7 +36,7 @@ export default function Cards({ info }) {
         className="cards overflow-hidden opacity-0 cursor-pointer"
       >
         <div>
-          <p className="text-primary  font-bold px-4 py-1 text-sm text-center">
+          <p className="text-primary  font-bold px-5 py-1 text-sm text-center">
             {info.name}
           </p>
         </div>

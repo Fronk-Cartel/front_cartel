@@ -139,7 +139,7 @@ export default function Home() {
     });
   };
 
-  console.log(attr);
+  // console.log(attr);
 
   const renderData = () => {
     return data?.slice(startIndex, endIndex).map((d) => {
