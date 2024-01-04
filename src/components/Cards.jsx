@@ -59,7 +59,7 @@ export default function Cards({ info }) {
         <>
           <div
             onClick={show}
-            className="cursor-pointer text-3xl fixed z-[100] right-5 top-2"
+            className="cursor-pointer text-3xl fixed z-[100] right-5 top-5"
           >
             X
           </div>

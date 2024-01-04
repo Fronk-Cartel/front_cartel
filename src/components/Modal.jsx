@@ -83,7 +83,7 @@ export default function Modal({ info }) {
     }
   });
 
-  console.log(totalOccurrences);
+  // console.log(totalOccurrences);
 
   // console.log(occurrencesOfValues);
 
@@ -174,6 +174,7 @@ export default function Modal({ info }) {
             <Traits trait="Rarity" value={totalOccurrences} />
           </div>
         </div>
+            <div className="text-xs text-center mt-2 text-italics">The lower the rarity score, the rarer it is</div>
       </div>
     </div>
   );
