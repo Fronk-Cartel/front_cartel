@@ -5,6 +5,7 @@ import { MdOutlineContentCopy } from "react-icons/md";
 
 export default function Modal({ info }) {
   const [data, setData] = useState(null);
+  const [allData, setAllData] = useState(null);
   const [ins, setIns] = useState("");
   const [copied, setCopied] = useState(false);
 
@@ -17,6 +18,74 @@ export default function Modal({ info }) {
       setCopied(false);
     }, 1500);
   };
+
+  const values = info.attributes.slice(2).map((a) => a.value);
+
+  const allValues = allData?.map((d) =>
+    d.attributes.slice(2).flatMap((a) => a.value)
+  );
+
+  const flattenedValues = allValues?.flat();
+  // console.log(flattenedValues.length);
+
+  function countOccurrences(arr) {
+    const occurrences = {};
+
+    // Loop through the array
+    arr?.forEach((element) => {
+      // If the element is already in the occurrences object, increment its count
+      if (occurrences[element]) {
+        occurrences[element]++;
+      } else {
+        // If the element is not in the occurrences object, initialize its count to 1
+        occurrences[element] = 1;
+      }
+    });
+
+    return occurrences;
+  }
+
+  // Example usage:
+  // const myArray = [1, 2, 3, 1, 2, 1, 4, 5, 4];
+  const occurrencesObject = countOccurrences(flattenedValues);
+
+  // Get the keys of the object as an array
+  // const keysArray = Object.keys(occurrencesObject);
+
+  // // Get the length of the array (which represents the number of keys in the object)
+  // const numberOfKeys = keysArray.length;
+
+  // console.log(occurrencesObject);
+  // console.log(values);
+
+  const occurrencesOfValues = {};
+
+  // Loop through the elements in the values array
+  values.forEach((value) => {
+    // Check if the value exists in the occurrencesObject
+    if (occurrencesObject.hasOwnProperty(value)) {
+      // Retrieve the occurrence count and store it in occurrencesOfValues
+      occurrencesOfValues[value] = occurrencesObject[value];
+    } else {
+      // If the value is not in occurrencesObject, set its occurrence count to 0 or handle accordingly
+      occurrencesOfValues[value] = 0;
+    }
+  });
+
+  let totalOccurrences = 0;
+
+  // Loop through the elements in the values array
+  values.forEach((value) => {
+    // Check if the value exists in the occurrencesObject
+    if (occurrencesObject.hasOwnProperty(value)) {
+      // Accumulate the occurrence count to the total
+      totalOccurrences += occurrencesObject[value];
+    }
+  });
+
+  console.log(totalOccurrences);
+
+  // console.log(occurrencesOfValues);
 
   const renderTraits = () => {
     return info?.attributes.map((a, i) => {
@@ -37,6 +106,9 @@ export default function Modal({ info }) {
         const response = await fetch("/fronkcartel.json");
         const jsonData = await response.json();
         setData(jsonData);
+        const res = await fetch("/_metadata.json");
+        const json = await res.json();
+        setAllData(json);
         // console.log(jsonData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -78,7 +150,7 @@ export default function Modal({ info }) {
           <div className="text-center">
             <button onClick={handleCopyClick} className=" ">
               {copied ? (
-                "Copied Inscriptional ID!"
+                "Copied Inscription ID!"
               ) : (
                 <div className="flex items-center space-x-2">
                   {" "}
@@ -87,7 +159,7 @@ export default function Modal({ info }) {
               )}
             </button>
             <marquee className="whitespace-wrap">Inscription ID: {ins}</marquee>
-            <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee>
+            {/* <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee> */}
           </div>
         </div>
 
@@ -99,6 +171,7 @@ export default function Modal({ info }) {
               <div className="text-end flex-1">Value</div>
             </div>
             {renderTraits()}
+            <Traits trait="Rarity" value={totalOccurrences} />
           </div>
         </div>
       </div>
