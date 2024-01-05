@@ -14,8 +14,98 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
   const ITEMS_PER_PAGE = 100;
-
   const [attr, setAttr] = useState(null);
+
+  const getAttributes = data?.map((d) =>
+    d.attributes.slice(2).map((v) => v.value)
+  );
+
+  const flattenedValues = getAttributes?.flat();
+  // const getAllValues = getAttributes?.slice(2).map((v) => v.value);
+
+  function countOccurrences(arr) {
+    const occurrences = {};
+
+    // Loop through the array
+    arr?.forEach((element) => {
+      // If the element is already in the occurrences object, increment its count
+      if (occurrences[element]) {
+        occurrences[element]++;
+      } else {
+        // If the element is not in the occurrences object, initialize its count to 1
+        occurrences[element] = 1;
+      }
+    });
+
+    return occurrences;
+  }
+
+  const occurrencesObject = countOccurrences(flattenedValues);
+  // console.log(occurrencesObject);
+
+  function transformAndFillDigits(inputData, digitsData) {
+    const result = inputData?.map((item) => {
+      const attributesDict = {};
+
+      item.attributes?.slice(2).forEach((attribute) => {
+        const traitType = attribute?.value;
+        const digits =
+          digitsData[traitType] !== undefined ? digitsData[traitType] : null;
+
+        attributesDict[traitType] = digits;
+      });
+
+      return {
+        name: item.name,
+        ...attributesDict,
+      };
+    });
+
+    return result;
+  }
+
+  const transformedAndFilledData = transformAndFillDigits(
+    data,
+    occurrencesObject
+  );
+
+  function calculateTotal(data) {
+  const result = data?.map(item => {
+    const values = Object.values(item);
+    const total = values.reduce((acc, value) => (acc + (Number.isInteger(value) ? value : 0)), 0);
+
+    return {
+      name: item.name,
+      total,
+    };
+  });
+
+  return result;
+}
+const totalData = calculateTotal(transformedAndFilledData);
+
+function calculateTotalAndSort(data) {
+  const result = data
+    ?.map(item => {
+      const values = Object.values(item);
+      const total = values.reduce((acc, value) => (acc + (Number.isInteger(value) ? value : 0)), 0);
+
+      return {
+        name: item.name,
+        total,
+      };
+    })
+    .sort((a, b) => a.total - b.total);
+
+  return result;
+}
+
+const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
+
+// console.log(sortedTotalData);
+
+
+
 
   const handleSelectChange = (e) => {
     setAttr(e.target.value);
@@ -40,7 +130,6 @@ export default function Home() {
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  // ...
 
   const fetchData = async (page, term = "") => {
     try {
@@ -143,7 +232,7 @@ export default function Home() {
 
   const renderData = () => {
     return data?.slice(startIndex, endIndex).map((d) => {
-      return <Cards key={d.dna} info={d} />;
+      return <Cards key={d.dna} info={d} rank={sortedTotalData} />;
     });
   };
 
