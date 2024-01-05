@@ -171,10 +171,9 @@ export default function Modal({ info }) {
               <div className="text-end flex-1">Value</div>
             </div>
             {renderTraits()}
-            <Traits trait="Rarity" value={totalOccurrences} />
+            {/* <Traits trait="Rarity" value={totalOccurrences} /> */}
           </div>
         </div>
-            <div className="text-xs text-center mt-2 text-italics">The lower the rarity score, the rarer it is</div>
       </div>
     </div>
   );

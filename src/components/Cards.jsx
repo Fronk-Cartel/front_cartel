@@ -90,8 +90,8 @@ export default function Cards({ info, rank }) {
         ref={cardRef}
         className="cards overflow-hidden opacity-0 cursor-pointer"
       >
-        <div>
-          <p className="text-primary  font-bold px-5 py-1 text-sm text-center">
+        <div className="flex items-center justify-center">
+          <p className="text-primary w-2/3  font-bold  py-1 text-sm text-center">
             {info.name}
           </p>
         </div>
@@ -115,9 +115,9 @@ export default function Cards({ info, rank }) {
               {copied ? (
                 <div className="text-primary">Copied</div>
               ) : (
-                <div className="flex items-center text-black ">
+                <div className="flex items-center text-primary ">
                   {" "}
-                  <MdOutlineContentCopy stroke="#1e6f50" size={20} />
+                  <MdOutlineContentCopy fill="#1e6f50" size={20} />
                   {/* <span>copy Id</span> */}
                 </div>
               )}
