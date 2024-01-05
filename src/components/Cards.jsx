@@ -107,15 +107,15 @@ export default function Cards({ info, rank }) {
           />
         </div>
         <div>
-          <div className="flex justify-end px-3">
+          <div className="flex justify-end items-center px-3">
             <p className="text-primary font-bold px-2 py-2 text-sm text-end">
               #{ranked}
             </p>
             <div onClick={handleCopyClick} className="text-primary ">
               {copied ? (
-                <span className="text-primary">Copied</span>
+                <div className="text-primary">Copied</div>
               ) : (
-                <div className="flex items-center text-black space-x-2">
+                <div className="flex items-center text-black ">
                   {" "}
                   <MdOutlineContentCopy stroke="#1e6f50" size={20} />
                   {/* <span>copy Id</span> */}
