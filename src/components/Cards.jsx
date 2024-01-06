@@ -6,60 +6,18 @@ import { MdOutlineContentCopy } from "react-icons/md";
 // import pic from "../../public/assets/images/300.png";
 
 export default function Cards({ info, rank }) {
-  const [data, setData] = useState(null);
-  const [allData, setAllData] = useState(null);
-  const cardRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
-  const [ranked, setRanked] = useState(null);
   const [copied, setCopied] = useState(false);
-  const [ins, setIns] = useState("");
+  const cardRef = useRef(null);
 
   const show = () => {
     setShowModal(!showModal);
   };
-  useEffect(() => {
-    // Find the rank based on the info name
-    const getRank = rank.find((r) => r.name === info.name);
 
-    if (getRank !== undefined) {
-      const indexOfRank = rank.indexOf(getRank);
-      setRanked(indexOfRank);
-    } else {
-      console.log("Rank not found");
-    }
-  }, [rank, info]);
-
-  useEffect(() => {
-    const fetchInscription = async () => {
-      try {
-        const response = await fetch("/fronkcartel.json");
-        const jsonData = await response.json();
-        setData(jsonData);
-        const res = await fetch("/_metadata.json");
-        const json = await res.json();
-        setAllData(json);
-        // console.log(jsonData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchInscription();
-  }, []);
-
-  useEffect(() => {
-    const renderInscription = () => {
-      return data?.map((d) => {
-        if (d.name === info.name) {
-          setIns(d.inscriptionId);
-        }
-      });
-    };
-
-    renderInscription();
-  }, [data, info]);
+  // console.log(info);
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(ins);
+    navigator.clipboard.writeText(info.inscriptionId);
     setCopied(true);
 
     // Reset the "Copied!" message after a brief delay
@@ -91,7 +49,7 @@ export default function Cards({ info, rank }) {
         className="cards overflow-hidden opacity-0 cursor-pointer"
       >
         <div className="flex items-center justify-center">
-          <p className="text-primary w-2/3  font-bold  py-1 text-sm text-center">
+          <p className="text-primary w-11/12  font-bold  py-1 text-sm text-center">
             {info.name}
           </p>
         </div>
@@ -109,7 +67,7 @@ export default function Cards({ info, rank }) {
         <div>
           <div className="flex justify-end items-center px-3">
             <p className="text-primary font-bold px-2 py-2 text-sm text-end">
-              #{ranked}
+              #{rank}
             </p>
             <div onClick={handleCopyClick} className="text-primary ">
               {copied ? (
@@ -133,7 +91,7 @@ export default function Cards({ info, rank }) {
           >
             X
           </div>
-          <Modal info={info} />
+          {/* <Modal info={info} /> */}
         </>
       )}
     </>

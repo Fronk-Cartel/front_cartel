@@ -1,27 +1,56 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+// /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
-import { gsap } from "gsap";
 import Cards from "@/components/Cards";
+import { gsap } from "gsap";
+// // import Cards from "@/components/Cards";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 
 export default function Home() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [inscriptData, setInscriptData] = useState([]);
   const [dataFilter, setDataFilter] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
   const ITEMS_PER_PAGE = 100;
-  const [attr, setAttr] = useState(null);
+  const [attr, setAttr] = useState("");
+
+  const showFilter = () => {
+    setFilter(!filter);
+  };
+
+  // fetching data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/assets/_metadata.json");
+        const jsonData = await response.json();
+        //inscription id
+        const res = await fetch("/fronkcartel.json");
+        const json = await res.json();
+        setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
+
+        setData(jsonData);
+        setInscriptData(json);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // console.log(inscriptData);
 
   const getAttributes = data?.map((d) =>
     d.attributes.slice(2).map((v) => v.value)
   );
 
   const flattenedValues = getAttributes?.flat();
-  // const getAllValues = getAttributes?.slice(2).map((v) => v.value);
+  const getAllValues = getAttributes?.slice(2).map((v) => v.value);
 
   function countOccurrences(arr) {
     const occurrences = {};
@@ -70,117 +99,96 @@ export default function Home() {
   );
 
   function calculateTotal(data) {
-  const result = data?.map(item => {
-    const values = Object.values(item);
-    const total = values.reduce((acc, value) => (acc + (Number.isInteger(value) ? value : 0)), 0);
-
-    return {
-      name: item.name,
-      total,
-    };
-  });
-
-  return result;
-}
-const totalData = calculateTotal(transformedAndFilledData);
-
-function calculateTotalAndSort(data) {
-  const result = data
-    ?.map(item => {
+    const result = data?.map((item) => {
       const values = Object.values(item);
-      const total = values.reduce((acc, value) => (acc + (Number.isInteger(value) ? value : 0)), 0);
+      const total = values.reduce(
+        (acc, value) => acc + (Number.isInteger(value) ? value : 0),
+        0
+      );
 
       return {
         name: item.name,
         total,
       };
-    })
-    .sort((a, b) => a.total - b.total);
+    });
 
-  return result;
-}
+    return result;
+  }
+  const totalData = calculateTotal(transformedAndFilledData);
 
-const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
+  function calculateTotalAndSort(data) {
+    const result = data
+      ?.map((item) => {
+        const values = Object.values(item);
+        const total = values.reduce(
+          (acc, value) => acc + (Number.isInteger(value) ? value : 0),
+          0
+        );
 
-// console.log(sortedTotalData);
+        return {
+          name: item.name,
+          total,
+        };
+      })
+      .sort((a, b) => a.total - b.total);
 
+    return result;
+  }
 
+  const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
 
+  const compiledArr = [];
 
-  const handleSelectChange = (e) => {
-    setAttr(e.target.value);
-    showFilter();
+  const getCompiledData = () => {
+    data?.map((d) => {
+      const compiled = {
+        name: "",
+        inscriptionId: "",
+        image: "",
+        values: {},
+        total: "",
+      };
+
+      inscriptData?.map((i) => {
+        compiled.name = d.name;
+        compiled.image = d.image;
+        if (i.name === compiled.name) {
+          compiled.inscriptionId = i.inscriptionId;
+        }
+      });
+
+      sortedTotalData?.map((s) => {
+        if (s.name === d.name) {
+          compiled.total = s.total;
+        }
+      });
+
+      transformedAndFilledData?.map((t) => {
+        if (t.name === d.name) {
+          compiled.values = t;
+        }
+      });
+
+      compiledArr.push(compiled);
+    });
   };
 
-  const showFilter = () => {
-    setFilter(!filter);
-  };
+  getCompiledData();
 
-  useEffect(() => {
-    fetchData(currentPage);
+  // console.log(compiledArr);
 
-    // Scroll to the top of the page when the page changes
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
-
-  useEffect(() => {
-    fetchData(currentPage, searchTerm);
-    fetchDataFilter();
-  }, [currentPage, searchTerm, attr]);
-
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-
-  const fetchData = async (page, term = "") => {
-    try {
-      const response = await fetch("/_metadata.json");
-      const jsonData = await response.json();
-      setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
-
-      // Filter data based on the search term and selected attribute
-      const filteredData = jsonData
-        .filter((item) => {
-          // Always include all items when there is no search term
-          return term === "" || item.name.toString().includes(`#${term}`);
-        })
-        .filter((item) => {
-          if (attr !== null) {
-            // Check if attr is not null
-            // If an attribute is selected, filter based on it
-            return item.attributes.some(
-              (attribute) =>
-                attribute.value.toLowerCase() === attr.toLowerCase()
-            );
-          }
-          return true; // No attribute selected, include all items
-        })
-        .sort((a, b) => {
-          // Extract numbers from names and compare
-          const numA = parseInt(a.name.match(/\d+/)[0], 10);
-          const numB = parseInt(b.name.match(/\d+/)[0], 10);
-          return numA - numB;
-        });
-
-      setData(filteredData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  const fetchDataFilter = async () => {
-    try {
-      const response = await fetch("/_metadata.json");
-      const jsonData = await response.json();
-
-      setDataFilter(jsonData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+  const renderData = () => {
+    return compiledArr
+      ?.sort((a, b) => a.total - b.total)
+      .map((d, i) => {
+        return <Cards key={d.name} info={d} rank={i + 1} />;
+        // console.log(d);
+      });
   };
 
   const traitSet = new Set();
 
-  dataFilter?.forEach((d) => {
+  data?.forEach((d) => {
     d.attributes?.forEach((attribute) => {
       // Add both trait type and value to the set
       traitSet.add(`${attribute.trait_type}`);
@@ -188,12 +196,19 @@ const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
     });
   });
 
+  // console.log(traitSet);
+
+  const handleSelectChange = (e) => {
+    setAttr(e.target.value);
+    showFilter();
+  };
+
   // Convert the set to an array
   const uniqueTraits = Array.from(traitSet).slice(2);
   // const uniqueValues = Array.from(valueSet);
   const getValues = (trait) => {
     const valueSet = new Set();
-    dataFilter?.forEach((d) => {
+    data?.forEach((d) => {
       d.attributes?.forEach((attribute) => {
         if (attribute.trait_type.slice(2).toLowerCase() === trait) {
           valueSet.add(`${attribute.value}`);
@@ -230,12 +245,6 @@ const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
 
   // console.log(attr);
 
-  const renderData = () => {
-    return data?.slice(startIndex, endIndex).map((d) => {
-      return <Cards key={d.dna} info={d} rank={sortedTotalData} />;
-    });
-  };
-
   const renderPaginationButtons = () => {
     const buttons = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -253,6 +262,68 @@ const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
     }
     return buttons;
   };
+
+  //   useEffect(() => {
+  //     fetchData(currentPage);
+
+  //     // Scroll to the top of the page when the page changes
+  //     window.scrollTo({ top: 0, behavior: "smooth" });
+  //   }, [currentPage]);
+
+  //   useEffect(() => {
+  //     fetchData(currentPage, searchTerm);
+  //     fetchDataFilter();
+  //   }, [currentPage, searchTerm, attr]);
+
+  //   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  //   const endIndex = startIndex + ITEMS_PER_PAGE;
+
+  //   const fetchData = async (page, term = "") => {
+  //     try {
+  //       const response = await fetch("/_metadata.json");
+  //       const jsonData = await response.json();
+  //       setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
+
+  //       // Filter data based on the search term and selected attribute
+  //       const filteredData = jsonData
+  //         .filter((item) => {
+  //           // Always include all items when there is no search term
+  //           return term === "" || item.name.toString().includes(`#${term}`);
+  //         })
+  //         .filter((item) => {
+  //           if (attr !== null) {
+  //             // Check if attr is not null
+  //             // If an attribute is selected, filter based on it
+  //             return item.attributes.some(
+  //               (attribute) =>
+  //                 attribute.value.toLowerCase() === attr.toLowerCase()
+  //             );
+  //           }
+  //           return true; // No attribute selected, include all items
+  //         })
+  //         // .sort((a, b) => {
+  //         //   // Extract numbers from names and compare
+  //         //   const numA = parseInt(a.name.match(/\d+/)[0], 10);
+  //         //   const numB = parseInt(b.name.match(/\d+/)[0], 10);
+  //         //   return numA - numB;
+  //         // });
+
+  //       setData(filteredData);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   const fetchDataFilter = async () => {
+  //     try {
+  //       const response = await fetch("/_metadata.json");
+  //       const jsonData = await response.json();
+
+  //       setDataFilter(jsonData);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
   useEffect(() => {
     const reveal = gsap.fromTo(
@@ -341,39 +412,7 @@ const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
               Filter By Traits
             </h3>
             <div className="pl-8 pr-8">
-              <div>
-                {renderSelect()}
-                {/* <select>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                </select>
-
-                <select>
-                  <option value="Body">Face</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                </select>
-
-                <select>
-                  <option value="Body">Face</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                </select> */}
-                {/* <select>
-                  <option value="Body">Face</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                  <option value="Body">Body</option>
-                </select> */}
-              </div>
+              <div>{renderSelect()}</div>
               <div className="mt-2 text-end ">
                 <button
                   onClick={(e) => {
