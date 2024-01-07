@@ -67,7 +67,7 @@ export default function Cards({ info, rank }) {
         <div>
           <div className="flex justify-end items-center px-3">
             <p className="text-primary font-bold px-2 py-2 text-sm text-end">
-              #{rank}
+              Rank {rank}
             </p>
             <div onClick={handleCopyClick} className="text-primary ">
               {copied ? (

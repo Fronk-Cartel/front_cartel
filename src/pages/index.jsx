@@ -2,14 +2,18 @@
 // /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
 import Cards from "@/components/Cards";
+import axios from "axios";
 import { gsap } from "gsap";
 // // import Cards from "@/components/Cards";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
+import { FixedSizeList } from "react-window";
+
 
 export default function Home() {
   const [data, setData] = useState([]);
+  const [test, setTest] = useState([]);
   const [inscriptData, setInscriptData] = useState([]);
   const [dataFilter, setDataFilter] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,12 +31,15 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/assets/_metadata.json");
+        const response = await fetch("/_metadata.json");
+        const r = await fetch("/sortedData.json");
         const jsonData = await response.json();
         //inscription id
         const res = await fetch("/fronkcartel.json");
         const json = await res.json();
+        const n = await r.json();
 
+        setTest(n);
         setData(jsonData);
         setInscriptData(json);
       } catch (error) {
@@ -176,16 +183,32 @@ export default function Home() {
 
   getCompiledData();
 
-  // console.log(compiledArr);
   const sortedData = compiledArr?.sort((a, b) => a.rank - b.rank);
+  // console.log(sortedData);
+
+  // useEffect(() => {
+  //   const sendData = async () => {
+  //     try {
+  //       const res = await axios.post("/api/seed", sortedData);
+  //       // const data = await res.json();
+
+  //       console.log(res);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   if (sortedData.length > 0) {
+  //     sendData();
+  //   }
+  // }, []);
 
   // const valu = compiledArr
   //   ?.sort((a, b) => a.rank - b.rank)
   //   .filter((m) => Object.keys(m.values).includes("Doofus "));
   const renderData = () => {
-    const filteredData = sortedData?.filter((d) => {
+    const filteredData = test?.filter((d) => {
       const nameMatch = searchTerm === "" || d.name.includes(searchTerm);
-      const attrMatch = !attr || Object.keys(d.values).includes("Doofus ");
+      const attrMatch = !attr || Object.keys(d.values).includes(attr);
 
       return nameMatch && attrMatch;
     });
@@ -211,7 +234,7 @@ export default function Home() {
     }
   };
 
-  // console.log(attr);
+  // console.log(test);
 
   useEffect(() => {
     renderData();
@@ -276,7 +299,7 @@ export default function Home() {
   };
 
   const renderPaginationButtons = () => {
-    const totalPages = Math.ceil(sortedData.length / itemsPerPage);
+    const totalPages = Math.ceil(test.length / itemsPerPage);
     const buttons = [];
 
     for (let i = 1; i <= totalPages; i++) {
