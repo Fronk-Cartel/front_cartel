@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Traits({ trait, value, total }) {
-  const calcPercentage = (value * 100) / total;
+  const calcPercentage = Math.round((value * 100) / total);
+
   // console.log(calcPercentage);
 
   return (
