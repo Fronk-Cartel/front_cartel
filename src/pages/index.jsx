@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/_metadata.json");
+        const response = await fetch("/assets/_metadata.json");
         const jsonData = await response.json();
         //inscription id
         const res = await fetch("/fronkcartel.json");
