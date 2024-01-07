@@ -10,7 +10,6 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 import { FixedSizeList } from "react-window";
 
-
 export default function Home() {
   const [data, setData] = useState([]);
   const [test, setTest] = useState([]);
@@ -28,13 +27,36 @@ export default function Home() {
   };
 
   // fetching data
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       if (!filter) {
+  //         const response = await fetch("/assets/_metadata.json");
+  //         // const r = await fetch("/sortedData.json");
+  //         const jsonData = await response.json();
+  //         //inscription id
+  //         const res = await fetch("/fronkcartel.json");
+  //         const json = await res.json();
+  //         // const n = await r.json();
+
+  //         // setTest(n);
+  //         setData(jsonData);
+  //         setInscriptData(json);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, [filter]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/_metadata.json");
         const r = await fetch("/sortedData.json");
         const jsonData = await response.json();
-        //inscription id
+        // inscription id
         const res = await fetch("/fronkcartel.json");
         const json = await res.json();
         const n = await r.json();
@@ -51,139 +73,139 @@ export default function Home() {
 
   // console.log(inscriptData);
 
-  const getAttributes = data?.map((d) =>
-    d.attributes.slice(2).map((v) => v.value)
-  );
+  // const getAttributes = data?.map((d) =>
+  //   d.attributes.slice(2).map((v) => v.value)
+  // );
 
-  const flattenedValues = getAttributes?.flat();
-  const getAllValues = getAttributes?.slice(2).map((v) => v.value);
+  // const flattenedValues = getAttributes?.flat();
+  // const getAllValues = getAttributes?.slice(2).map((v) => v.value);
 
-  function countOccurrences(arr) {
-    const occurrences = {};
+  // function countOccurrences(arr) {
+  //   const occurrences = {};
 
-    // Loop through the array
-    arr?.forEach((element) => {
-      // If the element is already in the occurrences object, increment its count
-      if (occurrences[element]) {
-        occurrences[element]++;
-      } else {
-        // If the element is not in the occurrences object, initialize its count to 1
-        occurrences[element] = 1;
-      }
-    });
+  //   // Loop through the array
+  //   arr?.forEach((element) => {
+  //     // If the element is already in the occurrences object, increment its count
+  //     if (occurrences[element]) {
+  //       occurrences[element]++;
+  //     } else {
+  //       // If the element is not in the occurrences object, initialize its count to 1
+  //       occurrences[element] = 1;
+  //     }
+  //   });
 
-    return occurrences;
-  }
+  //   return occurrences;
+  // }
 
-  const occurrencesObject = countOccurrences(flattenedValues);
-  // console.log(occurrencesObject);
+  // const occurrencesObject = countOccurrences(flattenedValues);
+  // // console.log(occurrencesObject);
 
-  function transformAndFillDigits(inputData, digitsData) {
-    const result = inputData?.map((item) => {
-      const attributesDict = {};
+  // function transformAndFillDigits(inputData, digitsData) {
+  //   const result = inputData?.map((item) => {
+  //     const attributesDict = {};
 
-      item.attributes?.slice(2).forEach((attribute) => {
-        const traitType = attribute?.value;
-        const digits =
-          digitsData[traitType] !== undefined ? digitsData[traitType] : null;
+  //     item.attributes?.slice(2).forEach((attribute) => {
+  //       const traitType = attribute?.value;
+  //       const digits =
+  //         digitsData[traitType] !== undefined ? digitsData[traitType] : null;
 
-        attributesDict[traitType] = digits;
-      });
+  //       attributesDict[traitType] = digits;
+  //     });
 
-      return {
-        name: item.name,
-        ...attributesDict,
-      };
-    });
+  //     return {
+  //       name: item.name,
+  //       ...attributesDict,
+  //     };
+  //   });
 
-    return result;
-  }
+  //   return result;
+  // }
 
-  const transformedAndFilledData = transformAndFillDigits(
-    data,
-    occurrencesObject
-  );
+  // const transformedAndFilledData = transformAndFillDigits(
+  //   data,
+  //   occurrencesObject
+  // );
 
-  function calculateTotal(data) {
-    const result = data?.map((item) => {
-      const values = Object.values(item);
-      const total = values.reduce(
-        (acc, value) => acc + (Number.isInteger(value) ? value : 0),
-        0
-      );
+  // function calculateTotal(data) {
+  //   const result = data?.map((item) => {
+  //     const values = Object.values(item);
+  //     const total = values.reduce(
+  //       (acc, value) => acc + (Number.isInteger(value) ? value : 0),
+  //       0
+  //     );
 
-      return {
-        name: item.name,
-        total,
-      };
-    });
+  //     return {
+  //       name: item.name,
+  //       total,
+  //     };
+  //   });
 
-    return result;
-  }
-  const totalData = calculateTotal(transformedAndFilledData);
+  //   return result;
+  // }
+  // const totalData = calculateTotal(transformedAndFilledData);
 
-  function calculateTotalAndSort(data) {
-    const result = data
-      ?.map((item) => {
-        const values = Object.values(item);
-        const total = values.reduce(
-          (acc, value) => acc + (Number.isInteger(value) ? value : 0),
-          0
-        );
+  // function calculateTotalAndSort(data) {
+  //   const result = data
+  //     ?.map((item) => {
+  //       const values = Object.values(item);
+  //       const total = values.reduce(
+  //         (acc, value) => acc + (Number.isInteger(value) ? value : 0),
+  //         0
+  //       );
 
-        return {
-          name: item.name,
-          total,
-        };
-      })
-      .sort((a, b) => a.total - b.total);
+  //       return {
+  //         name: item.name,
+  //         total,
+  //       };
+  //     })
+  //     .sort((a, b) => a.total - b.total);
 
-    return result;
-  }
+  //   return result;
+  // }
 
-  const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
+  // const sortedTotalData = calculateTotalAndSort(transformedAndFilledData);
 
-  const compiledArr = [];
+  // const compiledArr = [];
 
-  const getCompiledData = () => {
-    data?.map((d) => {
-      const compiled = {
-        name: "",
-        inscriptionId: "",
-        image: "",
-        values: {},
-        total: "",
-        rank: "",
-      };
+  // const getCompiledData = () => {
+  //   data?.map((d) => {
+  //     const compiled = {
+  //       name: "",
+  //       inscriptionId: "",
+  //       image: "",
+  //       values: {},
+  //       total: "",
+  //       rank: "",
+  //     };
 
-      inscriptData?.map((i) => {
-        compiled.name = d.name;
-        compiled.image = d.image;
-        if (i.name === compiled.name) {
-          compiled.inscriptionId = i.inscriptionId;
-        }
-      });
+  //     inscriptData?.map((i) => {
+  //       compiled.name = d.name;
+  //       compiled.image = d.image;
+  //       if (i.name === compiled.name) {
+  //         compiled.inscriptionId = i.inscriptionId;
+  //       }
+  //     });
 
-      sortedTotalData?.map((s, i) => {
-        if (s.name === d.name) {
-          compiled.total = s.total;
-          compiled.rank = i + 1;
-        }
-      });
+  //     sortedTotalData?.map((s, i) => {
+  //       if (s.name === d.name) {
+  //         compiled.total = s.total;
+  //         compiled.rank = i + 1;
+  //       }
+  //     });
 
-      transformedAndFilledData?.map((t) => {
-        if (t.name === d.name) {
-          compiled.values = t;
-        }
-      });
+  //     transformedAndFilledData?.map((t) => {
+  //       if (t.name === d.name) {
+  //         compiled.values = t;
+  //       }
+  //     });
 
-      compiledArr.push(compiled);
-    });
-  };
+  //     compiledArr.push(compiled);
+  //   });
+  // };
 
-  getCompiledData();
+  // getCompiledData();
 
-  const sortedData = compiledArr?.sort((a, b) => a.rank - b.rank);
+  // const sortedData = compiledArr?.sort((a, b) => a.rank - b.rank);
   // console.log(sortedData);
 
   // useEffect(() => {
@@ -197,9 +219,10 @@ export default function Home() {
   //       console.log(err);
   //     }
   //   };
-  //   if (sortedData.length > 0) {
-  //     sendData();
-  //   }
+  // if (sortedData.length > 0) {
+  // console.log(sortedData);
+  // sendData();
+  // }
   // }, []);
 
   // const valu = compiledArr
@@ -368,7 +391,7 @@ export default function Home() {
         </section>
 
         <section className="pb-20">
-          {data?.length > 0 ? (
+          {test?.length > 0 ? (
             <>
               <div className="image-gallery mt-10">{renderData()}</div>
               <div>
