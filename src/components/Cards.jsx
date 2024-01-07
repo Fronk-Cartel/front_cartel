@@ -91,7 +91,7 @@ export default function Cards({ info, rank }) {
           >
             X
           </div>
-          {/* <Modal info={info} /> */}
+          <Modal info={info} />
         </>
       )}
     </>

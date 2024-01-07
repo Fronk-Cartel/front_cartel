@@ -16,7 +16,7 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
-  const ITEMS_PER_PAGE = 100;
+  const itemsPerPage = 100;
   const [attr, setAttr] = useState("");
 
   const showFilter = () => {
@@ -27,12 +27,11 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/assets/_metadata.json");
+        const response = await fetch("/_metadata.json");
         const jsonData = await response.json();
         //inscription id
         const res = await fetch("/fronkcartel.json");
         const json = await res.json();
-        setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
 
         setData(jsonData);
         setInscriptData(json);
@@ -147,6 +146,7 @@ export default function Home() {
         image: "",
         values: {},
         total: "",
+        rank: "",
       };
 
       inscriptData?.map((i) => {
@@ -157,9 +157,10 @@ export default function Home() {
         }
       });
 
-      sortedTotalData?.map((s) => {
+      sortedTotalData?.map((s, i) => {
         if (s.name === d.name) {
           compiled.total = s.total;
+          compiled.rank = i + 1;
         }
       });
 
@@ -176,15 +177,46 @@ export default function Home() {
   getCompiledData();
 
   // console.log(compiledArr);
+  const sortedData = compiledArr?.sort((a, b) => a.rank - b.rank);
 
+  // const valu = compiledArr
+  //   ?.sort((a, b) => a.rank - b.rank)
+  //   .filter((m) => Object.keys(m.values).includes("Doofus "));
   const renderData = () => {
-    return compiledArr
-      ?.sort((a, b) => a.total - b.total)
-      .map((d, i) => {
-        return <Cards key={d.name} info={d} rank={i + 1} />;
-        // console.log(d);
-      });
+    const filteredData = sortedData?.filter((d) => {
+      const nameMatch = searchTerm === "" || d.name.includes(searchTerm);
+      const attrMatch = !attr || Object.keys(d.values).includes("Doofus ");
+
+      return nameMatch && attrMatch;
+    });
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
+    if (currentData && currentData.length > 0) {
+      return currentData.map((d) => (
+        <Cards key={d.name} info={d} rank={d.rank} />
+      ));
+    } else {
+      return (
+        <div className="text-center mt-20 text-xl">
+          {searchTerm ? (
+            "No results found."
+          ) : (
+            <div className="animate-pulse">Loading...</div>
+          )}
+        </div>
+      );
+    }
   };
+
+  // console.log(attr);
+
+  useEffect(() => {
+    renderData();
+  }, [attr, searchTerm]);
+  // console.log(attr);
 
   const traitSet = new Set();
 
@@ -243,10 +275,10 @@ export default function Home() {
     });
   };
 
-  // console.log(attr);
-
   const renderPaginationButtons = () => {
+    const totalPages = Math.ceil(sortedData.length / itemsPerPage);
     const buttons = [];
+
     for (let i = 1; i <= totalPages; i++) {
       buttons.push(
         <button
@@ -263,67 +295,10 @@ export default function Home() {
     return buttons;
   };
 
-  //   useEffect(() => {
-  //     fetchData(currentPage);
-
-  //     // Scroll to the top of the page when the page changes
-  //     window.scrollTo({ top: 0, behavior: "smooth" });
-  //   }, [currentPage]);
-
-  //   useEffect(() => {
-  //     fetchData(currentPage, searchTerm);
-  //     fetchDataFilter();
-  //   }, [currentPage, searchTerm, attr]);
-
-  //   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  //   const endIndex = startIndex + ITEMS_PER_PAGE;
-
-  //   const fetchData = async (page, term = "") => {
-  //     try {
-  //       const response = await fetch("/_metadata.json");
-  //       const jsonData = await response.json();
-  //       setTotalPages(Math.ceil(jsonData?.length / ITEMS_PER_PAGE));
-
-  //       // Filter data based on the search term and selected attribute
-  //       const filteredData = jsonData
-  //         .filter((item) => {
-  //           // Always include all items when there is no search term
-  //           return term === "" || item.name.toString().includes(`#${term}`);
-  //         })
-  //         .filter((item) => {
-  //           if (attr !== null) {
-  //             // Check if attr is not null
-  //             // If an attribute is selected, filter based on it
-  //             return item.attributes.some(
-  //               (attribute) =>
-  //                 attribute.value.toLowerCase() === attr.toLowerCase()
-  //             );
-  //           }
-  //           return true; // No attribute selected, include all items
-  //         })
-  //         // .sort((a, b) => {
-  //         //   // Extract numbers from names and compare
-  //         //   const numA = parseInt(a.name.match(/\d+/)[0], 10);
-  //         //   const numB = parseInt(b.name.match(/\d+/)[0], 10);
-  //         //   return numA - numB;
-  //         // });
-
-  //       setData(filteredData);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-
-  //   const fetchDataFilter = async () => {
-  //     try {
-  //       const response = await fetch("/_metadata.json");
-  //       const jsonData = await response.json();
-
-  //       setDataFilter(jsonData);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    // Scroll to the top of the page when the page changes
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
 
   useEffect(() => {
     const reveal = gsap.fromTo(
