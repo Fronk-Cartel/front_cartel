@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 import { BsSortDownAlt } from "react-icons/bs";
+import Image from "next/image";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -364,7 +365,7 @@ export default function Home() {
 
   useEffect(() => {
     const reveal = gsap.fromTo(
-      "input, h2, .filter",
+      "input, h2, .filter, .logo",
       { opacity: 0 },
       {
         opacity: 1,
@@ -382,7 +383,17 @@ export default function Home() {
     <Layout title="Search" className={` bg-primary`}>
       <div className="container mx-auto ">
         <section>
-          <div className="flex flex-col justify-center items-center mt-10 px-4 ">
+          <div className="logo bg-blue-00 flex justify-center w-full md:mt-7 px-3  ">
+            <Image
+              src={`/assets/logo/fronkcartellogo2.png`}
+              width={500}
+              height={500}
+              alt="logo"
+              priority
+              className="w-full lg:w-2/3 h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col justify-center mt-10 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">
               Search NFT rarity by number
             </h2>

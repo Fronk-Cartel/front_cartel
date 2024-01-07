@@ -17,11 +17,11 @@ export default function Header() {
 
   return (
     <header className="min-h-[10vh] flex items-center justify-center">
-      <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-sm">
+      <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-base">
         <ul ref={navRef} className="flex gap-10 bg-red-0">
-          <li>
+          {/* <li>
             <a href="https://fronk-cartel.vercel.app/">HOME</a>
-          </li>
+          </li> */}
           <li>
             <a href="https://twitter.com/FronkCartel">X</a>
           </li>

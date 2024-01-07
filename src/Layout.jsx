@@ -9,6 +9,7 @@ export default function Layout({ title, children }) {
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/images/5004.png" />
+        {/* <link rel="stylesheet" href="" /> */}
       </Head>
       <Header />
       <main className="min-h-screen">{children}</main>
