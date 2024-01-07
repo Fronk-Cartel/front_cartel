@@ -1,14 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-// /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
 import Cards from "@/components/Cards";
-import axios from "axios";
 import { gsap } from "gsap";
-// // import Cards from "@/components/Cards";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
-import { FixedSizeList } from "react-window";
+import { BsSortDownAlt } from "react-icons/bs";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -17,6 +14,7 @@ export default function Home() {
   const [dataFilter, setDataFilter] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [toggle, setToggle] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
   const itemsPerPage = 100;
@@ -24,6 +22,10 @@ export default function Home() {
 
   const showFilter = () => {
     setFilter(!filter);
+  };
+
+  const toggleSortData = () => {
+    setToggle(!toggle);
   };
 
   // fetching data
@@ -228,8 +230,22 @@ export default function Home() {
   // const valu = compiledArr
   //   ?.sort((a, b) => a.rank - b.rank)
   //   .filter((m) => Object.keys(m.values).includes("Doofus "));
+  const toggleData = [...test];
+
+  toggleData?.sort((a, b) => {
+    // Extract numbers from names
+    const numberA = parseInt(a.name.match(/\d+/)[0], 10);
+    const numberB = parseInt(b.name.match(/\d+/)[0], 10);
+
+    // Compare the extracted numbers
+    return numberA - numberB;
+  });
+
+  // console.log(toggleData);
+
   const renderData = () => {
-    const filteredData = test?.filter((d) => {
+    const dataToRender = toggle ? toggleData : test;
+    const filteredData = dataToRender?.filter((d) => {
       const nameMatch = searchTerm === "" || d.name.includes(searchTerm);
       const attrMatch = !attr || Object.keys(d.values).includes(attr);
 
@@ -261,7 +277,7 @@ export default function Home() {
 
   useEffect(() => {
     renderData();
-  }, [attr, searchTerm]);
+  }, [attr, searchTerm, toggle]);
   // console.log(attr);
 
   const traitSet = new Set();
@@ -377,7 +393,7 @@ export default function Home() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <div className="absolute top-3 right-16 text-primary ">
+              <div className="absolute top-3 right-28 text-primary ">
                 <AiOutlineSearch size={28} />
               </div>
               <div
@@ -385,6 +401,12 @@ export default function Home() {
                 className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
               >
                 <FiFilter size={24} />
+              </div>
+              <div
+                onClick={toggleSortData}
+                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
+              >
+                <BsSortDownAlt size={24} />
               </div>
             </div>
           </div>
