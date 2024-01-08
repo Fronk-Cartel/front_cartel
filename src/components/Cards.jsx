@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
@@ -76,7 +77,7 @@ export default function Cards({ info, rank }) {
           </p>
         </div>
         <div onClick={show}>
-          <Image
+          <img
             src={image}
             width={500}
             height={500}
