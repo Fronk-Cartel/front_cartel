@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Traits from "./Traits";
 import { MdOutlineContentCopy } from "react-icons/md";
 
-export default function Modal({ info }) {
+export default function Modal({ info, img }) {
   const [data, setData] = useState(null);
   const [allData, setAllData] = useState(null);
   const [ins, setIns] = useState("");
@@ -156,7 +156,7 @@ export default function Modal({ info }) {
           <h3 className="text-lg">{info?.name}</h3>
           <div className="w-1/2  my-2 rounded-lg overflow-hidden">
             <Image
-              src={`/assets/images${info?.image}`}
+              src={img}
               width={500}
               height={500}
               alt="hello"

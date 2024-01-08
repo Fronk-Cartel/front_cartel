@@ -9,6 +9,28 @@ export default function Cards({ info, rank }) {
   const [showModal, setShowModal] = useState(false);
   const [copied, setCopied] = useState(false);
   const cardRef = useRef(null);
+  const [digit, setDigit] = useState("");
+
+  const imageName = info.name;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const getNumber = () => {
+    const match = imageName.match(/\d+/);
+    if (match) {
+      const extractedNumber = parseInt(match[0], 10);
+      setDigit(extractedNumber);
+    } else {
+      console.log("No number found in the name.");
+    }
+  };
+
+  useEffect(() => {
+    getNumber();
+  }, [getNumber]);
+
+  const image =
+    digit <= 5000
+      ? `https://ik.imagekit.io/Cartel/1/${digit}.png`
+      : `https://ik.imagekit.io/Cartel/2/${digit}.png`;
 
   const show = () => {
     setShowModal(!showModal);
@@ -55,7 +77,7 @@ export default function Cards({ info, rank }) {
         </div>
         <div onClick={show}>
           <Image
-            src={`/assets/images${info.image}`}
+            src={image}
             width={500}
             height={500}
             alt="hello"
@@ -91,7 +113,7 @@ export default function Cards({ info, rank }) {
           >
             X
           </div>
-          <Modal info={info} />
+          <Modal info={info} img={image} />
         </>
       )}
     </>
