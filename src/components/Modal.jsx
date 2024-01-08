@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Traits from "./Traits";
@@ -155,7 +156,7 @@ export default function Modal({ info, img }) {
         >
           <h3 className="text-lg">{info?.name}</h3>
           <div className="w-1/2  my-2 rounded-lg overflow-hidden">
-            <Image
+            <img
               src={img}
               width={500}
               height={500}

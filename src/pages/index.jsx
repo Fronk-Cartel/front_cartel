@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
 import Cards from "@/components/Cards";
@@ -384,12 +385,12 @@ export default function Home() {
       <div className="container mx-auto ">
         <section>
           <div className="logo bg-blue-00 flex justify-center w-full md:mt-7 px-3  ">
-            <Image
+            <img
               src={`/assets/logo/fronkcartellogo2.png`}
               width={500}
               height={500}
               alt="logo"
-              priority
+              // priority
               className="w-full lg:w-2/3 h-full object-contain"
             />
           </div>
