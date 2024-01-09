@@ -81,7 +81,7 @@ export default function Cards({ info, rank }) {
             src={image}
             width={500}
             height={500}
-            alt="hello"
+            alt={info.name}
             //   priority
             loading="lazy"
             className="w-full h-full object-contain"

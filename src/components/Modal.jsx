@@ -160,7 +160,7 @@ export default function Modal({ info, img }) {
               src={img}
               width={500}
               height={500}
-              alt="hello"
+              alt={info.name}
               //   priority
               loading="lazy"
               className="w-full h-full object-contain"
