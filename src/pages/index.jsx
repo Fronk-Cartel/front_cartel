@@ -381,7 +381,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout title="Search" className={` bg-primary`}>
+    <Layout title="Rarity" className={` bg-primary`}>
       <div className="container mx-auto ">
         <section>
           <div className="logo bg-blue-00 flex justify-center w-full md:mt-7 px-3  ">
