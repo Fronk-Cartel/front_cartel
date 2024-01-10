@@ -21,6 +21,27 @@ export default function Home() {
   const [filter, setFilter] = useState(false);
   const itemsPerPage = 100;
   const [attr, setAttr] = useState("");
+  const [body, setBody] = useState("");
+  const [head, setHead] = useState("");
+  const [eye, setEye] = useState("");
+  const [mouth, setMouth] = useState("");
+
+  const handleSelectChangeHead = (e) => {
+    setHead(e.target.value);
+    showFilter();
+  };
+  const handleSelectChangeMouth = (e) => {
+    setMouth(e.target.value);
+    showFilter();
+  };
+  const handleSelectChangeEye = (e) => {
+    setEye(e.target.value);
+    showFilter();
+  };
+  const handleSelectChangeBody = (e) => {
+    setBody(e.target.value);
+    showFilter();
+  };
 
   const showFilter = () => {
     setFilter(!filter);
@@ -59,9 +80,9 @@ export default function Home() {
       try {
         const response = await fetch("/_metadata.json");
         const r = await fetch("/sortedData.json");
-        const jsonData = await response.json();
-        // inscription id
         const res = await fetch("/fronkcartel.json");
+
+        const jsonData = await response.json();
         const json = await res.json();
         const n = await r.json();
 
@@ -249,9 +270,12 @@ export default function Home() {
     const dataToRender = toggle ? toggleData : test;
     const filteredData = dataToRender?.filter((d) => {
       const nameMatch = searchTerm === "" || d.name.includes(searchTerm);
-      const attrMatch = !attr || Object.keys(d.values).includes(attr);
+      const headMatch = !head || Object.keys(d.values).includes(head);
+      const bodyMatch = !body || Object.keys(d.values).includes(body);
+      const eyeMatch = !eye || Object.keys(d.values).includes(eye);
+      const mouthMatch = !mouth || Object.keys(d.values).includes(mouth);
 
-      return nameMatch && attrMatch;
+      return nameMatch && headMatch && bodyMatch && eyeMatch && mouthMatch;
     });
 
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -279,7 +303,7 @@ export default function Home() {
 
   useEffect(() => {
     renderData();
-  }, [attr, searchTerm, toggle]);
+  }, [head, body, mouth, eye, searchTerm, toggle]);
   // console.log(attr);
 
   const traitSet = new Set();
@@ -293,11 +317,6 @@ export default function Home() {
   });
 
   // console.log(traitSet);
-
-  const handleSelectChange = (e) => {
-    setAttr(e.target.value);
-    showFilter();
-  };
 
   // Convert the set to an array
   const uniqueTraits = Array.from(traitSet).slice(2);
@@ -336,6 +355,47 @@ export default function Home() {
           </select>
         </div>
       );
+    });
+  };
+  const renderBody = () => {
+    return uniqueTraits?.map((t) => {
+      const trait_values = getValues("body");
+
+      return Array.from(trait_values)?.map((v) => (
+        <option key={v} value={v}>
+          {v}
+        </option>
+      ));
+    });
+  };
+  const renderHead = () => {
+    return uniqueTraits?.map((t) => {
+      const trait_values = getValues("head");
+      return Array.from(trait_values)?.map((v) => (
+        <option key={v} value={v}>
+          {v}
+        </option>
+      ));
+    });
+  };
+  const renderEye = () => {
+    return uniqueTraits?.map((t) => {
+      const trait_values = getValues("eye");
+      return Array.from(trait_values)?.map((v) => (
+        <option key={v} value={v}>
+          {v}
+        </option>
+      ));
+    });
+  };
+  const renderMouth = () => {
+    return uniqueTraits?.map((t) => {
+      const trait_values = getValues("mouth");
+      return Array.from(trait_values)?.map((v) => (
+        <option key={v} value={v}>
+          {v}
+        </option>
+      ));
     });
   };
 
@@ -467,7 +527,37 @@ export default function Home() {
               Filter By Traits
             </h3>
             <div className="pl-8 pr-8">
-              <div>{renderSelect()}</div>
+              <div>
+                <label htmlFor="body">Body</label>
+                <select onChange={handleSelectChangeBody}>
+                  <option value="">Select Value</option>
+                  {renderBody()}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="head">Head</label>
+                <select onChange={handleSelectChangeHead}>
+                  <option value="">Select Value</option>
+                  {renderHead()}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="mouth">Mouth</label>
+                <select onChange={handleSelectChangeMouth}>
+                  <option value="">Select Value</option>
+                  {renderMouth()}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="eye">Eye</label>
+                <select onChange={handleSelectChangeEye}>
+                  <option value="">Select Value</option>
+                  {renderEye()}
+                </select>
+              </div>
               <div className="mt-2 text-end ">
                 <button
                   onClick={(e) => {
