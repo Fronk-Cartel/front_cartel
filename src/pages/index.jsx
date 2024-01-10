@@ -513,11 +513,11 @@ export default function Home() {
             <h3 className="text-xl text-center mb-5 text-primary font-medium">
               Filter By Traits
             </h3>
-            <div className="pl-8 pr-8">
+            <form className="pl-8 pr-8">
               <div>
                 <label htmlFor="body">Body</label>
                 <select onChange={handleSelectChangeBody}>
-                  <option value="">{defaultValue}</option>
+                  <option value={defaultValue}>{defaultValue}</option>
                   {renderBody()}
                 </select>
               </div>
@@ -525,7 +525,7 @@ export default function Home() {
               <div>
                 <label htmlFor="head">Head</label>
                 <select onChange={handleSelectChangeHead}>
-                  <option value="">{defaultValue}</option>
+                  <option value={defaultValue}>{defaultValue}</option>
                   {renderHead()}
                 </select>
               </div>
@@ -533,7 +533,7 @@ export default function Home() {
               <div>
                 <label htmlFor="mouth">Mouth</label>
                 <select onChange={handleSelectChangeMouth}>
-                  <option value="">{defaultValue}</option>
+                  <option value={defaultValue}>{defaultValue}</option>
                   {renderMouth()}
                 </select>
               </div>
@@ -541,13 +541,14 @@ export default function Home() {
               <div>
                 <label htmlFor="eye">Eye</label>
                 <select onChange={handleSelectChangeEye}>
-                  <option value="">{defaultValue}</option>
+                  <option value={defaultValue}>{defaultValue}</option>
                   {renderEye()}
                 </select>
               </div>
               <div className="mt-2 text-end ">
                 <button
                   onClick={(e) => {
+                    // e.preventDefault();
                     setHead(defaultValue);
                     setEye(defaultValue);
                     setMouth(defaultValue);
@@ -559,7 +560,7 @@ export default function Home() {
                   Reset
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
