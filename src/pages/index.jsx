@@ -289,7 +289,7 @@ export default function Home() {
     } else {
       return (
         <div className="text-center mt-20 text-xl">
-          {searchTerm ? (
+          {currentData.length === 0 ? (
             "No results found."
           ) : (
             <div className="animate-pulse">Loading...</div>
@@ -561,7 +561,10 @@ export default function Home() {
               <div className="mt-2 text-end ">
                 <button
                   onClick={(e) => {
-                    setAttr(null);
+                    setHead(null);
+                    setEye(null);
+                    setMouth(null);
+                    setBody(null);
                     setFilter(!filter);
                   }}
                   className="border-2 border-primary hover:bg-primary hover:text-white duration-300 px-2 rounded-md"
