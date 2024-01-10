@@ -20,11 +20,13 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
   const itemsPerPage = 100;
-  const [attr, setAttr] = useState("");
-  const [body, setBody] = useState("");
-  const [head, setHead] = useState("");
-  const [eye, setEye] = useState("");
-  const [mouth, setMouth] = useState("");
+  const defaultValue = "Select a value";
+  const [body, setBody] = useState(defaultValue);
+  const [head, setHead] = useState(defaultValue);
+  const [eye, setEye] = useState(defaultValue);
+  const [mouth, setMouth] = useState(defaultValue);
+
+  // console.log(head, mouth, body, eye);
 
   const handleSelectChangeHead = (e) => {
     setHead(e.target.value);
@@ -231,24 +233,7 @@ export default function Home() {
   // getCompiledData();
 
   // const sortedData = compiledArr?.sort((a, b) => a.rank - b.rank);
-  // console.log(sortedData);
-
-  // useEffect(() => {
-  //   const sendData = async () => {
-  //     try {
-  //       const res = await axios.post("/api/seed", sortedData);
-  //       // const data = await res.json();
-
-  //       console.log(res);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  // if (sortedData.length > 0) {
-  // console.log(sortedData);
-  // sendData();
-  // }
-  // }, []);
+  // console.log(compiledArr);
 
   // const valu = compiledArr
   //   ?.sort((a, b) => a.rank - b.rank)
@@ -264,16 +249,18 @@ export default function Home() {
     return numberA - numberB;
   });
 
-  // console.log(toggleData);
-
   const renderData = () => {
     const dataToRender = toggle ? toggleData : test;
     const filteredData = dataToRender?.filter((d) => {
-      const nameMatch = searchTerm === "" || d.name.includes(searchTerm);
-      const headMatch = !head || Object.keys(d.values).includes(head);
-      const bodyMatch = !body || Object.keys(d.values).includes(body);
-      const eyeMatch = !eye || Object.keys(d.values).includes(eye);
-      const mouthMatch = !mouth || Object.keys(d.values).includes(mouth);
+      const nameMatch = searchTerm === "" || d.name.includes(`#${searchTerm}`);
+      const headMatch =
+        head === defaultValue || Object.keys(d.values).includes(head);
+      const bodyMatch =
+        body === defaultValue || Object.keys(d.values).includes(body);
+      const eyeMatch =
+        eye === defaultValue || Object.keys(d.values).includes(eye);
+      const mouthMatch =
+        mouth === defaultValue || Object.keys(d.values).includes(mouth);
 
       return nameMatch && headMatch && bodyMatch && eyeMatch && mouthMatch;
     });
@@ -335,28 +322,28 @@ export default function Home() {
 
   // console.log(getValues("body"));
 
-  const renderSelect = () => {
-    return uniqueTraits?.map((t) => {
-      const trait_values = getValues(t.slice(2).toLowerCase());
-      // console.log(t);
+  // const renderSelect = () => {
+  //   return uniqueTraits?.map((t) => {
+  //     const trait_values = getValues(t.slice(2).toLowerCase());
+  //     // console.log(t);
 
-      //  console.log(`Trait: ${t.slice(2)}, Values: ${Array.from(trait_values)}`);
+  //     //  console.log(`Trait: ${t.slice(2)}, Values: ${Array.from(trait_values)}`);
 
-      return (
-        <div key={t}>
-          <label htmlFor={t}>{t.slice(1)}</label>
-          <select onChange={handleSelectChange}>
-            <option value="">Select Value</option>
-            {Array.from(trait_values)?.map((v) => (
-              <option key={v} value={v}>
-                {v}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    });
-  };
+  //     return (
+  //       <div key={t}>
+  //         <label htmlFor={t}>{t.slice(1)}</label>
+  //         <select onChange={handleSelectChange}>
+  //           <option value="">Select Value</option>
+  //           {Array.from(trait_values)?.map((v) => (
+  //             <option key={v} value={v}>
+  //               {v}
+  //             </option>
+  //           ))}
+  //         </select>
+  //       </div>
+  //     );
+  //   });
+  // };
   const renderBody = () => {
     return uniqueTraits?.map((t) => {
       const trait_values = getValues("body");
@@ -530,7 +517,7 @@ export default function Home() {
               <div>
                 <label htmlFor="body">Body</label>
                 <select onChange={handleSelectChangeBody}>
-                  <option value="">Select Value</option>
+                  <option value="">{defaultValue}</option>
                   {renderBody()}
                 </select>
               </div>
@@ -538,7 +525,7 @@ export default function Home() {
               <div>
                 <label htmlFor="head">Head</label>
                 <select onChange={handleSelectChangeHead}>
-                  <option value="">Select Value</option>
+                  <option value="">{defaultValue}</option>
                   {renderHead()}
                 </select>
               </div>
@@ -546,7 +533,7 @@ export default function Home() {
               <div>
                 <label htmlFor="mouth">Mouth</label>
                 <select onChange={handleSelectChangeMouth}>
-                  <option value="">Select Value</option>
+                  <option value="">{defaultValue}</option>
                   {renderMouth()}
                 </select>
               </div>
@@ -554,17 +541,17 @@ export default function Home() {
               <div>
                 <label htmlFor="eye">Eye</label>
                 <select onChange={handleSelectChangeEye}>
-                  <option value="">Select Value</option>
+                  <option value="">{defaultValue}</option>
                   {renderEye()}
                 </select>
               </div>
               <div className="mt-2 text-end ">
                 <button
                   onClick={(e) => {
-                    setHead(null);
-                    setEye(null);
-                    setMouth(null);
-                    setBody(null);
+                    setHead(defaultValue);
+                    setEye(defaultValue);
+                    setMouth(defaultValue);
+                    setBody(defaultValue);
                     setFilter(!filter);
                   }}
                   className="border-2 border-primary hover:bg-primary hover:text-white duration-300 px-2 rounded-md"
