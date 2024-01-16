@@ -15,7 +15,7 @@ export default function Home() {
   const [inscriptData, setInscriptData] = useState([]);
   const [dataFilter, setDataFilter] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [itemsAtTime, setItemsAtTime] = useState(test);
+  const [itemsAtTime, setItemsAtTime] = useState(test);
   const [toggle, setToggle] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(false);
@@ -270,7 +270,7 @@ export default function Home() {
     const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
     
     if (currentData && currentData.length > 0) {
-      
+      // setItemsAtTime(currentData)
       return currentData.map((d) => (
         <Cards key={d.name} info={d} rank={d.rank} />
       ));
