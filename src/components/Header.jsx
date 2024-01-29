@@ -20,7 +20,7 @@ export default function Header() {
       <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-base">
         <ul
           ref={navRef}
-          className="flex gap-2 flex-wrap items-center justify-center  bg-red-0"
+          className="flex gap-1 flex-wrap items-center justify-center  bg-red-0"
         >
           <li>
             <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
