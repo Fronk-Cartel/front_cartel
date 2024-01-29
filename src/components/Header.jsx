@@ -20,13 +20,24 @@ export default function Header() {
       <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-base">
         <ul ref={navRef} className="flex gap-10 bg-red-0">
           <li>
-            <a href="https://doggy.market/nfts/fronkcartel" target="_blank">Market</a>
+            <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
+              Market
+            </a>
           </li>
           <li>
-            <a href="https://twitter.com/FronkCartel">X</a>
+            <a href="https://twitter.com/FronkCartel" target="_blank">
+              X
+            </a>
           </li>
           <li>
-            <a href="https://t.me/fronkcartel">TELEGRAM</a>
+            <a href="https://t.me/fronkcartel" target="_blank">
+              TELEGRAM
+            </a>
+          </li>
+          <li>
+            <a href="https://fronkdev.vercel.app" target="_blank">
+              .devs
+            </a>
           </li>
         </ul>
       </nav>
