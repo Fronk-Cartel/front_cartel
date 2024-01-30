@@ -433,16 +433,18 @@ export default function Home() {
       <div className="container mx-auto ">
         <section>
           <div className="logo bg-blue-00 flex justify-center w-full md:mt-7 px-3  ">
-            <img
+            {/* <img
               src={`/assets/logo/fronkcartellogo2.png`}
               width={500}
               height={500}
               alt="logo"
               // priority
               className="w-full lg:w-2/3 h-full object-contain"
-            />
+            /> */}
+            
+            <h1 className="text-2xl sm:text-3xl md:text-6xl ">FronkCartel</h1>
           </div>
-          <div className="flex flex-col justify-center mt-10 items-center px-4 ">
+          <div className="flex flex-col justify-center mt-7 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">
               Search NFT rarity by number
             </h2>

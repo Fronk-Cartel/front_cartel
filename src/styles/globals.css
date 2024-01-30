@@ -28,6 +28,9 @@ body {
   @apply bg-primary text-white;
 }
 
+.logo {
+  font-family: "Local", sans-serif;
+}
 
 nav li {
   @apply py-0.5 px-2;
