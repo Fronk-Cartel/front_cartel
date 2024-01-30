@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const navRef = useRef(null);
@@ -15,8 +17,16 @@ export default function Header() {
     };
   }, []);
 
+  const router = useRouter();
+  // console.log(router.pathname);
+  
+
   return (
-    <header className="min-h-[10vh] flex items-center justify-center">
+    <header
+      className={`min-h-[10vh] flex items-center justify-center ${
+        router.pathname === "/devs" ? "bg-gray-500" : "bg-primary"
+      }`}
+    >
       <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-base">
         <ul
           ref={navRef}
@@ -37,11 +47,16 @@ export default function Header() {
               TELEGRAM
             </a>
           </li>
-          <li>
-            <a href="https://fronkdev.vercel.app" target="_blank">
-              .devs
-            </a>
-          </li>
+
+          {router.pathname === "/devs" ? (
+            <li>
+              <Link href="/">Fronkcartel</Link>
+            </li>
+          ) : (
+            <li>
+              <Link href="/devs">.devs</Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

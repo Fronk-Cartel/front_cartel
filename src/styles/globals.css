@@ -63,6 +63,12 @@ input {
   @apply rounded-md bg-white min-h-60 md:max-w-36;
 }
 
+.devcards {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  @apply rounded-md bg-white min-h-52 md:max-w-36;
+}
+
 .hide-scroll::-webkit-scrollbar {
   display: none;
 }
