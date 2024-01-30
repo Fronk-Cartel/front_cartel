@@ -442,7 +442,7 @@ export default function Home() {
               className="w-full lg:w-2/3 h-full object-contain"
             /> */}
             
-            <h1 className="whitespace-nowrap text-[200%] md:text-6xl ">Fronk Cartel</h1>
+            <h1 className="whitespace-nowrap text-[170%] md:text-6xl ">Fronk Cartel</h1>
           </div>
           <div className="flex flex-col justify-center mt-7 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">
