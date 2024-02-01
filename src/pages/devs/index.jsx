@@ -109,7 +109,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout title=".Devs">
+    <Layout title=".devs">
       <div className="container mx-auto ">
         <section>
           <div className="logo bg-blue-00 flex justify-center w-full md:pt-7 px-3  ">
