@@ -19,7 +19,6 @@ export default function Header() {
 
   const router = useRouter();
   // console.log(router.pathname);
-  
 
   return (
     <header
@@ -32,11 +31,19 @@ export default function Header() {
           ref={navRef}
           className="flex gap-2 flex-wrap items-center justify-center  bg-red-0"
         >
-          <li>
-            <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
-              Market
-            </a>
-          </li>
+          {router.pathname === "/devs" ? (
+            <li>
+              <a href="https://doggy.market/nfts/devs" target="_blank">
+                Market
+              </a>
+            </li>
+          ) : (
+            <li>
+              <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
+                Market
+              </a>
+            </li>
+          )}
           <li>
             <a href="https://twitter.com/FronkCartel" target="_blank">
               X
