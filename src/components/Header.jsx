@@ -78,8 +78,8 @@ export default function Header() {
       <nav
         onClick={handleMenu}
         className={`${
-          showMenu ? "translate-x-0" : "-translate-x-full"
-        }  absolute bg-[#00000090]  backdrop-blur-sm top-0 bottom-0 left-0 right-0 h-screen z-50  w-full bx-red-400 flex justify-between gap-9 text-base duration-500`}
+          showMenu ? "translate-x-0 fixed" : "-translate-x-full absolute"
+        }   bg-[#00000090]  backdrop-blur-sm top-0 bottom-0 left-0 right-0 h-screen z-50  w-full bx-red-400 flex justify-between gap-9 text-base duration-500`}
       >
         <ul
           ref={navRef}
