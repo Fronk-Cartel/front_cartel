@@ -137,19 +137,6 @@ export default function Demons() {
                 <AiOutlineSearch size={28} />
               </div>
 
-              <img src="/assets/demons/Demon #990.png" alt="" />
-              {/* <div
-                // onClick={showFilter}
-                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
-              >
-                <FiFilter size={24} />
-              </div>
-              <div
-                // onClick={toggleSortData}
-                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
-              >
-                <BsSortDownAlt size={24} />
-              </div> */}
             </div>
           </div>
         </section>
