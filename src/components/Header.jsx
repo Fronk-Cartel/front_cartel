@@ -68,7 +68,7 @@ export default function Header() {
 
   return (
     <header
-      className={`relative min-h-[5vh] bg-red400 flex items-start pt-2 justify-start px-4 ${bg()}`}
+      className={`relative min-h-[8vh] bg-red400 flex items-start pt-2 justify-start px-4 ${bg()}`}
     >
       {!showMenu && (
         <div className="cursor-pointer">
