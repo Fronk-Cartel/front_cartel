@@ -85,7 +85,7 @@ export default function Header() {
               src={logo()}
               width={500}
               height={500}
-              alt={logo}
+              alt="logo"
               loading="lazy"
               className="w-full h-full object-contain"
             />
