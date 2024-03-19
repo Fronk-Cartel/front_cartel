@@ -35,7 +35,7 @@ export default function Demons() {
     fetchData();
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   data?.sort((a, b) => {
     const numA = parseInt(a.name.match(/\d+/)?.[0] || 0); // Extracting numeric value from name
@@ -133,7 +133,7 @@ export default function Demons() {
       <div className="container mx-auto ">
         <section>
           <div className="demon-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">
-            <h1 className=" text-6xl ">D9monz</h1>
+            <h1 className=" text-6xl ">d9monz</h1>
           </div>
           <div className="flex flex-col justify-center mt-3 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">Search by number</h2>
