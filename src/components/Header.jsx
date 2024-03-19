@@ -9,6 +9,7 @@ import { MdOutlineCancel } from "react-icons/md";
 export default function Header() {
   const navRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
+  const {pathname} = useRouter()
 
   const handleMenu = () => {
     setShowMenu(!showMenu);
@@ -67,8 +68,13 @@ export default function Header() {
 
   return (
     <header
-      className={`relative min-h-[5vh] bg-red400 flex items-start pt-2 justify-end px-4 ${bg()}`}
+      className={`relative min-h-[5vh] bg-red400 flex items-start pt-2 justify-start px-4 ${bg()}`}
     >
+      {!showMenu && (
+        <div className="cursor-pointer">
+          <IoIosMenu onClick={handleMenu} size={40} />
+        </div>
+      )}
       <nav
         onClick={handleMenu}
         className={`${
@@ -90,77 +96,70 @@ export default function Header() {
               className="w-full h-full object-contain"
             />
           </div>
-          {/* {router.pathname === "/devs" ? (
-            <li>
-              <a href="https://doggy.market/nfts/devs" target="_blank">
-                Market
-              </a>
-            </li>
+
+          {pathname === "/d9monz" ? (
+            <>
+              <li>
+                <a href="https://doggy.market/nfts/d9monz" target="_blank">
+                  Market
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/nsb_CC?t=daoBdLKJSJm9P3oKHZTO4w&s=09"
+                  target="_blank"
+                >
+                  X
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/nsbCC" target="_blank">
+                  TELEGRAM
+                </a>
+              </li>
+              <li>
+                <Link href="/">Fronkcartel</Link>
+              </li>
+              <li>
+                <Link href="/devs">.devs</Link>
+              </li>
+              <li>
+                <Link href="/d9monz">d9monz</Link>
+              </li>
+            </>
           ) : (
-            <li>
-              <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
-                Market
-              </a>
-            </li>
+            <>
+              <li>
+                <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
+                  Market
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/FronkCartel" target="_blank">
+                  X
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/fronkcartel" target="_blank">
+                  TELEGRAM
+                </a>
+              </li>
+              <li>
+                <Link href="/">Fronkcartel</Link>
+              </li>
+              <li>
+                <Link href="/devs">.devs</Link>
+              </li>
+              <li>
+                <Link href="/d9monz">d9monz</Link>
+              </li>
+            </>
           )}
-          <li>
-            <a href="https://twitter.com/FronkCartel" target="_blank">
-              X
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/fronkcartel" target="_blank">
-              TELEGRAM
-            </a>
-          </li>
-
-          {router.pathname === "/devs" ? (
-            <li>
-              <Link href="/">Fronkcartel</Link>
-            </li>
-          ) : (
-            <li>
-              <Link href="/devs">.devs</Link>
-            </li>
-          )} */}
-
-          <li>
-            <a href="https://doggy.market/nfts/fronkcartel" target="_blank">
-              Market
-            </a>
-          </li>
-
-          <li>
-            <a href="https://twitter.com/FronkCartel" target="_blank">
-              X
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/fronkcartel" target="_blank">
-              TELEGRAM
-            </a>
-          </li>
-
-          <li>
-            <Link href="/">Fronkcartel</Link>
-          </li>
-
-          <li>
-            <Link href="/devs">.devs</Link>
-          </li>
-          <li>
-            <Link href="/d9monz">d9monz</Link>
-          </li>
         </ul>
         <div className="mr-2 mt-2 cursor-pointer">
           <MdOutlineCancel onClick={handleMenu} size={30} />
         </div>
       </nav>
-      {!showMenu && (
-        <div className="cursor-pointer">
-          <IoIosMenu onClick={handleMenu} size={40} />
-        </div>
-      )}
     </header>
   );
 }

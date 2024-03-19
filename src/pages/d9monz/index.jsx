@@ -37,24 +37,13 @@ export default function Demons() {
 
   // console.log(data);
 
-  data?.sort((a, b) => {
-    const numA = parseInt(a.name.match(/\d+/)?.[0] || 0); // Extracting numeric value from name
-    const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
-    return numA - numB; // Sorting based on numeric value
-  });
+  // data?.sort((a, b) => {
+  //   const numA = parseInt(a.name.match(/\d+/)?.[0] || 0); // Extracting numeric value from name
+  //   const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
+  //   return numA - numB; // Sorting based on numeric value
+  // });
 
-  // function processJSON(jsonData) {
-  //   const modifiedData = jsonData.map((item) => {
-  //     const imageName =
-  //       item.name.replace(/ /g, "%20").replace(/#/g, "_") + ".png";
-  //     return { ...item, image: imageName };
-  //   });
-  //   setModified(modifiedData);
-  //   // console.log(JSON.stringify(modifiedData, null, 2));
-  //   // console.log(modifiedData);
-  // }
-
-  // processJSON(data);
+  // console.log(data);
 
   const renderData = () => {
     // const dataToRender = toggle ? toggleData : test;
@@ -129,7 +118,7 @@ export default function Demons() {
   }, []);
 
   return (
-    <Layout title="D9monz">
+    <Layout title="d9monz">
       <div className="container mx-auto ">
         <section>
           <div className="demon-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">

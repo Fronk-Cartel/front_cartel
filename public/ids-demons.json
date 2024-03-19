@@ -5,9 +5,540 @@
     "image": "Demon%20_1.png"
   },
   {
+    "inscriptionId": "460ced10510647f907337bd39defe40013acb553d644bcb33b005763f4d3f2c3i0",
+    "name": "Demon #2",
+    "image": "Demon%20_2.png"
+  },
+  {
+    "inscriptionId": "c8e6be843ed019feab5e6007d8faab33ec3dc9fd998b1d72917d404af9a2b4cfi0",
+    "name": "Demon #3",
+    "image": "Demon%20_3.png"
+  },
+  {
+    "inscriptionId": "243f2fda74a83089862c9b0da1d80c689a6d72f29eca9ee1de148d88625db3e5i0",
+    "name": "Demon #4",
+    "image": "Demon%20_4.png"
+  },
+  {
+    "inscriptionId": "5641517ae0860f60ffa4ef92dffcfa35515afdf7e287291c668ed01f2b6a66c8i0",
+    "name": "Demon #5",
+    "image": "Demon%20_5.png"
+  },
+  {
+    "inscriptionId": "69d1882b10f01e388819e16a23312157d3cc9ce104d4332c9e3ac8dec6a14d21i0",
+    "name": "Demon #6",
+    "image": "Demon%20_6.png"
+  },
+  {
+    "inscriptionId": "3f70e9583562cec6cd46e2a6bdbbd758b14ab3038f09d7cad69de0a12e3a5aeai0",
+    "name": "Demon #7",
+    "image": "Demon%20_7.png"
+  },
+  {
+    "inscriptionId": "a66433cad51a4d3f4686b744952fc9d269af62ce7c9544cdee7032fc6a63acdbi0",
+    "name": "Demon #8",
+    "image": "Demon%20_8.png"
+  },
+  {
+    "inscriptionId": "52e18d2d1dbd667ba1b4d019f0f545143e9746978a4bab71943f30e72aabc62fi0",
+    "name": "Demon #9",
+    "image": "Demon%20_9.png"
+  },
+  {
     "inscriptionId": "8a20e6269d82b859754ca67fd023df33d4a8109774714e6ee8a2bc112d54331di0",
     "name": "Demon #10",
     "image": "Demon%20_10.png"
+  },
+  {
+    "inscriptionId": "feb877a728a1381644e747edbade0d292985971752626d2c3f6627437e8dd447i0",
+    "name": "Demon #11",
+    "image": "Demon%20_11.png"
+  },
+  {
+    "inscriptionId": "c02561c3b98c662edc0ee38672b995c30c2fb9d54ec19fe8dc62ac3a829081dfi0",
+    "name": "Demon #12",
+    "image": "Demon%20_12.png"
+  },
+  {
+    "inscriptionId": "1cfd3cd811d2c982e84ce04221e1e94f505e58cf13bfa366d6f8e1ab2c744a92i0",
+    "name": "Nikko",
+    "image": "Nikko.png"
+  },
+  {
+    "inscriptionId": "af08faa4d8dd97f16651e7abce2e401ff3bf2504bac6de22ca0c5bd0b26b28aai0",
+    "name": "VV",
+    "image": "VV.png"
+  },
+  {
+    "inscriptionId": "376747e98ff46cdfcb37bca80791424a84d6b413c7684f1d6bc9e72bdbb42259i0",
+    "name": "Wraith",
+    "image": "Wraith.png"
+  },
+  {
+    "inscriptionId": "3a344d5dfcb2ce68d7d316a537a967f18aea8d709164cc12bc2631605b3a5164i0",
+    "name": "Fallen",
+    "image": "Fallen.gif"
+  },
+  {
+    "inscriptionId": "e2962e409450c42fd65b7f8ae7fe34e6bdf83789b331f05d3c11b2afab64e3d9i0",
+    "name": "Hatred",
+    "image": "Hatred.gif"
+  },
+  {
+    "inscriptionId": "d8fd655ec945993b82f7f7c407d7ca5cf2b341e58c39d8c6863c5de24209ac4ei0",
+    "name": "Nosferatu",
+    "image": "Nosferatu.gif"
+  },
+  {
+    "inscriptionId": "f3fe8c02c546fc8730844dfe192f3c429fbb47cfb4b3c6cc4b0af5559a21d08ci0",
+    "name": "Original Sin",
+    "image": "Original%20Sin.gif"
+  },
+  {
+    "inscriptionId": "47272c681eb2c7a7eaa9a2f44c823ee534d1db41cc71e9e5317af957c5728f02i0",
+    "name": "Renunciation",
+    "image": "Renunciation.gif"
+  },
+  {
+    "inscriptionId": "94f732245346f1df181ea2ce009aa5457e0abe7b1ca3eef423460aea6bef28f4i0",
+    "name": "RED999MPTION",
+    "image": "RED999MPTION.png"
+  },
+
+  {
+    "inscriptionId": "ea0ddf4020dfcdf879278df4158b0fca2d7d3942ead783ec7da0003b66b6bd4ei0",
+    "name": "Demon #13",
+    "image": "Demon%20_13.png"
+  },
+  {
+    "inscriptionId": "f9ddc0c6aecfa05e129caaeed0cebeae6022426d4f3bd9ab35f9b494bd4eac16i0",
+    "name": "Demon #14",
+    "image": "Demon%20_14.png"
+  },
+  {
+    "inscriptionId": "c13326fbe9e7c12ee58e58120073d6956b8d22a427e3cebf76eb23006b518bd1i0",
+    "name": "Demon #15",
+    "image": "Demon%20_15.png"
+  },
+  {
+    "inscriptionId": "479da41b67dc7722fe406422250531ee08f39ad1985bd82a1a4783a75e36f1eei0",
+    "name": "Demon #16",
+    "image": "Demon%20_16.png"
+  },
+  {
+    "inscriptionId": "f146eccb3e43ad80fc8c3a252a9df6889c75ac66a506f9dfe0b2c7d6c09a2ffai0",
+    "name": "Demon #17",
+    "image": "Demon%20_17.png"
+  },
+  {
+    "inscriptionId": "7072b98ff955e20f172e1f6015cbe0cb618526bc5a9c45a7c219e45434f3064ai0",
+    "name": "Demon #18",
+    "image": "Demon%20_18.png"
+  },
+  {
+    "inscriptionId": "ce0b765f40040a1f48a5ca7e536e6fd9d5f368339ecbacb5095852969879542ci0",
+    "name": "Demon #19",
+    "image": "Demon%20_19.png"
+  },
+  {
+    "inscriptionId": "88488b1a7d607249d251e609b9fe7aebbc2507dadbc90a358a9ada709b3fc258i0",
+    "name": "Demon #20",
+    "image": "Demon%20_20.png"
+  },
+  {
+    "inscriptionId": "45da51e00e33a05aed387a3ca282b2dd39fbe7bdb889ed2ff13052decc421ccai0",
+    "name": "Demon #21",
+    "image": "Demon%20_21.png"
+  },
+  {
+    "inscriptionId": "480813e8bde3d997f67b7e3d34501c59890f7a6bb62e7f449012ac63274664f4i0",
+    "name": "Demon #22",
+    "image": "Demon%20_22.png"
+  },
+  {
+    "inscriptionId": "0f8adab8ceeeb805351b56b9dd7b87b55109c88fe49369ed299705dbc961bbb3i0",
+    "name": "Demon #23",
+    "image": "Demon%20_23.png"
+  },
+  {
+    "inscriptionId": "5b620598ebc77c58ca81b1f505f7c3d69700416d5ec8a72c34decdfe5e534f42i0",
+    "name": "Demon #24",
+    "image": "Demon%20_24.png"
+  },
+  {
+    "inscriptionId": "d9a3cd026834b5451094a4289d7c63a0facafd65a1badcb5b17a667047bf3c59i0",
+    "name": "Demon #25",
+    "image": "Demon%20_25.png"
+  },
+  {
+    "inscriptionId": "d98fcc12d1f5c2e7f2d90927185ff9d96d3bd025898c78870b323c57f4f887c0i0",
+    "name": "Demon #26",
+    "image": "Demon%20_26.png"
+  },
+  {
+    "inscriptionId": "dac3bebb92e3b9a346e6eafadba1b136269517351be6f9a5fb849ea309a9fd31i0",
+    "name": "Demon #27",
+    "image": "Demon%20_27.png"
+  },
+  {
+    "inscriptionId": "9368c33134b888f42c80c1e633985881299cc84499ada0230a5bc663a4759033i0",
+    "name": "Demon #28",
+    "image": "Demon%20_28.png"
+  },
+  {
+    "inscriptionId": "eebad2b0e30440221220599392d6d5a207be41dc787dca0c280e782d6228fa4ci0",
+    "name": "Demon #29",
+    "image": "Demon%20_29.png"
+  },
+  {
+    "inscriptionId": "c74e0f708b2ec9a1907f5a7d5c1faeff1d116a1a25e6daebeb33427d4781e9c3i0",
+    "name": "Demon #30",
+    "image": "Demon%20_30.png"
+  },
+  {
+    "inscriptionId": "c367a18edb4b325ec2bbd63cbfb62bf57cb6d723ad3b192d9bbf9e9acf1fa4bai0",
+    "name": "Demon #31",
+    "image": "Demon%20_31.png"
+  },
+  {
+    "inscriptionId": "7b8525233e7621e1db59b3de6bbed0ef498e69a441825aa91434cd16f19aadabi0",
+    "name": "Demon #32",
+    "image": "Demon%20_32.png"
+  },
+  {
+    "inscriptionId": "82b94a6ad8c9dc2ce7119827ed68b5b357f8eb2b8b8617bbc80557ef836e0f1ai0",
+    "name": "Demon #33",
+    "image": "Demon%20_33.png"
+  },
+  {
+    "inscriptionId": "949a806e01bed086f90ed3a11601287a76c945d023a286f3120091f111f6ca5ci0",
+    "name": "Demon #34",
+    "image": "Demon%20_34.png"
+  },
+  {
+    "inscriptionId": "9ca3dd8583440ac9661908d77064f262d04d062a70f3b5d6757d6b5d9d5a46d1i0",
+    "name": "Demon #35",
+    "image": "Demon%20_35.png"
+  },
+  {
+    "inscriptionId": "0ff43a20546ae517c34ab2b7bde28f04980308a88e570616426c8f3e7dc556bbi0",
+    "name": "Demon #36",
+    "image": "Demon%20_36.png"
+  },
+  {
+    "inscriptionId": "2b1883f241b6bd3003d997513165d9d9c8ecb73937dd959f3a9329f1fcba7fb1i0",
+    "name": "Demon #37",
+    "image": "Demon%20_37.png"
+  },
+  {
+    "inscriptionId": "1bff9da2f3dbdbfe37e202b8695b978f58dcdd02cdb2a91cd9eab85f1a563657i0",
+    "name": "Demon #38",
+    "image": "Demon%20_38.png"
+  },
+  {
+    "inscriptionId": "97cf9e3bc4f43c471e94f5ef8b2b683656f974fc5d79dd46c14de05fcd43e29ai0",
+    "name": "Demon #39",
+    "image": "Demon%20_39.png"
+  },
+  {
+    "inscriptionId": "9407d8db14a7476b292ad6dff64fcc5d7f3c5a3b83b648c9fc447b6301e01116i0",
+    "name": "Demon #40",
+    "image": "Demon%20_40.png"
+  },
+  {
+    "inscriptionId": "00c41afff6b482eb3f19d8dbb4264993439ad3452785b80acd2ac8af8530638ci0",
+    "name": "Demon #41",
+    "image": "Demon%20_41.png"
+  },
+  {
+    "inscriptionId": "3a2b13603a4e2794900442d7ccf1a4892ad6e6bc2e0c0b7ce9d5be0501abc320i0",
+    "name": "Demon #42",
+    "image": "Demon%20_42.png"
+  },
+  {
+    "inscriptionId": "b14a0b33308776281b61676a35fb25415713832c5c7bc77e7228ca0845bc96a5i0",
+    "name": "Demon #43",
+    "image": "Demon%20_43.png"
+  },
+  {
+    "inscriptionId": "a11d268c487cacadbbd5813ee4aa372d64c1aaa9ab466cd9eb606267603f0ec0i0",
+    "name": "Demon #44",
+    "image": "Demon%20_44.png"
+  },
+  {
+    "inscriptionId": "a0b16359f8654bbea9cfdf26cc259ad271885f8ce5303c915df830f619d4af36i0",
+    "name": "Demon #45",
+    "image": "Demon%20_45.png"
+  },
+  {
+    "inscriptionId": "bb6a6a3d4ea7099d0a8f8890306bd90493b3af6fa954b24298d82e9a837b0c8di0",
+    "name": "Demon #46",
+    "image": "Demon%20_46.png"
+  },
+  {
+    "inscriptionId": "00a04f8945243f7241237893026ac5c467fb84927c53c60efccc633530a7314ci0",
+    "name": "Demon #47",
+    "image": "Demon%20_47.png"
+  },
+  {
+    "inscriptionId": "d6645e288a8ee196f3073bae4e85453e85ccb6685740e5349590ffb258b34650i0",
+    "name": "Demon #48",
+    "image": "Demon%20_48.png"
+  },
+  {
+    "inscriptionId": "91d44f4e9eea2d7a4116206c7740ea101bf186324068f369535a8cb0ff8dbce2i0",
+    "name": "Demon #49",
+    "image": "Demon%20_49.png"
+  },
+  {
+    "inscriptionId": "f39e30ea2c8aac40120b1498581bb25be208fb149b00c793e78e696f0928f7edi0",
+    "name": "Demon #50",
+    "image": "Demon%20_50.png"
+  },
+  {
+    "inscriptionId": "e53421e99e509ffe274c4756e155113818d995e6cdece58519dd7b81ff5cbfd0i0",
+    "name": "Demon #51",
+    "image": "Demon%20_51.png"
+  },
+  {
+    "inscriptionId": "05d9289f363ae8fbbd3e498837a612247dd89c941db881de4d40267f2cec8544i0",
+    "name": "Demon #52",
+    "image": "Demon%20_52.png"
+  },
+  {
+    "inscriptionId": "23270a2b96ea37ddf62b8ffffe7dda422e0014decb9e4906650a6fd4fd2d37c9i0",
+    "name": "Demon #53",
+    "image": "Demon%20_53.png"
+  },
+  {
+    "inscriptionId": "7547e9460e88ef65105c15e3b774332365763e42defd8ae0e6eb6453440e7f6ci0",
+    "name": "Demon #54",
+    "image": "Demon%20_54.png"
+  },
+  {
+    "inscriptionId": "dbc14b512326a1f5580ebbfd8854ab8245994e047a33fccb73daf2d815219398i0",
+    "name": "Demon #55",
+    "image": "Demon%20_55.png"
+  },
+  {
+    "inscriptionId": "ea00960d0523a3f3ba4d75ebb1731438c5682e05d240cd5bd7d6be715f896a01i0",
+    "name": "Demon #56",
+    "image": "Demon%20_56.png"
+  },
+  {
+    "inscriptionId": "73ebbb1a28e213e0047d2e91694698764d599dccdf9cd264bf0110e8a563208ci0",
+    "name": "Demon #57",
+    "image": "Demon%20_57.png"
+  },
+  {
+    "inscriptionId": "7e9dc01f5dc404582dc8dcebfa75d46afbafe9b46965a9bc76cff430fafea8fbi0",
+    "name": "Demon #58",
+    "image": "Demon%20_58.png"
+  },
+  {
+    "inscriptionId": "64cd4f8f4491bb9f84d95953864ea3b3c98772dd20819f229e91ae495656ce25i0",
+    "name": "Demon #59",
+    "image": "Demon%20_59.png"
+  },
+  {
+    "inscriptionId": "cb28ec6eab260c1103785b08b1e3f4ebc0225a837f969cc90e5a6d4137833e03i0",
+    "name": "Demon #60",
+    "image": "Demon%20_60.png"
+  },
+  {
+    "inscriptionId": "6779bd42289b39a816d0c50f5a955ef7c05df5b393a8b9e126c5bd0f345ab649i0",
+    "name": "Demon #61",
+    "image": "Demon%20_61.png"
+  },
+  {
+    "inscriptionId": "d7d5fef0f0286c639fd8ed26f7f271e727c391b77f180a5582b613e709b8c9eci0",
+    "name": "Demon #62",
+    "image": "Demon%20_62.png"
+  },
+  {
+    "inscriptionId": "7045adaeb2587778ba17f6a6cab5deee84890b1c9f9a01d984e1f20f23881d69i0",
+    "name": "Demon #63",
+    "image": "Demon%20_63.png"
+  },
+  {
+    "inscriptionId": "4b626d6da4503289173ddb3cb014aa2d45a212f441c264066e05ed7f3a1baba6i0",
+    "name": "Demon #64",
+    "image": "Demon%20_64.png"
+  },
+  {
+    "inscriptionId": "2d744810233e6820d5513ca43c00a2a384dce144cd4e544d554110eaa8c75725i0",
+    "name": "Demon #65",
+    "image": "Demon%20_65.png"
+  },
+  {
+    "inscriptionId": "b58baede0fee02e6392145c16ab125616cc732717588b63be375883d6012902ei0",
+    "name": "Demon #66",
+    "image": "Demon%20_66.png"
+  },
+  {
+    "inscriptionId": "abc0b7e58d11f9dd83fb363a51b50987baf0f07ec9584e39d5c8f45ee317e52bi0",
+    "name": "Demon #67",
+    "image": "Demon%20_67.png"
+  },
+  {
+    "inscriptionId": "2a5c0a366e29f918fe7d96abe400c4e942850c2896509450a643eb9991f41f73i0",
+    "name": "Demon #68",
+    "image": "Demon%20_68.png"
+  },
+  {
+    "inscriptionId": "1a6f914b688aea6a85bb83b2cc2f94a83ffc5d6d8e8ed28cce8567898e04bee4i0",
+    "name": "Demon #69",
+    "image": "Demon%20_69.png"
+  },
+  {
+    "inscriptionId": "439dc71c8d0f7dd9cf4f8f21093ebbbc99f6edfd10791562923cc5b22563331ei0",
+    "name": "Demon #70",
+    "image": "Demon%20_70.png"
+  },
+  {
+    "inscriptionId": "b6e9ed8b75e71121cc9c624d147b6ee6fe34b4990637ad31d03f9d6295f44dcai0",
+    "name": "Demon #71",
+    "image": "Demon%20_71.png"
+  },
+  {
+    "inscriptionId": "d30e074892f94784b9301df758af80570b67a866795cfdfe3da4edf368b7b629i0",
+    "name": "Demon #72",
+    "image": "Demon%20_72.png"
+  },
+  {
+    "inscriptionId": "7bf0afbe2517394e708efa2be70c446310c1d616a4ed2b45867287d8ffde8255i0",
+    "name": "Demon #73",
+    "image": "Demon%20_73.png"
+  },
+  {
+    "inscriptionId": "d738e33c2fcf3cbcf86e969dbcb65310a37580e0b70b7f2e1f1a574281f4c19di0",
+    "name": "Demon #74",
+    "image": "Demon%20_74.png"
+  },
+  {
+    "inscriptionId": "4c0d0f76d1792bf54239025f2bee6a5fe2fc3d6e66f7fd9d741cc6439f049ae6i0",
+    "name": "Demon #75",
+    "image": "Demon%20_75.png"
+  },
+  {
+    "inscriptionId": "7166ed2be499d0bfa67086807d5a3d186e1673375a746bf80bc0e1c1b947a884i0",
+    "name": "Demon #76",
+    "image": "Demon%20_76.png"
+  },
+  {
+    "inscriptionId": "e895b8f51e3a72bd3d0cd2fc32aadb54a95509abae10fa860b72968ee34db72bi0",
+    "name": "Demon #77",
+    "image": "Demon%20_77.png"
+  },
+  {
+    "inscriptionId": "21304665bf5a88987e5538969c47925ca815ba479e9944be1ed4cdb9c00c86b9i0",
+    "name": "Demon #78",
+    "image": "Demon%20_78.png"
+  },
+  {
+    "inscriptionId": "95d62947914287da106cf6bff350a482c1bdfcea38678b7aa61112a79c9840fbi0",
+    "name": "Demon #79",
+    "image": "Demon%20_79.png"
+  },
+  {
+    "inscriptionId": "b3d355549f6e7b05208bb0444fac04ec62137b7b7802981cef84162993be9be7i0",
+    "name": "Demon #80",
+    "image": "Demon%20_80.png"
+  },
+  {
+    "inscriptionId": "294b8a4dfd8e5420ceae970956aadae18d86ebdde7606cd024ae82558d5acc4ei0",
+    "name": "Demon #81",
+    "image": "Demon%20_81.png"
+  },
+  {
+    "inscriptionId": "0e21717acf45832be68d0669c7da3c5a9a61b3a74b67eb99c4ea68df6d7c3749i0",
+    "name": "Demon #82",
+    "image": "Demon%20_82.png"
+  },
+  {
+    "inscriptionId": "e971c5a0a58ed946ee646e653507e4c8ce59a2513259bdfc5dad59b4cbd14cdei0",
+    "name": "Demon #83",
+    "image": "Demon%20_83.png"
+  },
+  {
+    "inscriptionId": "648d991c1c994245a6e6794c8146e2262c08d0f81d69dfae7ef5e925f16ba3f2i0",
+    "name": "Demon #84",
+    "image": "Demon%20_84.png"
+  },
+  {
+    "inscriptionId": "d4f4b54c95e130c162cb85f593bb8b794ba58d60938e95645c6408de8e3e3cd7i0",
+    "name": "Demon #85",
+    "image": "Demon%20_85.png"
+  },
+  {
+    "inscriptionId": "63baaa248a2188324c3f9db61b39890d80ff57e98b1b0f5cd8918efd73a68a53i0",
+    "name": "Demon #86",
+    "image": "Demon%20_86.png"
+  },
+  {
+    "inscriptionId": "8571e04229651351b3ea931f9f99be2842d9d098d74170d77b4dcd99b85f3943i0",
+    "name": "Demon #87",
+    "image": "Demon%20_87.png"
+  },
+  {
+    "inscriptionId": "753cdc744f4d6070afc1c5107d41202ae5baabb3146aba45af4c250d2e462319i0",
+    "name": "Demon #88",
+    "image": "Demon%20_88.png"
+  },
+  {
+    "inscriptionId": "90cf2a04728ad0aa9a36f783946ecb528caa3ce32e7f9e322e0e7c19a4c64404i0",
+    "name": "Demon #89",
+    "image": "Demon%20_89.png"
+  },
+  {
+    "inscriptionId": "15fd508b93a1e18ae66a5e7a7efc580a34f1fdb4ab1d55065284c4e94c425b68i0",
+    "name": "Demon #90",
+    "image": "Demon%20_90.png"
+  },
+  {
+    "inscriptionId": "d3c83fc55cf2f8ae66922291f00312908f7c7b120cf4b44f855d7603c386db93i0",
+    "name": "Demon #91",
+    "image": "Demon%20_91.png"
+  },
+  {
+    "inscriptionId": "105c4ce44855212c0255507e68f45308e430ec5e718822d7ab770489157851c2i0",
+    "name": "Demon #92",
+    "image": "Demon%20_92.png"
+  },
+  {
+    "inscriptionId": "3f3f6403b69b838bcae0017e32b7f0a2e82b2c9cb609efc157f8f5d4567b3bebi0",
+    "name": "Demon #93",
+    "image": "Demon%20_93.png"
+  },
+  {
+    "inscriptionId": "4fd28a441057ed0de680587f6f06855391a844c999f1e4aa26a5b65db621c2d0i0",
+    "name": "Demon #94",
+    "image": "Demon%20_94.png"
+  },
+  {
+    "inscriptionId": "5420af83ceaa9151cb907f4aecb5eba5fda5d9c57a20771ba56d6cd894d158ddi0",
+    "name": "Demon #95",
+    "image": "Demon%20_95.png"
+  },
+  {
+    "inscriptionId": "2bf74fd939581142d9f37b775b18848fce17e804a3e5dce0cf00bc7aefe5d247i0",
+    "name": "Demon #96",
+    "image": "Demon%20_96.png"
+  },
+  {
+    "inscriptionId": "a2612248dfa190300db72d5312abedb2fd2899207430673deac690aaa2e29fabi0",
+    "name": "Demon #97",
+    "image": "Demon%20_97.png"
+  },
+  {
+    "inscriptionId": "ff224ea0ccd7f778cf5de1ee10aeddc62c33dafe7646bac98cb06daa0de0559ai0",
+    "name": "Demon #98",
+    "image": "Demon%20_98.png"
+  },
+  {
+    "inscriptionId": "91be3a1560cdae1afadc599e46fc7451fef4a57ce7cfe9be868e1a8c37d7784ci0",
+    "name": "Demon #99",
+    "image": "Demon%20_99.png"
   },
   {
     "inscriptionId": "b6cbe1bdc9750e59ed832e508f5870b9efc874aaf50846469259ca82ef0e1225i0",
@@ -60,11 +591,6 @@
     "image": "Demon%20_109.png"
   },
   {
-    "inscriptionId": "feb877a728a1381644e747edbade0d292985971752626d2c3f6627437e8dd447i0",
-    "name": "Demon #11",
-    "image": "Demon%20_11.png"
-  },
-  {
     "inscriptionId": "c4a943b88933b254ebd19bf6d4f44abccfb7c44523753c7214be2d5c2986465ci0",
     "name": "Demon #110",
     "image": "Demon%20_110.png"
@@ -113,11 +639,6 @@
     "inscriptionId": "6f972ddb62705b2c63c099e1f22db4f12e884342b3778dbaff7781f36dafb637i0",
     "name": "Demon #119",
     "image": "Demon%20_119.png"
-  },
-  {
-    "inscriptionId": "c02561c3b98c662edc0ee38672b995c30c2fb9d54ec19fe8dc62ac3a829081dfi0",
-    "name": "Demon #12",
-    "image": "Demon%20_12.png"
   },
   {
     "inscriptionId": "662a3a81043e1cc5c88095dcb9fecc89df0dfcf268ca42fb11917cf51139936ci0",
@@ -170,11 +691,6 @@
     "image": "Demon%20_129.png"
   },
   {
-    "inscriptionId": "ea0ddf4020dfcdf879278df4158b0fca2d7d3942ead783ec7da0003b66b6bd4ei0",
-    "name": "Demon #13",
-    "image": "Demon%20_13.png"
-  },
-  {
     "inscriptionId": "dea046ae20bbc639d95968fc45f873cccccf62a76459dae24b37287728ade161i0",
     "name": "Demon #130",
     "image": "Demon%20_130.png"
@@ -223,11 +739,6 @@
     "inscriptionId": "f9950b0e6b186b3159f843a1872ad70e8648f5c05314bec539d10db7a7bf6defi0",
     "name": "Demon #139",
     "image": "Demon%20_139.png"
-  },
-  {
-    "inscriptionId": "f9ddc0c6aecfa05e129caaeed0cebeae6022426d4f3bd9ab35f9b494bd4eac16i0",
-    "name": "Demon #14",
-    "image": "Demon%20_14.png"
   },
   {
     "inscriptionId": "34f0e5f475855577214756478ce7309ac25c5129b2011e4713ca1d93c1f713dfi0",
@@ -280,11 +791,6 @@
     "image": "Demon%20_149.png"
   },
   {
-    "inscriptionId": "c13326fbe9e7c12ee58e58120073d6956b8d22a427e3cebf76eb23006b518bd1i0",
-    "name": "Demon #15",
-    "image": "Demon%20_15.png"
-  },
-  {
     "inscriptionId": "727619905aff6395028d492c08b9d342d3c1377d105ca4607d9a5895b1a337f3i0",
     "name": "Demon #150",
     "image": "Demon%20_150.png"
@@ -333,11 +839,6 @@
     "inscriptionId": "7de79d1e4059074cde3ff04c655660617701a960575166d35592571422a59f3ci0",
     "name": "Demon #159",
     "image": "Demon%20_159.png"
-  },
-  {
-    "inscriptionId": "479da41b67dc7722fe406422250531ee08f39ad1985bd82a1a4783a75e36f1eei0",
-    "name": "Demon #16",
-    "image": "Demon%20_16.png"
   },
   {
     "inscriptionId": "57a085b31610f649f45bdce9fa1e746c07d8a22b01c1046faf1dd4f528b858b9i0",
@@ -390,11 +891,6 @@
     "image": "Demon%20_169.png"
   },
   {
-    "inscriptionId": "f146eccb3e43ad80fc8c3a252a9df6889c75ac66a506f9dfe0b2c7d6c09a2ffai0",
-    "name": "Demon #17",
-    "image": "Demon%20_17.png"
-  },
-  {
     "inscriptionId": "e0a8ac319e1635354a7882c0dbbccf1379475147c2a9107d9baeb37b008559b6i0",
     "name": "Demon #170",
     "image": "Demon%20_170.png"
@@ -443,11 +939,6 @@
     "inscriptionId": "f2970429be21ca071ad29093c36dc0b8886c224ed5471d112af095c1d36b8f3ci0",
     "name": "Demon #179",
     "image": "Demon%20_179.png"
-  },
-  {
-    "inscriptionId": "7072b98ff955e20f172e1f6015cbe0cb618526bc5a9c45a7c219e45434f3064ai0",
-    "name": "Demon #18",
-    "image": "Demon%20_18.png"
   },
   {
     "inscriptionId": "d8d01383384a2e540ada73ee17b25b87bee91185c1c719154ba53f61fd549080i0",
@@ -500,11 +991,6 @@
     "image": "Demon%20_189.png"
   },
   {
-    "inscriptionId": "ce0b765f40040a1f48a5ca7e536e6fd9d5f368339ecbacb5095852969879542ci0",
-    "name": "Demon #19",
-    "image": "Demon%20_19.png"
-  },
-  {
     "inscriptionId": "c92b6a92262beaaf198171acd59a35e6aa0900e18e37bbe4a7e5fe63141382d5i0",
     "name": "Demon #190",
     "image": "Demon%20_190.png"
@@ -553,16 +1039,6 @@
     "inscriptionId": "71172cd3627e47f99299013e30229a730827fea126d831226e51440616c25298i0",
     "name": "Demon #199",
     "image": "Demon%20_199.png"
-  },
-  {
-    "inscriptionId": "460ced10510647f907337bd39defe40013acb553d644bcb33b005763f4d3f2c3i0",
-    "name": "Demon #2",
-    "image": "Demon%20_2.png"
-  },
-  {
-    "inscriptionId": "88488b1a7d607249d251e609b9fe7aebbc2507dadbc90a358a9ada709b3fc258i0",
-    "name": "Demon #20",
-    "image": "Demon%20_20.png"
   },
   {
     "inscriptionId": "08091c924f79776d16ea133bccb92f48edfa9a9173076d238fa6b8a4c1fbec9bi0",
@@ -615,11 +1091,6 @@
     "image": "Demon%20_209.png"
   },
   {
-    "inscriptionId": "45da51e00e33a05aed387a3ca282b2dd39fbe7bdb889ed2ff13052decc421ccai0",
-    "name": "Demon #21",
-    "image": "Demon%20_21.png"
-  },
-  {
     "inscriptionId": "0bf0555e04a8da213d66b89a3a82bc1a3de8c75cbec2c91c134574d51a5cc8c9i0",
     "name": "Demon #210",
     "image": "Demon%20_210.png"
@@ -668,11 +1139,6 @@
     "inscriptionId": "a7ad1e0544c8a9b63e4ddb245add633500d9d32e73cc5845ec0d0c9615be68aai0",
     "name": "Demon #219",
     "image": "Demon%20_219.png"
-  },
-  {
-    "inscriptionId": "480813e8bde3d997f67b7e3d34501c59890f7a6bb62e7f449012ac63274664f4i0",
-    "name": "Demon #22",
-    "image": "Demon%20_22.png"
   },
   {
     "inscriptionId": "1f275fea8eaad846c30877ed1296531dca6835bd2c59c90026cfc1cf997ef725i0",
@@ -725,11 +1191,6 @@
     "image": "Demon%20_229.png"
   },
   {
-    "inscriptionId": "0f8adab8ceeeb805351b56b9dd7b87b55109c88fe49369ed299705dbc961bbb3i0",
-    "name": "Demon #23",
-    "image": "Demon%20_23.png"
-  },
-  {
     "inscriptionId": "477c20b90886c4afaa3b4dce7ee70d79863b0dfdbe61820f1a68d3be0ab88082i0",
     "name": "Demon #230",
     "image": "Demon%20_230.png"
@@ -778,11 +1239,6 @@
     "inscriptionId": "7161a0b20601a01e89ad5907c6b0a003708c4234f50e19422703eeb861f9660di0",
     "name": "Demon #239",
     "image": "Demon%20_239.png"
-  },
-  {
-    "inscriptionId": "5b620598ebc77c58ca81b1f505f7c3d69700416d5ec8a72c34decdfe5e534f42i0",
-    "name": "Demon #24",
-    "image": "Demon%20_24.png"
   },
   {
     "inscriptionId": "f639be0f33a9ccb7f404d7408bb78d9c6ce3d46107b7f1568c8d1c93d8e2b004i0",
@@ -835,11 +1291,6 @@
     "image": "Demon%20_249.png"
   },
   {
-    "inscriptionId": "d9a3cd026834b5451094a4289d7c63a0facafd65a1badcb5b17a667047bf3c59i0",
-    "name": "Demon #25",
-    "image": "Demon%20_25.png"
-  },
-  {
     "inscriptionId": "31e58def5a5d9bde5f594c7d7ff93a7ed56ea5593f897f8789d919a417026a5ci0",
     "name": "Demon #250",
     "image": "Demon%20_250.png"
@@ -888,11 +1339,6 @@
     "inscriptionId": "4e20cbb3108bc11390e8242eedaf0788e19da2adced301b13392ddf80d168d1ci0",
     "name": "Demon #259",
     "image": "Demon%20_259.png"
-  },
-  {
-    "inscriptionId": "d98fcc12d1f5c2e7f2d90927185ff9d96d3bd025898c78870b323c57f4f887c0i0",
-    "name": "Demon #26",
-    "image": "Demon%20_26.png"
   },
   {
     "inscriptionId": "5637364a83fb6f646fcef220e5e3ae9672dd956f46501e0c7a11c713d1589566i0",
@@ -945,11 +1391,6 @@
     "image": "Demon%20_269.png"
   },
   {
-    "inscriptionId": "dac3bebb92e3b9a346e6eafadba1b136269517351be6f9a5fb849ea309a9fd31i0",
-    "name": "Demon #27",
-    "image": "Demon%20_27.png"
-  },
-  {
     "inscriptionId": "c9a994293dc616d4cea337b57fc7683be7d19624a6f2ba3505ebe9cb4afb10b0i0",
     "name": "Demon #270",
     "image": "Demon%20_270.png"
@@ -998,11 +1439,6 @@
     "inscriptionId": "324ebd39916f6b0d7e88d98bbb9cd6ced74f3db0874cb441394f82a53fc3ce4ai0",
     "name": "Demon #279",
     "image": "Demon%20_279.png"
-  },
-  {
-    "inscriptionId": "9368c33134b888f42c80c1e633985881299cc84499ada0230a5bc663a4759033i0",
-    "name": "Demon #28",
-    "image": "Demon%20_28.png"
   },
   {
     "inscriptionId": "8f79680a4a20ce98f24b6080938a3791f986a0a233fc4e349268663db4a7a2efi0",
@@ -1055,11 +1491,6 @@
     "image": "Demon%20_289.png"
   },
   {
-    "inscriptionId": "eebad2b0e30440221220599392d6d5a207be41dc787dca0c280e782d6228fa4ci0",
-    "name": "Demon #29",
-    "image": "Demon%20_29.png"
-  },
-  {
     "inscriptionId": "cd71c5c7f049c37b5f26e11be1d671b03e6395a7f68b67544e12da086cda3686i0",
     "name": "Demon #290",
     "image": "Demon%20_290.png"
@@ -1108,16 +1539,6 @@
     "inscriptionId": "e9b4432970f53432e4536e965fbdfa13f67947a2adb1a7c666ad001702bc494di0",
     "name": "Demon #299",
     "image": "Demon%20_299.png"
-  },
-  {
-    "inscriptionId": "c8e6be843ed019feab5e6007d8faab33ec3dc9fd998b1d72917d404af9a2b4cfi0",
-    "name": "Demon #3",
-    "image": "Demon%20_3.png"
-  },
-  {
-    "inscriptionId": "c74e0f708b2ec9a1907f5a7d5c1faeff1d116a1a25e6daebeb33427d4781e9c3i0",
-    "name": "Demon #30",
-    "image": "Demon%20_30.png"
   },
   {
     "inscriptionId": "eb31dbc983754fa4007e52f6542510c23f1d77e3fe207e63e89d347b39672c9ci0",
@@ -1170,11 +1591,6 @@
     "image": "Demon%20_309.png"
   },
   {
-    "inscriptionId": "c367a18edb4b325ec2bbd63cbfb62bf57cb6d723ad3b192d9bbf9e9acf1fa4bai0",
-    "name": "Demon #31",
-    "image": "Demon%20_31.png"
-  },
-  {
     "inscriptionId": "56906f96316367bb60009763687336b52110e748971d274ed9ea7c7ab9b33c1di0",
     "name": "Demon #310",
     "image": "Demon%20_310.png"
@@ -1223,11 +1639,6 @@
     "inscriptionId": "87510edbfb39c83868b7186edb6f1e00fedc773f7a5854d224895938e247847bi0",
     "name": "Demon #319",
     "image": "Demon%20_319.png"
-  },
-  {
-    "inscriptionId": "7b8525233e7621e1db59b3de6bbed0ef498e69a441825aa91434cd16f19aadabi0",
-    "name": "Demon #32",
-    "image": "Demon%20_32.png"
   },
   {
     "inscriptionId": "777ac1ca7046d75f7bd88a43423fcbc7a9520ca3f7a0ccd6ea04e56fa272c55ci0",
@@ -1280,11 +1691,6 @@
     "image": "Demon%20_329.png"
   },
   {
-    "inscriptionId": "82b94a6ad8c9dc2ce7119827ed68b5b357f8eb2b8b8617bbc80557ef836e0f1ai0",
-    "name": "Demon #33",
-    "image": "Demon%20_33.png"
-  },
-  {
     "inscriptionId": "da999610ca99f0b8af8e1c8167bb2257af30a88b406acad238fef405069441cai0",
     "name": "Demon #330",
     "image": "Demon%20_330.png"
@@ -1333,11 +1739,6 @@
     "inscriptionId": "d8a7a10c8864611f35bf8ee93e34924158c617ae5a0b99b11cfc84cb05d01491i0",
     "name": "Demon #339",
     "image": "Demon%20_339.png"
-  },
-  {
-    "inscriptionId": "949a806e01bed086f90ed3a11601287a76c945d023a286f3120091f111f6ca5ci0",
-    "name": "Demon #34",
-    "image": "Demon%20_34.png"
   },
   {
     "inscriptionId": "595916dfc10d285093424d72a251b366892a56d7199bbf264e2a49ad90a0566ci0",
@@ -1390,11 +1791,6 @@
     "image": "Demon%20_349.png"
   },
   {
-    "inscriptionId": "9ca3dd8583440ac9661908d77064f262d04d062a70f3b5d6757d6b5d9d5a46d1i0",
-    "name": "Demon #35",
-    "image": "Demon%20_35.png"
-  },
-  {
     "inscriptionId": "e05d4ee4b3c182d63d9fa246683527da3b68e644475e6cdfc6ad5c43004bd337i0",
     "name": "Demon #350",
     "image": "Demon%20_350.png"
@@ -1443,11 +1839,6 @@
     "inscriptionId": "f9600dae38635521da0fbfbb506aed2097ad796882b62ed74b039c4b290238afi0",
     "name": "Demon #359",
     "image": "Demon%20_359.png"
-  },
-  {
-    "inscriptionId": "0ff43a20546ae517c34ab2b7bde28f04980308a88e570616426c8f3e7dc556bbi0",
-    "name": "Demon #36",
-    "image": "Demon%20_36.png"
   },
   {
     "inscriptionId": "53fad5d9e771d5d47a30800290a0bfa399c276028c0e898c7939b4e4b65f7180i0",
@@ -1500,11 +1891,6 @@
     "image": "Demon%20_369.png"
   },
   {
-    "inscriptionId": "2b1883f241b6bd3003d997513165d9d9c8ecb73937dd959f3a9329f1fcba7fb1i0",
-    "name": "Demon #37",
-    "image": "Demon%20_37.png"
-  },
-  {
     "inscriptionId": "f40a316a7e838a5e545b558787e441f71189792ccbc55321cff54e9435557a7fi0",
     "name": "Demon #370",
     "image": "Demon%20_370.png"
@@ -1553,11 +1939,6 @@
     "inscriptionId": "40cd76febd35f5a15cc9bb43cb9250706e6fe2cbc212dafe01047ee08fe1721bi0",
     "name": "Demon #379",
     "image": "Demon%20_379.png"
-  },
-  {
-    "inscriptionId": "1bff9da2f3dbdbfe37e202b8695b978f58dcdd02cdb2a91cd9eab85f1a563657i0",
-    "name": "Demon #38",
-    "image": "Demon%20_38.png"
   },
   {
     "inscriptionId": "fbe6d83a8abb642c4429632dd7d37c46ae8fbd5fd75a8cbda039ce322ea193c2i0",
@@ -1610,11 +1991,6 @@
     "image": "Demon%20_389.png"
   },
   {
-    "inscriptionId": "97cf9e3bc4f43c471e94f5ef8b2b683656f974fc5d79dd46c14de05fcd43e29ai0",
-    "name": "Demon #39",
-    "image": "Demon%20_39.png"
-  },
-  {
     "inscriptionId": "eac04fcca08a9efd48016b68dbd35d8a2739faf9a1851b7800b8e401bd82d118i0",
     "name": "Demon #390",
     "image": "Demon%20_390.png"
@@ -1663,16 +2039,6 @@
     "inscriptionId": "e133582d4516530a433b0e81f9f49b675dad14bbb0b52e1c37b03a55e234c710i0",
     "name": "Demon #399",
     "image": "Demon%20_399.png"
-  },
-  {
-    "inscriptionId": "243f2fda74a83089862c9b0da1d80c689a6d72f29eca9ee1de148d88625db3e5i0",
-    "name": "Demon #4",
-    "image": "Demon%20_4.png"
-  },
-  {
-    "inscriptionId": "9407d8db14a7476b292ad6dff64fcc5d7f3c5a3b83b648c9fc447b6301e01116i0",
-    "name": "Demon #40",
-    "image": "Demon%20_40.png"
   },
   {
     "inscriptionId": "e655a7350e9f9229dea341d6885db500ef804c595abea88687516c605a8cc9dai0",
@@ -1725,11 +2091,6 @@
     "image": "Demon%20_409.png"
   },
   {
-    "inscriptionId": "00c41afff6b482eb3f19d8dbb4264993439ad3452785b80acd2ac8af8530638ci0",
-    "name": "Demon #41",
-    "image": "Demon%20_41.png"
-  },
-  {
     "inscriptionId": "bab92720bd60267634446af1de70368922fd235828fefb6d61a64150a2993b97i0",
     "name": "Demon #410",
     "image": "Demon%20_410.png"
@@ -1778,11 +2139,6 @@
     "inscriptionId": "57a6bb61da59c4c9c9648c879d67d51e6934f24dcd884464874a2a550a589890i0",
     "name": "Demon #419",
     "image": "Demon%20_419.png"
-  },
-  {
-    "inscriptionId": "3a2b13603a4e2794900442d7ccf1a4892ad6e6bc2e0c0b7ce9d5be0501abc320i0",
-    "name": "Demon #42",
-    "image": "Demon%20_42.png"
   },
   {
     "inscriptionId": "eded2bf99009732e677be566227f7deabdc4dcd29b6dbc4544cca73b82f70175i0",
@@ -1835,11 +2191,6 @@
     "image": "Demon%20_429.png"
   },
   {
-    "inscriptionId": "b14a0b33308776281b61676a35fb25415713832c5c7bc77e7228ca0845bc96a5i0",
-    "name": "Demon #43",
-    "image": "Demon%20_43.png"
-  },
-  {
     "inscriptionId": "3ad47781c353eb285579e608a2a3668dbe7d9ee600a2348a27d2c94a3df108cci0",
     "name": "Demon #430",
     "image": "Demon%20_430.png"
@@ -1888,11 +2239,6 @@
     "inscriptionId": "7b8946e0f7131ae8706b4ae245cbfd71d42b8d698354b5a126fc671e239a2649i0",
     "name": "Demon #439",
     "image": "Demon%20_439.png"
-  },
-  {
-    "inscriptionId": "a11d268c487cacadbbd5813ee4aa372d64c1aaa9ab466cd9eb606267603f0ec0i0",
-    "name": "Demon #44",
-    "image": "Demon%20_44.png"
   },
   {
     "inscriptionId": "b517fbb9662a3934dfeecf08b1fe9b09b0e53f38d9b8dbc3652573b94c4c7f0ei0",
@@ -1945,11 +2291,6 @@
     "image": "Demon%20_449.png"
   },
   {
-    "inscriptionId": "a0b16359f8654bbea9cfdf26cc259ad271885f8ce5303c915df830f619d4af36i0",
-    "name": "Demon #45",
-    "image": "Demon%20_45.png"
-  },
-  {
     "inscriptionId": "fd704809d899770e13ce7ef7fce13a3c29d943a58d48f843ed947a3a479193a2i0",
     "name": "Demon #450",
     "image": "Demon%20_450.png"
@@ -1998,11 +2339,6 @@
     "inscriptionId": "0d937398c44303d007606430ab67f8b8c885c0aec25661880321a69e64f69318i0",
     "name": "Demon #459",
     "image": "Demon%20_459.png"
-  },
-  {
-    "inscriptionId": "bb6a6a3d4ea7099d0a8f8890306bd90493b3af6fa954b24298d82e9a837b0c8di0",
-    "name": "Demon #46",
-    "image": "Demon%20_46.png"
   },
   {
     "inscriptionId": "b314f3ce96a98cc85a8ae377e6a2a11e6c1202a6e3fb96f0618e10b14033c117i0",
@@ -2055,11 +2391,6 @@
     "image": "Demon%20_469.png"
   },
   {
-    "inscriptionId": "00a04f8945243f7241237893026ac5c467fb84927c53c60efccc633530a7314ci0",
-    "name": "Demon #47",
-    "image": "Demon%20_47.png"
-  },
-  {
     "inscriptionId": "23e7cea2e93af81e7477901acd3bf2dd18425febd8f49777dd934811c71ab5d9i0",
     "name": "Demon #470",
     "image": "Demon%20_470.png"
@@ -2108,11 +2439,6 @@
     "inscriptionId": "8be102de250a74990d7cbdf57fe67f85a01844eb1d4841fceaf3f94a3978f5c5i0",
     "name": "Demon #479",
     "image": "Demon%20_479.png"
-  },
-  {
-    "inscriptionId": "d6645e288a8ee196f3073bae4e85453e85ccb6685740e5349590ffb258b34650i0",
-    "name": "Demon #48",
-    "image": "Demon%20_48.png"
   },
   {
     "inscriptionId": "21e998856ddb3aa66c91f115717b3fa9d24c249d7670867fcaee0e484c44c071i0",
@@ -2165,11 +2491,6 @@
     "image": "Demon%20_489.png"
   },
   {
-    "inscriptionId": "91d44f4e9eea2d7a4116206c7740ea101bf186324068f369535a8cb0ff8dbce2i0",
-    "name": "Demon #49",
-    "image": "Demon%20_49.png"
-  },
-  {
     "inscriptionId": "43be6f6c8ebf4baa55ccb720e1b6d04def4074aa644fcaf23748825f66cd5469i0",
     "name": "Demon #490",
     "image": "Demon%20_490.png"
@@ -2218,16 +2539,6 @@
     "inscriptionId": "df440ce05672b2b2646e75848c3a2dbbb963a7ef3c56b67aca41034cdea14062i0",
     "name": "Demon #499",
     "image": "Demon%20_499.png"
-  },
-  {
-    "inscriptionId": "5641517ae0860f60ffa4ef92dffcfa35515afdf7e287291c668ed01f2b6a66c8i0",
-    "name": "Demon #5",
-    "image": "Demon%20_5.png"
-  },
-  {
-    "inscriptionId": "f39e30ea2c8aac40120b1498581bb25be208fb149b00c793e78e696f0928f7edi0",
-    "name": "Demon #50",
-    "image": "Demon%20_50.png"
   },
   {
     "inscriptionId": "b7f699661659d8883a8a3ce44eb919740d2f1164c55a684d1fc4a0d141219990i0",
@@ -2280,11 +2591,6 @@
     "image": "Demon%20_509.png"
   },
   {
-    "inscriptionId": "e53421e99e509ffe274c4756e155113818d995e6cdece58519dd7b81ff5cbfd0i0",
-    "name": "Demon #51",
-    "image": "Demon%20_51.png"
-  },
-  {
     "inscriptionId": "2ed76ad02af2c25e36b53032188281bb3fe6168e7c87b2b3f451e4fbd23561cei0",
     "name": "Demon #510",
     "image": "Demon%20_510.png"
@@ -2333,11 +2639,6 @@
     "inscriptionId": "4d559c4d63bd980962e49bba487e522c7384597343befef8de27c2f592c42810i0",
     "name": "Demon #519",
     "image": "Demon%20_519.png"
-  },
-  {
-    "inscriptionId": "05d9289f363ae8fbbd3e498837a612247dd89c941db881de4d40267f2cec8544i0",
-    "name": "Demon #52",
-    "image": "Demon%20_52.png"
   },
   {
     "inscriptionId": "b06d2bef6e6f47a5c9f5b1d0da8eecbea47ccfd1a95db440be1e3de6f2f1547bi0",
@@ -2390,11 +2691,6 @@
     "image": "Demon%20_529.png"
   },
   {
-    "inscriptionId": "23270a2b96ea37ddf62b8ffffe7dda422e0014decb9e4906650a6fd4fd2d37c9i0",
-    "name": "Demon #53",
-    "image": "Demon%20_53.png"
-  },
-  {
     "inscriptionId": "9bfce1b0becb6bf8ed98e171205b71472c568e85d9b9ea1d4705227b51a15142i0",
     "name": "Demon #530",
     "image": "Demon%20_530.png"
@@ -2443,11 +2739,6 @@
     "inscriptionId": "aeb4f33bb99b76fd7d3c293e8197dc284d23f61d4b45f496aae74f89fc60c7f0i0",
     "name": "Demon #539",
     "image": "Demon%20_539.png"
-  },
-  {
-    "inscriptionId": "7547e9460e88ef65105c15e3b774332365763e42defd8ae0e6eb6453440e7f6ci0",
-    "name": "Demon #54",
-    "image": "Demon%20_54.png"
   },
   {
     "inscriptionId": "d98bc8b814aa63567fd264fef4b0ca84c693a5a25a12791186571b1fb95d3216i0",
@@ -2500,11 +2791,6 @@
     "image": "Demon%20_549.png"
   },
   {
-    "inscriptionId": "dbc14b512326a1f5580ebbfd8854ab8245994e047a33fccb73daf2d815219398i0",
-    "name": "Demon #55",
-    "image": "Demon%20_55.png"
-  },
-  {
     "inscriptionId": "a4ebf79421cfd5f476030ea35081dac8d3fc10e4ea3bd8f113baf48ffb3c90c9i0",
     "name": "Demon #550",
     "image": "Demon%20_550.png"
@@ -2553,11 +2839,6 @@
     "inscriptionId": "f6d4392d03f16cfd319439064cf247db7714d0d79642ecd25b85e1c84384c86ai0",
     "name": "Demon #559",
     "image": "Demon%20_559.png"
-  },
-  {
-    "inscriptionId": "ea00960d0523a3f3ba4d75ebb1731438c5682e05d240cd5bd7d6be715f896a01i0",
-    "name": "Demon #56",
-    "image": "Demon%20_56.png"
   },
   {
     "inscriptionId": "9bea72f813e4b588a95ca4bb83b48296fc495c1493dab6dee2bae2851c556951i0",
@@ -2610,11 +2891,6 @@
     "image": "Demon%20_569.png"
   },
   {
-    "inscriptionId": "73ebbb1a28e213e0047d2e91694698764d599dccdf9cd264bf0110e8a563208ci0",
-    "name": "Demon #57",
-    "image": "Demon%20_57.png"
-  },
-  {
     "inscriptionId": "10b915cd78a1bb2dfb159deb33270ba30ca5ed7c5e952cbff6a9ed1891939aa0i0",
     "name": "Demon #570",
     "image": "Demon%20_570.png"
@@ -2663,11 +2939,6 @@
     "inscriptionId": "0a60fc08ff2c733769469beedd035577adf0d46c9e4e4c90ba7adeb32c1ab765i0",
     "name": "Demon #579",
     "image": "Demon%20_579.png"
-  },
-  {
-    "inscriptionId": "7e9dc01f5dc404582dc8dcebfa75d46afbafe9b46965a9bc76cff430fafea8fbi0",
-    "name": "Demon #58",
-    "image": "Demon%20_58.png"
   },
   {
     "inscriptionId": "b2bd2f5d400121b52f4c194dd6fac01f4b84856e544b19a733684b072ee0ab62i0",
@@ -2720,11 +2991,6 @@
     "image": "Demon%20_589.png"
   },
   {
-    "inscriptionId": "64cd4f8f4491bb9f84d95953864ea3b3c98772dd20819f229e91ae495656ce25i0",
-    "name": "Demon #59",
-    "image": "Demon%20_59.png"
-  },
-  {
     "inscriptionId": "f7e4fc38ea3cfa4860c580813e1641ac7647fc18e55539df2b55021789d796abi0",
     "name": "Demon #590",
     "image": "Demon%20_590.png"
@@ -2773,16 +3039,6 @@
     "inscriptionId": "75999d28d44dff618ca9a6577b545478cda65502c0109f9e27e5f3b760e98ecei0",
     "name": "Demon #599",
     "image": "Demon%20_599.png"
-  },
-  {
-    "inscriptionId": "69d1882b10f01e388819e16a23312157d3cc9ce104d4332c9e3ac8dec6a14d21i0",
-    "name": "Demon #6",
-    "image": "Demon%20_6.png"
-  },
-  {
-    "inscriptionId": "cb28ec6eab260c1103785b08b1e3f4ebc0225a837f969cc90e5a6d4137833e03i0",
-    "name": "Demon #60",
-    "image": "Demon%20_60.png"
   },
   {
     "inscriptionId": "c2d64348d4f0b526adee5b9ec5fdafea18b1c0bd07876f4290048dbf934e7867i0",
@@ -2835,11 +3091,6 @@
     "image": "Demon%20_609.png"
   },
   {
-    "inscriptionId": "6779bd42289b39a816d0c50f5a955ef7c05df5b393a8b9e126c5bd0f345ab649i0",
-    "name": "Demon #61",
-    "image": "Demon%20_61.png"
-  },
-  {
     "inscriptionId": "6ef5d370530ef09d636a91c2d567a50b809d30e8eb86156d53a997eb34db98c0i0",
     "name": "Demon #610",
     "image": "Demon%20_610.png"
@@ -2888,11 +3139,6 @@
     "inscriptionId": "cb979ace6a01d90da1c6b7cbb37cf50e3f5efd19c4c36fc2d933086aec160ae0i0",
     "name": "Demon #619",
     "image": "Demon%20_619.png"
-  },
-  {
-    "inscriptionId": "d7d5fef0f0286c639fd8ed26f7f271e727c391b77f180a5582b613e709b8c9eci0",
-    "name": "Demon #62",
-    "image": "Demon%20_62.png"
   },
   {
     "inscriptionId": "fa650b93a62bec95bb6696b9910d33e343971ec0381d552cce75e7fda7138b05i0",
@@ -2945,11 +3191,6 @@
     "image": "Demon%20_629.png"
   },
   {
-    "inscriptionId": "7045adaeb2587778ba17f6a6cab5deee84890b1c9f9a01d984e1f20f23881d69i0",
-    "name": "Demon #63",
-    "image": "Demon%20_63.png"
-  },
-  {
     "inscriptionId": "2b82f6a30a58bcb43dd51a8b4477f80bf614d5ced3b64111917c6b2425bd742fi0",
     "name": "Demon #630",
     "image": "Demon%20_630.png"
@@ -2998,11 +3239,6 @@
     "inscriptionId": "26126df1ce03fb8cf67871ee2950558a64de624c1df69ea05573ff1af96cba30i0",
     "name": "Demon #639",
     "image": "Demon%20_639.png"
-  },
-  {
-    "inscriptionId": "4b626d6da4503289173ddb3cb014aa2d45a212f441c264066e05ed7f3a1baba6i0",
-    "name": "Demon #64",
-    "image": "Demon%20_64.png"
   },
   {
     "inscriptionId": "012106f13c18c1475779d77d9ba9c8cb448b1d063e8f41b1d181f9c5555ee15fi0",
@@ -3055,11 +3291,6 @@
     "image": "Demon%20_649.png"
   },
   {
-    "inscriptionId": "2d744810233e6820d5513ca43c00a2a384dce144cd4e544d554110eaa8c75725i0",
-    "name": "Demon #65",
-    "image": "Demon%20_65.png"
-  },
-  {
     "inscriptionId": "93cdc4369989037aff6cdbbc83bd9f223385476c0c73cfdfd69e82a362146e55i0",
     "name": "Demon #650",
     "image": "Demon%20_650.png"
@@ -3108,11 +3339,6 @@
     "inscriptionId": "08947fa108412899e444196e11cc6ea878aa0b89610f575eb6770fd95a3a32afi0",
     "name": "Demon #659",
     "image": "Demon%20_659.png"
-  },
-  {
-    "inscriptionId": "b58baede0fee02e6392145c16ab125616cc732717588b63be375883d6012902ei0",
-    "name": "Demon #66",
-    "image": "Demon%20_66.png"
   },
   {
     "inscriptionId": "a6ae53141b3261200211f8172800c9289feac7f81dd6fa61b3106b9f9c1b0a44i0",
@@ -3165,11 +3391,6 @@
     "image": "Demon%20_669.png"
   },
   {
-    "inscriptionId": "abc0b7e58d11f9dd83fb363a51b50987baf0f07ec9584e39d5c8f45ee317e52bi0",
-    "name": "Demon #67",
-    "image": "Demon%20_67.png"
-  },
-  {
     "inscriptionId": "b9faa61746b0bb92f706883382e91a26bfb266d8272eea6f1fb901522dfca54ci0",
     "name": "Demon #670",
     "image": "Demon%20_670.png"
@@ -3218,11 +3439,6 @@
     "inscriptionId": "c901979526485abbe793c2c1fdfa252dd594cf49f81353b4439c2a51f34906aai0",
     "name": "Demon #679",
     "image": "Demon%20_679.png"
-  },
-  {
-    "inscriptionId": "2a5c0a366e29f918fe7d96abe400c4e942850c2896509450a643eb9991f41f73i0",
-    "name": "Demon #68",
-    "image": "Demon%20_68.png"
   },
   {
     "inscriptionId": "71e7d93d5dfcb0c5b7942ab5a440e2e9295571ee5f8d2b51cde640648873199ci0",
@@ -3275,11 +3491,6 @@
     "image": "Demon%20_689.png"
   },
   {
-    "inscriptionId": "1a6f914b688aea6a85bb83b2cc2f94a83ffc5d6d8e8ed28cce8567898e04bee4i0",
-    "name": "Demon #69",
-    "image": "Demon%20_69.png"
-  },
-  {
     "inscriptionId": "26f6c8b807b67021c0419eed75dca1f764764b38e6fac1ba7104a67f1c9aeefci0",
     "name": "Demon #690",
     "image": "Demon%20_690.png"
@@ -3328,16 +3539,6 @@
     "inscriptionId": "f7279504e26279855e2dc4948195b69aa59f03741860ed778faf86ac9956968ci0",
     "name": "Demon #699",
     "image": "Demon%20_699.png"
-  },
-  {
-    "inscriptionId": "3f70e9583562cec6cd46e2a6bdbbd758b14ab3038f09d7cad69de0a12e3a5aeai0",
-    "name": "Demon #7",
-    "image": "Demon%20_7.png"
-  },
-  {
-    "inscriptionId": "439dc71c8d0f7dd9cf4f8f21093ebbbc99f6edfd10791562923cc5b22563331ei0",
-    "name": "Demon #70",
-    "image": "Demon%20_70.png"
   },
   {
     "inscriptionId": "44de22d659306878a43c3947eb6124caceb04a76f4b7f47440fc9a74b65890bdi0",
@@ -3390,11 +3591,6 @@
     "image": "Demon%20_709.png"
   },
   {
-    "inscriptionId": "b6e9ed8b75e71121cc9c624d147b6ee6fe34b4990637ad31d03f9d6295f44dcai0",
-    "name": "Demon #71",
-    "image": "Demon%20_71.png"
-  },
-  {
     "inscriptionId": "d317eb8c68cd84df74267137e916a59b28cb16c86a03e83afda12faff32f8608i0",
     "name": "Demon #710",
     "image": "Demon%20_710.png"
@@ -3443,11 +3639,6 @@
     "inscriptionId": "dac7ba13c6f42470d9b248eeafe6b0905c309c7463f351802a0f7baa3925ca29i0",
     "name": "Demon #719",
     "image": "Demon%20_719.png"
-  },
-  {
-    "inscriptionId": "d30e074892f94784b9301df758af80570b67a866795cfdfe3da4edf368b7b629i0",
-    "name": "Demon #72",
-    "image": "Demon%20_72.png"
   },
   {
     "inscriptionId": "4241a9a2032cf3a93d96a4062a109f73f24e48a8f77f3765b54dc8805d164528i0",
@@ -3500,11 +3691,6 @@
     "image": "Demon%20_729.png"
   },
   {
-    "inscriptionId": "7bf0afbe2517394e708efa2be70c446310c1d616a4ed2b45867287d8ffde8255i0",
-    "name": "Demon #73",
-    "image": "Demon%20_73.png"
-  },
-  {
     "inscriptionId": "4b965b7d40f89babb01c86bd61911115ee3019bb79ab6c50795062e6a1d67431i0",
     "name": "Demon #730",
     "image": "Demon%20_730.png"
@@ -3553,11 +3739,6 @@
     "inscriptionId": "616b888888007c110087c3b6563eaae795c2160523b06a1f6129d79f3f846b2ci0",
     "name": "Demon #739",
     "image": "Demon%20_739.png"
-  },
-  {
-    "inscriptionId": "d738e33c2fcf3cbcf86e969dbcb65310a37580e0b70b7f2e1f1a574281f4c19di0",
-    "name": "Demon #74",
-    "image": "Demon%20_74.png"
   },
   {
     "inscriptionId": "8d3debf382672b4faa6f4ef4c3e4bdced254e30e9614c9bb65e5f81d18a41461i0",
@@ -3610,11 +3791,6 @@
     "image": "Demon%20_749.png"
   },
   {
-    "inscriptionId": "4c0d0f76d1792bf54239025f2bee6a5fe2fc3d6e66f7fd9d741cc6439f049ae6i0",
-    "name": "Demon #75",
-    "image": "Demon%20_75.png"
-  },
-  {
     "inscriptionId": "139ff85bf9e1ab4f14ddbea6d6b822a2529630bd6ed67def88f1b688cc38679di0",
     "name": "Demon #750",
     "image": "Demon%20_750.png"
@@ -3663,11 +3839,6 @@
     "inscriptionId": "8f987797b594ff23cdab6cb2018df00279df4d68c717d3987dce96cad1d3567fi0",
     "name": "Demon #759",
     "image": "Demon%20_759.png"
-  },
-  {
-    "inscriptionId": "7166ed2be499d0bfa67086807d5a3d186e1673375a746bf80bc0e1c1b947a884i0",
-    "name": "Demon #76",
-    "image": "Demon%20_76.png"
   },
   {
     "inscriptionId": "43122ce67e94ec2effebdaf85906d278c0190f302731071ea8bdff3ceea21916i0",
@@ -3720,11 +3891,6 @@
     "image": "Demon%20_769.png"
   },
   {
-    "inscriptionId": "e895b8f51e3a72bd3d0cd2fc32aadb54a95509abae10fa860b72968ee34db72bi0",
-    "name": "Demon #77",
-    "image": "Demon%20_77.png"
-  },
-  {
     "inscriptionId": "f972e842df6acd9baa477b320c9c6e6492a6e5b962c78416c91b0628d35ebd41i0",
     "name": "Demon #770",
     "image": "Demon%20_770.png"
@@ -3773,11 +3939,6 @@
     "inscriptionId": "ba81dc454b841bd84bdd45767aa9b0fbcd4bfb939762dd4096f58e8ea7748716i0",
     "name": "Demon #779",
     "image": "Demon%20_779.png"
-  },
-  {
-    "inscriptionId": "21304665bf5a88987e5538969c47925ca815ba479e9944be1ed4cdb9c00c86b9i0",
-    "name": "Demon #78",
-    "image": "Demon%20_78.png"
   },
   {
     "inscriptionId": "64110d5b7423959711fcf40522edcdb9c1ad1f10911c434b3960910cfefb5d4bi0",
@@ -3830,11 +3991,6 @@
     "image": "Demon%20_789.png"
   },
   {
-    "inscriptionId": "95d62947914287da106cf6bff350a482c1bdfcea38678b7aa61112a79c9840fbi0",
-    "name": "Demon #79",
-    "image": "Demon%20_79.png"
-  },
-  {
     "inscriptionId": "622143695cb52a91a076f13452e77134509ca976cb8ca594adeda9a204b65481i0",
     "name": "Demon #790",
     "image": "Demon%20_790.png"
@@ -3883,16 +4039,6 @@
     "inscriptionId": "f91666ba602d719afd0159acae0deb8d44c39a8096f347b34e2b380235f8e066i0",
     "name": "Demon #799",
     "image": "Demon%20_799.png"
-  },
-  {
-    "inscriptionId": "a66433cad51a4d3f4686b744952fc9d269af62ce7c9544cdee7032fc6a63acdbi0",
-    "name": "Demon #8",
-    "image": "Demon%20_8.png"
-  },
-  {
-    "inscriptionId": "b3d355549f6e7b05208bb0444fac04ec62137b7b7802981cef84162993be9be7i0",
-    "name": "Demon #80",
-    "image": "Demon%20_80.png"
   },
   {
     "inscriptionId": "fb8b34344afe5ff0d71d5cec0dbc81f57ebc881e31b2b9c46e677131ea299392i0",
@@ -3945,11 +4091,6 @@
     "image": "Demon%20_809.png"
   },
   {
-    "inscriptionId": "294b8a4dfd8e5420ceae970956aadae18d86ebdde7606cd024ae82558d5acc4ei0",
-    "name": "Demon #81",
-    "image": "Demon%20_81.png"
-  },
-  {
     "inscriptionId": "becb8c2c8f7d2a888a61a7b23518e4bf50e4467b007a9c60de6ee471d4762ab0i0",
     "name": "Demon #810",
     "image": "Demon%20_810.png"
@@ -3998,11 +4139,6 @@
     "inscriptionId": "102f2ca54001f0552fae29090a0c802e7e9a802feb37789efbd83981184cd011i0",
     "name": "Demon #819",
     "image": "Demon%20_819.png"
-  },
-  {
-    "inscriptionId": "0e21717acf45832be68d0669c7da3c5a9a61b3a74b67eb99c4ea68df6d7c3749i0",
-    "name": "Demon #82",
-    "image": "Demon%20_82.png"
   },
   {
     "inscriptionId": "012329e3f0d14a060b8c15816da07e5a0cf6f7448fe03b18ed2f43b6de4492b5i0",
@@ -4055,11 +4191,6 @@
     "image": "Demon%20_829.png"
   },
   {
-    "inscriptionId": "e971c5a0a58ed946ee646e653507e4c8ce59a2513259bdfc5dad59b4cbd14cdei0",
-    "name": "Demon #83",
-    "image": "Demon%20_83.png"
-  },
-  {
     "inscriptionId": "44ff6559067a0e8b13d0e95cb0a185d22a769fd696ec7ef27c3216b1ab0759c6i0",
     "name": "Demon #830",
     "image": "Demon%20_830.png"
@@ -4108,11 +4239,6 @@
     "inscriptionId": "e7348ef985b468f3761085713cabe69fc129cfac0908e88986264bb91d9f0272i0",
     "name": "Demon #839",
     "image": "Demon%20_839.png"
-  },
-  {
-    "inscriptionId": "648d991c1c994245a6e6794c8146e2262c08d0f81d69dfae7ef5e925f16ba3f2i0",
-    "name": "Demon #84",
-    "image": "Demon%20_84.png"
   },
   {
     "inscriptionId": "0e9b527d55ae4cd9a7408f00bbc64abd35619038cbe25fee37b3510979b09979i0",
@@ -4165,11 +4291,6 @@
     "image": "Demon%20_849.png"
   },
   {
-    "inscriptionId": "d4f4b54c95e130c162cb85f593bb8b794ba58d60938e95645c6408de8e3e3cd7i0",
-    "name": "Demon #85",
-    "image": "Demon%20_85.png"
-  },
-  {
     "inscriptionId": "1e0e2a78d00173d433138fe719fc6ca7ab29cd6d766551c3e51825b0e799adeci0",
     "name": "Demon #850",
     "image": "Demon%20_850.png"
@@ -4218,11 +4339,6 @@
     "inscriptionId": "d421b4f82ad41b454050ab5bbceaf2afb314903fda02ad114849f0c4d36b1efai0",
     "name": "Demon #859",
     "image": "Demon%20_859.png"
-  },
-  {
-    "inscriptionId": "63baaa248a2188324c3f9db61b39890d80ff57e98b1b0f5cd8918efd73a68a53i0",
-    "name": "Demon #86",
-    "image": "Demon%20_86.png"
   },
   {
     "inscriptionId": "a998e2b404a741818064e51de05233dc79d6b2a8ff526334bde215482e7c610ci0",
@@ -4275,11 +4391,6 @@
     "image": "Demon%20_869.png"
   },
   {
-    "inscriptionId": "8571e04229651351b3ea931f9f99be2842d9d098d74170d77b4dcd99b85f3943i0",
-    "name": "Demon #87",
-    "image": "Demon%20_87.png"
-  },
-  {
     "inscriptionId": "c643f627b120948cc97ef911d06079a95d3d88131a6c3cd20652f322f180c90fi0",
     "name": "Demon #870",
     "image": "Demon%20_870.png"
@@ -4328,11 +4439,6 @@
     "inscriptionId": "6b3f552a3befdea11414e678f239fdc8dbab6e52ea0e36b55106aaff0b225b4fi0",
     "name": "Demon #879",
     "image": "Demon%20_879.png"
-  },
-  {
-    "inscriptionId": "753cdc744f4d6070afc1c5107d41202ae5baabb3146aba45af4c250d2e462319i0",
-    "name": "Demon #88",
-    "image": "Demon%20_88.png"
   },
   {
     "inscriptionId": "b9e9b16d94e49aaed4bceaeff273a6314c84fb31e8a3a052744f6affa1147a7di0",
@@ -4385,11 +4491,6 @@
     "image": "Demon%20_889.png"
   },
   {
-    "inscriptionId": "90cf2a04728ad0aa9a36f783946ecb528caa3ce32e7f9e322e0e7c19a4c64404i0",
-    "name": "Demon #89",
-    "image": "Demon%20_89.png"
-  },
-  {
     "inscriptionId": "8c0762bc558158534fa3512fd9cfd0187db4820fbf5cc6de8264c0c21b91346ei0",
     "name": "Demon #890",
     "image": "Demon%20_890.png"
@@ -4438,16 +4539,6 @@
     "inscriptionId": "189ae62cf7f7788d4a159b03fc2c953cfbf0d84d2958b22a8f4e9943116ab7dai0",
     "name": "Demon #899",
     "image": "Demon%20_899.png"
-  },
-  {
-    "inscriptionId": "52e18d2d1dbd667ba1b4d019f0f545143e9746978a4bab71943f30e72aabc62fi0",
-    "name": "Demon #9",
-    "image": "Demon%20_9.png"
-  },
-  {
-    "inscriptionId": "15fd508b93a1e18ae66a5e7a7efc580a34f1fdb4ab1d55065284c4e94c425b68i0",
-    "name": "Demon #90",
-    "image": "Demon%20_90.png"
   },
   {
     "inscriptionId": "b860a0968521885b839d1b6d831988f56f428c465c473117e08f9b3b9793654ei0",
@@ -4500,11 +4591,6 @@
     "image": "Demon%20_909.png"
   },
   {
-    "inscriptionId": "d3c83fc55cf2f8ae66922291f00312908f7c7b120cf4b44f855d7603c386db93i0",
-    "name": "Demon #91",
-    "image": "Demon%20_91.png"
-  },
-  {
     "inscriptionId": "5c845fa22337b76a764253ef765b04a661d03bb1cc5f2fb1b1c05e5e47616d1ai0",
     "name": "Demon #910",
     "image": "Demon%20_910.png"
@@ -4553,11 +4639,6 @@
     "inscriptionId": "8d36c21e94d8bddd0a0aed2e80aa9b8c1423089eb2f068f5d41da180b0b5c828i0",
     "name": "Demon #919",
     "image": "Demon%20_919.png"
-  },
-  {
-    "inscriptionId": "105c4ce44855212c0255507e68f45308e430ec5e718822d7ab770489157851c2i0",
-    "name": "Demon #92",
-    "image": "Demon%20_92.png"
   },
   {
     "inscriptionId": "78932566771e0375f8696664063501433540f77de430713d6b54b21172c8248ci0",
@@ -4610,11 +4691,6 @@
     "image": "Demon%20_929.png"
   },
   {
-    "inscriptionId": "3f3f6403b69b838bcae0017e32b7f0a2e82b2c9cb609efc157f8f5d4567b3bebi0",
-    "name": "Demon #93",
-    "image": "Demon%20_93.png"
-  },
-  {
     "inscriptionId": "6efb323405d8471f5e1a9c8cbc15993ad1b265f4199893e9b10e7c28adc142a8i0",
     "name": "Demon #930",
     "image": "Demon%20_930.png"
@@ -4663,11 +4739,6 @@
     "inscriptionId": "8f977a3926f59a62b89c7c8a14e5892e3a83be3546df8ca42619eafba96450eci0",
     "name": "Demon #939",
     "image": "Demon%20_939.png"
-  },
-  {
-    "inscriptionId": "4fd28a441057ed0de680587f6f06855391a844c999f1e4aa26a5b65db621c2d0i0",
-    "name": "Demon #94",
-    "image": "Demon%20_94.png"
   },
   {
     "inscriptionId": "4fbeec6d10503090b71cb192aaf77e68ab614e0b2b86231beac093a28765f891i0",
@@ -4720,11 +4791,6 @@
     "image": "Demon%20_949.png"
   },
   {
-    "inscriptionId": "5420af83ceaa9151cb907f4aecb5eba5fda5d9c57a20771ba56d6cd894d158ddi0",
-    "name": "Demon #95",
-    "image": "Demon%20_95.png"
-  },
-  {
     "inscriptionId": "283e1db8e3c2d27541c68dc4a5bf4186f3d3c3c8eda0796f4e5ef36fc82c09d5i0",
     "name": "Demon #950",
     "image": "Demon%20_950.png"
@@ -4773,11 +4839,6 @@
     "inscriptionId": "a7b1de67e495da6438b83d68bd38401b6f771d25e664ae3e535bf28ba32c5379i0",
     "name": "Demon #959",
     "image": "Demon%20_959.png"
-  },
-  {
-    "inscriptionId": "2bf74fd939581142d9f37b775b18848fce17e804a3e5dce0cf00bc7aefe5d247i0",
-    "name": "Demon #96",
-    "image": "Demon%20_96.png"
   },
   {
     "inscriptionId": "96cd10a503180a8603fb509036a5e4f3f084248a602353dc5f073f7b89bed18ai0",
@@ -4830,11 +4891,6 @@
     "image": "Demon%20_969.png"
   },
   {
-    "inscriptionId": "a2612248dfa190300db72d5312abedb2fd2899207430673deac690aaa2e29fabi0",
-    "name": "Demon #97",
-    "image": "Demon%20_97.png"
-  },
-  {
     "inscriptionId": "ef830102de5f0b955bbe03ab0d16a4f8a1de330eea132e7185e9b8ddbf600c9fi0",
     "name": "Demon #970",
     "image": "Demon%20_970.png"
@@ -4883,11 +4939,6 @@
     "inscriptionId": "080e23ab325158247ec3502c2a610017755dc85419dafebd3b4c0aac4cb859ebi0",
     "name": "Demon #979",
     "image": "Demon%20_979.png"
-  },
-  {
-    "inscriptionId": "ff224ea0ccd7f778cf5de1ee10aeddc62c33dafe7646bac98cb06daa0de0559ai0",
-    "name": "Demon #98",
-    "image": "Demon%20_98.png"
   },
   {
     "inscriptionId": "c1ca9c3e9942f95788744333ea0b6ecda661ab83b8d72dcb7103c3685f32a698i0",
@@ -4940,58 +4991,8 @@
     "image": "Demon%20_989.png"
   },
   {
-    "inscriptionId": "91be3a1560cdae1afadc599e46fc7451fef4a57ce7cfe9be868e1a8c37d7784ci0",
-    "name": "Demon #99",
-    "image": "Demon%20_99.png"
-  },
-  {
     "inscriptionId": "4553a563e6898d824bfd0eb4199ae6c22ceff71a9998d8cb632481a0d083b307i0",
     "name": "Demon #990",
     "image": "Demon%20_990.png"
-  },
-  {
-    "inscriptionId": "1cfd3cd811d2c982e84ce04221e1e94f505e58cf13bfa366d6f8e1ab2c744a92i0",
-    "name": "Nikko",
-    "image": "Nikko.png"
-  },
-  {
-      "inscriptionId": "94f732245346f1df181ea2ce009aa5457e0abe7b1ca3eef423460aea6bef28f4i0",
-    "name": "RED999MPTION",
-    "image": "RED999MPTION.png"
-  },
-  {
-    "inscriptionId": "af08faa4d8dd97f16651e7abce2e401ff3bf2504bac6de22ca0c5bd0b26b28aai0",
-    "name": "VV",
-    "image": "VV.png"
-},
-{
-    "inscriptionId": "376747e98ff46cdfcb37bca80791424a84d6b413c7684f1d6bc9e72bdbb42259i0",
-    "name": "Wraith",
-    "image": "Wraith.png"
-  },
-    {
-      "inscriptionId": "3a344d5dfcb2ce68d7d316a537a967f18aea8d709164cc12bc2631605b3a5164i0",
-      "name": "Fallen",
-      "image": "Fallen.gif"
-    },
-  {
-    "inscriptionId": "e2962e409450c42fd65b7f8ae7fe34e6bdf83789b331f05d3c11b2afab64e3d9i0",
-    "name": "Hatred",
-    "image": "Hatred.gif"
-  },
-  {
-      "inscriptionId": "d8fd655ec945993b82f7f7c407d7ca5cf2b341e58c39d8c6863c5de24209ac4ei0",
-      "name": "Nosferatu",
-      "image": "Nosferatu.gif"
-    },
-    {
-      "inscriptionId": "f3fe8c02c546fc8730844dfe192f3c429fbb47cfb4b3c6cc4b0af5559a21d08ci0",
-      "name": "Original Sin",
-      "image": "Original%20Sin.gif"
-    },
-    {
-      "inscriptionId": "47272c681eb2c7a7eaa9a2f44c823ee534d1db41cc71e9e5317af957c5728f02i0",
-      "name": "Renunciation",
-      "image": "Renunciation.gif"
-    }
+  }
 ]
