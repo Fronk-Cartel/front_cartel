@@ -31,7 +31,7 @@ export default function Header() {
   const bg = () => {
     if (router.pathname === "/devs") {
       return "bg-gray-500";
-    } else if (router.pathname === "/demons") {
+    } else if (router.pathname === "/d9monz") {
       return "black-bg";
       // console.log("demons");
     } else {
@@ -42,7 +42,7 @@ export default function Header() {
   const logo = () => {
     if (router.pathname === "/devs") {
       return "/assets/images/25.png";
-    } else if (router.pathname === "/demons") {
+    } else if (router.pathname === "/d9monz") {
       return "/assets/logo/demon_logo.jpeg";
     } else {
       return "/assets/9901.png";
@@ -149,7 +149,7 @@ export default function Header() {
             <Link href="/devs">.devs</Link>
           </li>
           <li>
-            <Link href="/demons">demons</Link>
+            <Link href="/d9monz">d9monz</Link>
           </li>
         </ul>
         <div className="mr-2 mt-2 cursor-pointer">

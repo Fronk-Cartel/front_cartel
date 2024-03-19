@@ -121,11 +121,11 @@ export default function Demons() {
   }, []);
 
   return (
-    <Layout title="Demons">
+    <Layout title="D9monz">
       <div className="container mx-auto ">
         <section>
           <div className="demon-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">
-            <h1 className=" text-6xl ">Demons</h1>
+            <h1 className=" text-6xl ">D9monz</h1>
           </div>
           <div className="flex flex-col justify-center mt-3 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">Search by number</h2>

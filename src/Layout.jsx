@@ -28,7 +28,7 @@ export default function Layout({ title, children }) {
   const favicon = () => {
     if (router.pathname === "/devs") {
       return "/assets/images/25.png";
-    } else if (router.pathname === "/demons") {
+    } else if (router.pathname === "/d9monz") {
       return "/assets/logo/demon_logo.jpeg";
     } else {
       return "/assets/9901.png";
@@ -37,7 +37,7 @@ export default function Layout({ title, children }) {
   const bg = () => {
     if (router.pathname === "/devs") {
       return "bg-gray-500";
-    } else if (router.pathname === "/demons") {
+    } else if (router.pathname === "/d9monz") {
       return "black-bg";
       // console.log('demons');
     } else if(router.pathname === '') {
