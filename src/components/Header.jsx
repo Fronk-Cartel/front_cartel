@@ -55,9 +55,9 @@ export default function Header() {
       { x: -100 },
       {
         x: 0,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.inOut",
-        stagger: 0.2,
+        stagger: 0.1,
       }
     );
     return () => {

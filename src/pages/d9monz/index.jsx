@@ -35,6 +35,14 @@ export default function Demons() {
     fetchData();
   }, []);
 
+  console.log(data);
+
+  data?.sort((a, b) => {
+    const numA = parseInt(a.name.match(/\d+/)?.[0] || 0); // Extracting numeric value from name
+    const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
+    return numA - numB; // Sorting based on numeric value
+  });
+
   // function processJSON(jsonData) {
   //   const modifiedData = jsonData.map((item) => {
   //     const imageName =
