@@ -124,10 +124,10 @@ export default function Demons() {
     <Layout title="Demons">
       <div className="container mx-auto ">
         <section>
-          <div className="demon-logo bg-blue-00 flex justify-center w-full md:pt-7 px-3  ">
-            <h1 className=" text-6xl mt-4">Demons</h1>
+          <div className="demon-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">
+            <h1 className=" text-6xl ">Demons</h1>
           </div>
-          <div className="flex flex-col justify-center mt-5 items-center px-4 ">
+          <div className="flex flex-col justify-center mt-3 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">Search by number</h2>
             <div className="w-full relative flex space-x-2">
               <input
@@ -136,7 +136,7 @@ export default function Demons() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <div className="absolute top-3 right-2 text-gray-700 ">
+              <div className="absolute top-3 right-3 text-gray-700 ">
                 <AiOutlineSearch size={28} />
               </div>
 

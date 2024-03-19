@@ -35,6 +35,8 @@ export default function DemonCards({ info }) {
     }, 1500);
   };
 
+  
+
   useEffect(() => {
     const reveal = gsap.fromTo(
       ".demoncards",

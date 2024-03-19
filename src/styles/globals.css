@@ -30,12 +30,17 @@
   -moz-tap-highlight-color: transparent;
 }
 
-body {
-  font-family: "Silkscreen", sans-serif;
-  @apply  text-white;
+html {
+  overflow-x: hidden;
 }
 
-.black-bg{
+body {
+  overflow-x: hidden;
+  font-family: "Silkscreen", sans-serif;
+  @apply bg-primary text-white;
+}
+
+.black-bg {
   background-color: black;
 }
 

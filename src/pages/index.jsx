@@ -444,7 +444,7 @@ export default function Home() {
             
             <h1 className="whitespace-nowrap text-[170%] md:text-6xl ">Fronk Cartel</h1>
           </div>
-          <div className="flex flex-col justify-center mt-7 items-center px-4 ">
+          <div className="flex flex-col justify-center mt-3 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">
               Search NFT rarity by number
             </h2>
