@@ -20,11 +20,37 @@ export default function Header() {
   const router = useRouter();
   // console.log(router.pathname);
 
+  const bg = () => {
+    if (router.pathname === "/devs") {
+      return "bg-gray-500";
+    } else if (router.pathname === "/demons") {
+      return "black-bg";
+      // console.log("demons");
+    } else {
+      return "bg-primary";
+    }
+  };
+  // const link = () => {
+  //   if (router.pathname === "/devs") {
+  //     return (
+  //       <li>
+  //         <a href="https://doggy.market/nfts/devs" target="_blank">
+  //           Market
+  //         </a>
+  //       </li>
+  //     );
+  //   } else if (router.pathname === "/demons") {
+  //     return "bg-red-800";
+  //     // console.log("demons");
+  //   } else {
+  //     return "bg-primary";
+  //   }
+  // };
+
+
   return (
     <header
-      className={`min-h-[10vh] flex items-center justify-center ${
-        router.pathname === "/devs" ? "bg-gray-500" : "bg-primary"
-      }`}
+      className={`min-h-[10vh] flex items-center justify-center ${bg() }`}
     >
       <nav className="container mx-auto w-full bx-red-400 flex justify-center items-center gap-9 text-base">
         <ul

@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from "@/Layout";
-import DevCards from "@/components/DevCards";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -9,10 +8,10 @@ import { FiFilter } from "react-icons/fi";
 import { BsSortDownAlt } from "react-icons/bs";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import DemonCards from "@/components/DemonCards";
 
-export default function Home() {
+export default function Demons() {
   const [data, setData] = useState([]);
-  const [data2, setData2] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const itemsPerPage = 100;
@@ -20,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data.json");
+        const response = await fetch("/ids-demons.json");
         // const res = await fetch("/devs.json");
 
         const jsonData = await response.json();
@@ -36,6 +35,19 @@ export default function Home() {
     fetchData();
   }, []);
 
+  // function processJSON(jsonData) {
+  //   const modifiedData = jsonData.map((item) => {
+  //     const imageName =
+  //       item.name.replace(/ /g, "%20").replace(/#/g, "_") + ".png";
+  //     return { ...item, image: imageName };
+  //   });
+  //   setModified(modifiedData);
+  //   // console.log(JSON.stringify(modifiedData, null, 2));
+  //   // console.log(modifiedData);
+  // }
+
+  // processJSON(data);
+
   const renderData = () => {
     // const dataToRender = toggle ? toggleData : test;
     const filteredData = data?.filter((d) => {
@@ -49,7 +61,7 @@ export default function Home() {
 
     if (currentData && currentData.length > 0) {
       // setItemsAtTime(currentData)
-      return currentData.map((d) => <DevCards key={d.name} info={d} />);
+      return currentData.map((d) => <DemonCards key={d.name} info={d} />);
     } else {
       return (
         <div className="text-center mt-20 text-xl">
@@ -77,8 +89,8 @@ export default function Home() {
           key={i}
           onClick={() => setCurrentPage(i)}
           className={`${
-            currentPage === i ? "bg-[#111]" : "bg-[#]"
-          } border p-4 w-5 h-5 text-white justify-center items-center flex rounded-md`}
+            currentPage === i ? "bg-[#fff] text-black" : "bg-[#000] text-white"
+          } border p-4 w-5 h-5  justify-center items-center flex rounded-md`}
         >
           {i}
         </button>
@@ -109,12 +121,11 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout title=".devs">
+    <Layout title="Demons">
       <div className="container mx-auto ">
         <section>
-          <div className="logo bg-blue-00 flex justify-center w-full md:pt-7 px-3  ">
-  
-            <h1 className="text-6xl mt-4">.Devs</h1>
+          <div className="demon-logo bg-blue-00 flex justify-center w-full md:pt-7 px-3  ">
+            <h1 className=" text-6xl mt-4">Demons</h1>
           </div>
           <div className="flex flex-col justify-center mt-5 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">Search by number</h2>
@@ -128,7 +139,20 @@ export default function Home() {
               <div className="absolute top-3 right-2 text-gray-700 ">
                 <AiOutlineSearch size={28} />
               </div>
-       
+
+              <img src="/assets/demons/Demon #990.png" alt="" />
+              {/* <div
+                // onClick={showFilter}
+                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
+              >
+                <FiFilter size={24} />
+              </div>
+              <div
+                // onClick={toggleSortData}
+                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-primary w-12"
+              >
+                <BsSortDownAlt size={24} />
+              </div> */}
             </div>
           </div>
         </section>
@@ -142,8 +166,8 @@ export default function Home() {
                   <div className="arr"> &larr; </div>
                   <div> &rarr; </div>
                 </div> */}
-                <div className="flex justify-start items-center px-3 space-x-5 overflow-x-scroll pb-4 hide-scroll">
-                  {/* {renderPaginationButtons()} */}
+                <div className="flex justify-center mt-10 items-center px-3 space-x-5 overflow-x-scroll pb-4 hide-scroll">
+                  {renderPaginationButtons()}
                 </div>
               </div>
             </>
