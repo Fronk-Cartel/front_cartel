@@ -166,7 +166,7 @@ export default function Demons() {
                   <div className="arr"> &larr; </div>
                   <div> &rarr; </div>
                 </div> */}
-                <div className="flex justify-center mt-10 items-center px-3 space-x-5 overflow-x-scroll pb-4 hide-scroll">
+                <div className="flex  md:justify-center mt-10 items-center px-3 space-x-5 overflow-x-scroll pb-4 hide-scroll">
                   {renderPaginationButtons()}
                 </div>
               </div>

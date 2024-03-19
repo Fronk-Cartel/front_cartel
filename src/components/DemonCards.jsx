@@ -55,7 +55,6 @@ export default function DemonCards({ info }) {
     <>
       <div
         ref={cardRef}
-        onClick={show}
         className="demoncards overflow-hidden opacity-0 cursor-pointer"
       >
         <div className="flex items-center justify-center">
@@ -63,7 +62,7 @@ export default function DemonCards({ info }) {
             {info.name}
           </p>
         </div>
-        <div>
+        <div onClick={show}>
           <img
             // src={`https://ik.imagekit.io/ebmc7qv63/demons/Demon%20_986.png?updatedAt=1710800504904`}
             src={`https://ik.imagekit.io/ebmc7qv63/demons/${imageName}`}
