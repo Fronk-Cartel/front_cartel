@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
-import { BsSortDownAlt } from "react-icons/bs";
+import { BsSortDownAlt, BsSortUpAlt } from "react-icons/bs";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import DemonCards from "@/components/DemonCards";
@@ -14,7 +14,12 @@ export default function Demons() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [toggle, setToggle] = useState(false);
   const itemsPerPage = 100;
+
+  const toggleSortData = () => {
+    setToggle(!toggle);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,25 +40,21 @@ export default function Demons() {
     fetchData();
   }, []);
 
-  // console.log(data);
+  const toggleData = [...data];
 
-  // data?.sort((a, b) => {
-  //   const numA = parseInt(a.name.match(/\d+/)?.[0] || 0); // Extracting numeric value from name
-  //   const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
-  //   return numA - numB; // Sorting based on numeric value
-  // });
-
-  // console.log(data);
-
-  const renderData = () => {
-    // const dataToRender = toggle ? toggleData : test;
-  const filteredData = data?.filter((d) => {
-    const nameMatch =
-      searchTerm === "" ||
-      d.name.toLowerCase().includes(searchTerm.toLowerCase());
-    return nameMatch;
+  toggleData.sort((a, b) => {
+    // Compare indices of elements
+    return data.indexOf(b) - data.indexOf(a);
   });
 
+  const renderData = () => {
+    const dataToRender = toggle ? toggleData : data;
+    const filteredData = dataToRender?.filter((d) => {
+      const nameMatch =
+        searchTerm === "" ||
+        d.name.toLowerCase().includes(searchTerm.toLowerCase());
+      return nameMatch;
+    });
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -136,8 +137,18 @@ export default function Demons() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <div className="absolute top-3 right-3 text-gray-700 ">
+              <div className="absolute top-3 right-16 text-gray-700 ">
                 <AiOutlineSearch size={28} />
+              </div>
+              <div
+                onClick={toggleSortData}
+                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-black w-12"
+              >
+                {toggle ? (
+                  <BsSortUpAlt size={24} />
+                ) : (
+                  <BsSortDownAlt size={24} />
+                )}
               </div>
             </div>
           </div>
