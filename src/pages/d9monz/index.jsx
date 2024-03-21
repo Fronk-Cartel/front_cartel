@@ -47,10 +47,13 @@ export default function Demons() {
 
   const renderData = () => {
     // const dataToRender = toggle ? toggleData : test;
-    const filteredData = data?.filter((d) => {
-      const nameMatch = searchTerm === "" || d.name.includes(`${searchTerm}`);
-      return nameMatch;
-    });
+  const filteredData = data?.filter((d) => {
+    const nameMatch =
+      searchTerm === "" ||
+      d.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return nameMatch;
+  });
+
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -136,7 +139,6 @@ export default function Demons() {
               <div className="absolute top-3 right-3 text-gray-700 ">
                 <AiOutlineSearch size={28} />
               </div>
-
             </div>
           </div>
         </section>
