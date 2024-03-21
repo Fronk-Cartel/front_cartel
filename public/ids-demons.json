@@ -60,52 +60,6 @@
     "image": "Demon%20_12.png"
   },
   {
-    "inscriptionId": "1cfd3cd811d2c982e84ce04221e1e94f505e58cf13bfa366d6f8e1ab2c744a92i0",
-    "name": "Nikko",
-    "image": "Nikko.png"
-  },
-  {
-    "inscriptionId": "af08faa4d8dd97f16651e7abce2e401ff3bf2504bac6de22ca0c5bd0b26b28aai0",
-    "name": "VV",
-    "image": "VV.png"
-  },
-  {
-    "inscriptionId": "376747e98ff46cdfcb37bca80791424a84d6b413c7684f1d6bc9e72bdbb42259i0",
-    "name": "Wraith",
-    "image": "Wraith.png"
-  },
-  {
-    "inscriptionId": "3a344d5dfcb2ce68d7d316a537a967f18aea8d709164cc12bc2631605b3a5164i0",
-    "name": "Fallen",
-    "image": "Fallen.gif"
-  },
-  {
-    "inscriptionId": "e2962e409450c42fd65b7f8ae7fe34e6bdf83789b331f05d3c11b2afab64e3d9i0",
-    "name": "Hatred",
-    "image": "Hatred.gif"
-  },
-  {
-    "inscriptionId": "d8fd655ec945993b82f7f7c407d7ca5cf2b341e58c39d8c6863c5de24209ac4ei0",
-    "name": "Nosferatu",
-    "image": "Nosferatu.gif"
-  },
-  {
-    "inscriptionId": "f3fe8c02c546fc8730844dfe192f3c429fbb47cfb4b3c6cc4b0af5559a21d08ci0",
-    "name": "Original Sin",
-    "image": "Original%20Sin.gif"
-  },
-  {
-    "inscriptionId": "47272c681eb2c7a7eaa9a2f44c823ee534d1db41cc71e9e5317af957c5728f02i0",
-    "name": "Renunciation",
-    "image": "Renunciation.gif"
-  },
-  {
-    "inscriptionId": "94f732245346f1df181ea2ce009aa5457e0abe7b1ca3eef423460aea6bef28f4i0",
-    "name": "RED999MPTION",
-    "image": "RED999MPTION.png"
-  },
-
-  {
     "inscriptionId": "ea0ddf4020dfcdf879278df4158b0fca2d7d3942ead783ec7da0003b66b6bd4ei0",
     "name": "Demon #13",
     "image": "Demon%20_13.png"
@@ -4994,5 +4948,50 @@
     "inscriptionId": "4553a563e6898d824bfd0eb4199ae6c22ceff71a9998d8cb632481a0d083b307i0",
     "name": "Demon #990",
     "image": "Demon%20_990.png"
+  },
+  {
+    "inscriptionId": "af08faa4d8dd97f16651e7abce2e401ff3bf2504bac6de22ca0c5bd0b26b28aai0",
+    "name": "VV",
+    "image": "VV.png"
+  },
+  {
+    "inscriptionId": "1cfd3cd811d2c982e84ce04221e1e94f505e58cf13bfa366d6f8e1ab2c744a92i0",
+    "name": "Nikko",
+    "image": "Nikko.png"
+  },
+  {
+    "inscriptionId": "376747e98ff46cdfcb37bca80791424a84d6b413c7684f1d6bc9e72bdbb42259i0",
+    "name": "Wraith",
+    "image": "Wraith.png"
+  },
+  {
+    "inscriptionId": "3a344d5dfcb2ce68d7d316a537a967f18aea8d709164cc12bc2631605b3a5164i0",
+    "name": "Fallen",
+    "image": "Fallen.gif"
+  },
+  {
+    "inscriptionId": "47272c681eb2c7a7eaa9a2f44c823ee534d1db41cc71e9e5317af957c5728f02i0",
+    "name": "Renunciation",
+    "image": "Renunciation.gif"
+  },
+  {
+    "inscriptionId": "e2962e409450c42fd65b7f8ae7fe34e6bdf83789b331f05d3c11b2afab64e3d9i0",
+    "name": "Hatred",
+    "image": "Hatred.gif"
+  },
+  {
+    "inscriptionId": "f3fe8c02c546fc8730844dfe192f3c429fbb47cfb4b3c6cc4b0af5559a21d08ci0",
+    "name": "Original Sin",
+    "image": "Original%20Sin.gif"
+  },
+  {
+    "inscriptionId": "d8fd655ec945993b82f7f7c407d7ca5cf2b341e58c39d8c6863c5de24209ac4ei0",
+    "name": "Nosferatu",
+    "image": "Nosferatu.gif"
+  },
+  {
+    "inscriptionId": "94f732245346f1df181ea2ce009aa5457e0abe7b1ca3eef423460aea6bef28f4i0",
+    "name": "RED999MPTION",
+    "image": "RED999MPTION.png"
   }
 ]

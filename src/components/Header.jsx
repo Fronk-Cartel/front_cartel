@@ -85,12 +85,12 @@ export default function Header() {
           ref={navRef}
           className={`${bg()} flex gap-2 text-lg flex-col p-4 md:px-10 w-2/3 max-w-md bg-red-0`}
         >
-          <div className="text-white mb-5 h-20 w-20 mx-auto flex justify-center">
+          <div className="text-white mb-5 h-24 w-24 mx-auto flex justify-center">
             <img
               // src={`https://ik.imagekit.io/ebmc7qv63/demons/Demon%20_986.png?updatedAt=1710800504904`}
               src={logo()}
-              width={500}
-              height={500}
+              width={200}
+              height={200}
               alt="logo"
               loading="lazy"
               className="w-full h-full object-contain"

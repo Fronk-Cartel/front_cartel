@@ -48,7 +48,7 @@ export default function Demons() {
   const renderData = () => {
     // const dataToRender = toggle ? toggleData : test;
     const filteredData = data?.filter((d) => {
-      const nameMatch = searchTerm === "" || d.name.includes(`#${searchTerm}`);
+      const nameMatch = searchTerm === "" || d.name.includes(`${searchTerm}`);
       return nameMatch;
     });
 
