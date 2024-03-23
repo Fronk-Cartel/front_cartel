@@ -58,7 +58,7 @@ export default function DevCards({ info }) {
             {info.name}
           </p>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <img
             src={`/assets/images/${imageName}`}
             width={500}

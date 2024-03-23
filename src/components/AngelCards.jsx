@@ -5,9 +5,10 @@ import Image from "next/image";
 import DevModal from "./DevModals";
 import { MdOutlineContentCopy } from "react-icons/md";
 import DemonModals from "./DemonModals";
+import AngelModals from "./AngelModals";
 // import pic from "../../public/assets/images/300.png";
 
-export default function DemonCards({ info }) {
+export default function AngelCards({ info }) {
   const [showModal, setShowModal] = useState(false);
   const [copied, setCopied] = useState(false);
   const cardRef = useRef(null);
@@ -17,7 +18,8 @@ export default function DemonCards({ info }) {
   //   return inputString.replace(/ /g, "%20").replace(/#/g, "_");
   // }
 
-  const imageName = info.image;
+  // const imageName = info.image;
+  // console.log(info.id);
 
   const show = () => {
     setShowModal(!showModal);
@@ -26,7 +28,7 @@ export default function DemonCards({ info }) {
   };
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(info.inscriptionId);
+    navigator.clipboard.writeText(info.id);
     setCopied(true);
 
     // Reset the "Copied!" message after a brief delay
@@ -35,11 +37,9 @@ export default function DemonCards({ info }) {
     }, 1500);
   };
 
-  
-
   useEffect(() => {
     const reveal = gsap.fromTo(
-      ".demoncards",
+      ".angelcards",
       { opacity: 0, translateY: 20 },
       {
         opacity: 1,
@@ -57,20 +57,20 @@ export default function DemonCards({ info }) {
     <>
       <div
         ref={cardRef}
-        className="demoncards overflow-hidden opacity-0 cursor-pointer"
+        className="angelcards overflow-hidden opacity-0 cursor-pointer"
       >
         <div className="flex items-center justify-center">
           <p className="text-gray-700 w-11/12  font-bold  py-1 text-sm text-center">
-            {info.name}
+            {info.meta.name}
           </p>
         </div>
         <div onClick={show} className="overflow-hidden">
           <img
             // src={`https://ik.imagekit.io/ebmc7qv63/demons/Demon%20_986.png?updatedAt=1710800504904`}
-            src={`https://ik.imagekit.io/ebmc7qv63/demons/${imageName}`}
+            src={`https://ord-mirror.magiceden.dev/content/${info.id}`}
             width={500}
             height={500}
-            alt={info.name}
+            alt={info.meta.name}
             //   priority
             loading="lazy"
             className="w-full h-full object-contain"
@@ -103,9 +103,9 @@ export default function DemonCards({ info }) {
           >
             X
           </div>
-          <DemonModals
+          <AngelModals
             info={info}
-            img={`https://ik.imagekit.io/ebmc7qv63/demons/${imageName}`}
+            img={`https://ord-mirror.magiceden.dev/content/${info.id}`}
           />
         </>
       )}

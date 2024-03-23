@@ -76,7 +76,7 @@ export default function Cards({ info, rank }) {
             {info.name}
           </p>
         </div>
-        <div onClick={show}>
+        <div onClick={show} className="overflow-hidden">
           <img
             src={image}
             width={500}

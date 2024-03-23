@@ -9,7 +9,7 @@ import { MdOutlineCancel } from "react-icons/md";
 export default function Header() {
   const navRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
-  const {pathname} = useRouter()
+  const { pathname } = useRouter();
 
   const handleMenu = () => {
     setShowMenu(!showMenu);
@@ -34,7 +34,9 @@ export default function Header() {
       return "bg-gray-500";
     } else if (router.pathname === "/d9monz") {
       return "black-bg";
-      // console.log("demons");
+    } else if (router.pathname === "/8ngels") {
+      return "bg-white";
+      console.log("angels");
     } else {
       return "bg-primary";
     }
@@ -45,6 +47,8 @@ export default function Header() {
       return "/assets/images/25.png";
     } else if (router.pathname === "/d9monz") {
       return "/assets/logo/demon_logo.jpeg";
+    } else if (router.pathname === "/8ngels") {
+      return "/assets/logo/angel_logo.jpeg";
     } else {
       return "/assets/9901.png";
     }
@@ -68,10 +72,12 @@ export default function Header() {
 
   return (
     <header
-      className={`relative min-h-[8vh] bg-red400 flex items-start pt-2 justify-start px-4 ${bg()}`}
+      className={`relative min-h-[8vh] bg-red400 flex items-start pt-2 justify-start px-4 ${
+        router.pathname === "/8ngels" ? "text-black" : ""
+      } ${bg()}`}
     >
       {!showMenu && (
-        <div className="cursor-pointer">
+        <div className={`cursor-pointer`}>
           <IoIosMenu onClick={handleMenu} size={40} />
         </div>
       )}
@@ -97,7 +103,7 @@ export default function Header() {
             />
           </div>
 
-          {pathname === "/d9monz" ? (
+          {pathname === "/d9monz" || pathname === "/8ngels" ? (
             <>
               <li>
                 <a href="https://doggy.market/nfts/d9monz" target="_blank">
@@ -126,6 +132,9 @@ export default function Header() {
               <li>
                 <Link href="/d9monz">d9monz</Link>
               </li>
+              <li>
+                <Link href="/8ngels">8ngels</Link>
+              </li>
             </>
           ) : (
             <>
@@ -153,10 +162,17 @@ export default function Header() {
               <li>
                 <Link href="/d9monz">d9monz</Link>
               </li>
+              <li>
+                <Link href="/8ngels">8ngels</Link>
+              </li>
             </>
           )}
         </ul>
-        <div className="mr-2 mt-2 cursor-pointer">
+        <div
+          className={`mr-2 mt-2 cursor-pointer ${
+            router.pathname === "/8ngels" ? "text-white" : ""
+          }`}
+        >
           <MdOutlineCancel onClick={handleMenu} size={30} />
         </div>
       </nav>

@@ -30,18 +30,23 @@ export default function Layout({ title, children }) {
       return "/assets/images/25.png";
     } else if (router.pathname === "/d9monz") {
       return "/assets/logo/demon_logo.jpeg";
+    } else if (router.pathname === "/8ngels") {
+      return "/assets/logo/angel_logo.jpeg";
     } else {
       return "/assets/9901.png";
     }
   };
+  // console.log(router.pathname);
   const bg = () => {
     if (router.pathname === "/devs") {
       return "bg-gray-500";
     } else if (router.pathname === "/d9monz") {
       return "black-bg";
       // console.log('demons');
-    } else if(router.pathname === '') {
+    } else if (router.pathname === "") {
       return "bg-primary";
+    } else if (router.pathname === "/8ngels") {
+      return "bg-white";
     }
   };
 

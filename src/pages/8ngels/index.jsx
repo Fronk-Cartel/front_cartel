@@ -9,8 +9,9 @@ import { BsSortDownAlt, BsSortUpAlt } from "react-icons/bs";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import DemonCards from "@/components/DemonCards";
+import AngelCards from "@/components/AngelCards";
 
-export default function Demons() {
+export default function Angels() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,7 +25,7 @@ export default function Demons() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/ids-demons.json");
+        const response = await fetch("/angel.json");
         // const res = await fetch("/devs.json");
 
         const jsonData = await response.json();
@@ -62,7 +63,7 @@ export default function Demons() {
 
     if (currentData && currentData.length > 0) {
       // setItemsAtTime(currentData)
-      return currentData.map((d) => <DemonCards key={d.name} info={d} />);
+      return currentData.map((d) => <AngelCards key={d.id} info={d} />);
     } else {
       return (
         <div className="text-center mt-20 text-xl">
@@ -90,7 +91,7 @@ export default function Demons() {
           key={i}
           onClick={() => setCurrentPage(i)}
           className={`${
-            currentPage === i ? "bg-[#fff] text-black" : "bg-[#000] text-white"
+            currentPage === i ? "bg-black text-white" : "bg-white text-black"
           } border p-4 w-5 h-5  justify-center items-center flex rounded-md`}
         >
           {i}
@@ -122,11 +123,11 @@ export default function Demons() {
   }, []);
 
   return (
-    <Layout title="d9monz">
-      <div className="container mx-auto ">
+    <Layout title="8ngels">
+      <div className="container mx-auto text-black ">
         <section>
-          <div className="demon-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">
-            <h1 className=" text-6xl ">d9monz</h1>
+          <div className="angel-logo bg-blue00 flex justify-center w-full md:pt-7 px-3  ">
+            <h1 className=" text-6xl ">8ngels</h1>
           </div>
           <div className="flex flex-col justify-center mt-3 items-center px-4 ">
             <h2 className="text-xl text-center mt-0 mb-5">Search</h2>
@@ -142,7 +143,7 @@ export default function Demons() {
               </div>
               <div
                 onClick={toggleSortData}
-                className="filter shadow-lg cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-black w-12"
+                className="filter shadow-md cursor-pointer flex justify-center items-center h-12 rounded-md bg-white text-black w-12"
               >
                 {toggle ? (
                   <BsSortUpAlt size={24} />
