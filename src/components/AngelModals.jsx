@@ -64,8 +64,9 @@ export default function AngelModals({ info, img }) {
             <Link
               href={` https://magiceden.io/ordinals/item-details/${info.id}`}
               target="_blank"
+              className="px-4 py-2 rounded-xl bg-gray-900 hover:scale-[0.97] active:scale-[1.01] duration-200"
             >
-              <button className="btn text-black">View on Magic Eden</button>
+              <button className=" text-white">View on Magic Eden</button>
             </Link>
           </div>
         </div>

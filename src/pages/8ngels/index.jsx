@@ -55,9 +55,9 @@ export default function Angels() {
         searchTerm === "" ||
         d.meta.name.toLowerCase().includes(searchTerm.toLowerCase());
 
-      const inscription =
-        searchTerm === "" || d.inscription_number.includes(searchTerm);
-      return nameMatch || inscription;
+      // const inscription =
+      //   searchTerm === "" || d.inscription_number.includes(searchTerm);
+      return nameMatch;
     });
 
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -137,7 +137,7 @@ export default function Angels() {
             <div className="w-full relative flex space-x-2">
               <input
                 type="text"
-                placeholder="Type Number"
+                placeholder="Type Name or Number"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
