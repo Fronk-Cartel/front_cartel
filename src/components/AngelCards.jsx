@@ -77,10 +77,14 @@ export default function AngelCards({ info }) {
           />
         </div>
         <div>
-          <div className="flex justify-end items-center px-3">
+          <div className="flex justify-between items-center px-2">
             <p className="text-gray-700 font-bold px-2 py-2 text-sm text-center">
-              {copied ? "" : "Copy ID"}
+              {copied ? "" : info.inscription_number}
+              {/* {info.inscription_number} */}
             </p>
+            {/* <p className="text-gray-700 font-bold px-2 py-2 text-sm text-center">
+              {copied ? "" : "Copy ID"}
+            </p> */}
             <div onClick={handleCopyClick} className="text-gray-700 ">
               {copied ? (
                 <div className="text-gray-700">Copied</div>
