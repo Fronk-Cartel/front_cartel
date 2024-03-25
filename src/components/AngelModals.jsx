@@ -50,8 +50,11 @@ export default function AngelModals({ info, img }) {
               )}
             </button>
 
-            <p className="whitespace-wrap text-xs break-words text-center max-w-xs ">
-              Inscription Number: {info?.id}
+            <p className="whitespace-wrap text-xs break-words text-center max-w-xs mt-2 ">
+              Inscription Number: {info?.inscription_number}
+            </p>
+            <p className="whitespace-wrap text-xs break-words text-center max-w-xs mt-2">
+              Inscription ID: {info?.id}
             </p>
 
             {/* <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee> */}
@@ -59,10 +62,10 @@ export default function AngelModals({ info, img }) {
 
           <div className="flex justify-center mt-8">
             <Link
-              href={`https://doggy.market/inscription/${info.id}`}
+              href={` https://magiceden.io/ordinals/item-details/${info.id}`}
               target="_blank"
             >
-              <button className="btn text-black">View on Doggy</button>
+              <button className="btn text-black">View on Magic Eden</button>
             </Link>
           </div>
         </div>

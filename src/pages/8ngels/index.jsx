@@ -25,7 +25,7 @@ export default function Angels() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/angel.json");
+        const response = await fetch("/angels_new.json");
         // const res = await fetch("/devs.json");
 
         const jsonData = await response.json();
@@ -53,8 +53,11 @@ export default function Angels() {
     const filteredData = dataToRender?.filter((d) => {
       const nameMatch =
         searchTerm === "" ||
-        d.name.toLowerCase().includes(searchTerm.toLowerCase());
-      return nameMatch;
+        d.meta.name.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const inscription =
+        searchTerm === "" || d.inscription_number.includes(searchTerm);
+      return nameMatch || inscription;
     });
 
     const indexOfLastItem = currentPage * itemsPerPage;
