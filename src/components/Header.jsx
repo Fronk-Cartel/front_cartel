@@ -106,7 +106,14 @@ export default function Header() {
           {pathname === "/d9monz" || pathname === "/8ngels" ? (
             <>
               <li>
-                <a href="https://doggy.market/nfts/d9monz" target="_blank">
+                <a
+                  href={
+                    pathname === "/8ngels"
+                      ? "https://magiceden.io/ordinals/marketplace/8-bit_angels"
+                      : "https://doggy.market/nfts/d9monz"
+                  }
+                  target="_blank"
+                >
                   Market
                 </a>
               </li>

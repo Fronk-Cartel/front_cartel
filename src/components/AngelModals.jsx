@@ -50,7 +50,7 @@ export default function AngelModals({ info, img }) {
               )}
             </button>
 
-            <p className="whitespace-wrap text-xs break-words text-center max-w-xs mt-2 ">
+            <p className="whitespace-wrap text-sm font-semibold break-words text-center max-w-xs mt-2 ">
               Inscription Number: {info?.inscription_number}
             </p>
             <p className="whitespace-wrap text-xs break-words text-center max-w-xs mt-2">

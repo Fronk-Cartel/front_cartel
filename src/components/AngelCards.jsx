@@ -60,7 +60,7 @@ export default function AngelCards({ info }) {
         className="angelcards overflow-hidden opacity-0 cursor-pointer"
       >
         <div className="flex items-center justify-center">
-          <p className="text-gray-700 w-11/12  font-bold  py-1 text-sm text-center">
+          <p className="text-gray-700 w-11/12  font-bold  py-1 text-xs text-center">
             {info.meta.name}
           </p>
         </div>
@@ -80,11 +80,7 @@ export default function AngelCards({ info }) {
           <div className="flex justify-between items-center px-2">
             <p className="text-gray-700 font-bold px-2 py-2 text-sm text-center">
               {copied ? "" : info.inscription_number}
-              {/* {info.inscription_number} */}
             </p>
-            {/* <p className="text-gray-700 font-bold px-2 py-2 text-sm text-center">
-              {copied ? "" : "Copy ID"}
-            </p> */}
             <div onClick={handleCopyClick} className="text-gray-700 ">
               {copied ? (
                 <div className="text-gray-700">Copied</div>
@@ -92,7 +88,7 @@ export default function AngelCards({ info }) {
                 <div className="flex items-center text-gray-700 ">
                   {" "}
                   <MdOutlineContentCopy fill="#374151" size={20} />
-                  {/* <span>copy Id</span> */}
+                
                 </div>
               )}
             </div>
