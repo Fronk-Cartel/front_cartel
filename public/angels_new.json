@@ -4,6 +4,7 @@
     "meta": { "name": "GOD WINS" },
     "inscription_number": "926797"
   },
+
   {
     "id": "f567efad2edbe70402a58067dd32661bed2a6924edf2616eefe7f4aa768f56a8i0",
     "meta": { "name": "Angel of Death" },
@@ -18,11 +19,6 @@
     "id": "55712c2a3c1dffd4d7535549ca01be2462af4223ae5bfbf0a7f17bec9a3833cci0",
     "meta": { "name": "Interdimensional Angel" },
     "inscription_number": "1032420"
-  },
-  {
-    "id": "f71384ab2c1e531b11ac4f9f0dce3f2e8bd29322351571f891f3e61e0b7c6ceei0",
-    "meta": { "name": "Lost Angel" },
-    "inscription_number": "1035372"
   },
 
   {
@@ -39,6 +35,11 @@
     "id": "6a964711ae9ee9cf438a17ec1c46a1ee55002dfc14752262b3a563ea0bd28681i0",
     "meta": { "name": "Gad" },
     "inscription_number": "1020242"
+  },
+  {
+    "id": "f71384ab2c1e531b11ac4f9f0dce3f2e8bd29322351571f891f3e61e0b7c6ceei0",
+    "meta": { "name": "Lost Angel" },
+    "inscription_number": "1035372"
   },
   {
     "id": "21325bf3be4229ad0fbe52e185943a3f7fa94192fe3f60f56cab2c249aca5a00i0",
