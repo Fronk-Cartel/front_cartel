@@ -32,6 +32,8 @@ export default function Layout({ title, children }) {
       return "/assets/logo/demon_logo.jpeg";
     } else if (router.pathname === "/8ngels") {
       return "/assets/logo/angel_logo.jpeg";
+    } else if (router.pathname === "/eggclipse") {
+      return "https://api.doggy.market/inscriptions/5474163b4168c4df634b47fba421ec0642de6eebaf54d6e112b8d50f187f3563i0/content";
     } else {
       return "/assets/9901.png";
     }
@@ -47,6 +49,8 @@ export default function Layout({ title, children }) {
       return "bg-primary";
     } else if (router.pathname === "/8ngels") {
       return "bg-white";
+    } else if (router.pathname === "/eggclipse") {
+      return "egg-bg";
     }
   };
 

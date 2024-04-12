@@ -36,7 +36,8 @@ export default function Header() {
       return "black-bg";
     } else if (router.pathname === "/8ngels") {
       return "bg-white";
-      console.log("angels");
+    } else if (router.pathname === "/eggclipse") {
+      return "egg-bg";
     } else {
       return "bg-primary";
     }
@@ -49,6 +50,8 @@ export default function Header() {
       return "/assets/logo/demon_logo.jpeg";
     } else if (router.pathname === "/8ngels") {
       return "/assets/logo/angel_logo.jpeg";
+    } else if (router.pathname === "/eggclipse") {
+      return "https://api.doggy.market/inscriptions/5474163b4168c4df634b47fba421ec0642de6eebaf54d6e112b8d50f187f3563i0/content";
     } else {
       return "/assets/9901.png";
     }
@@ -142,6 +145,9 @@ export default function Header() {
               <li>
                 <Link href="/8ngels">8ngels</Link>
               </li>
+              <li>
+                <Link href="/eggclipse">Eggclipse</Link>
+              </li>
             </>
           ) : (
             <>
@@ -171,6 +177,9 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/8ngels">8ngels</Link>
+              </li>
+              <li>
+                <Link href="/eggclipse">Eggclipse</Link>
               </li>
             </>
           )}
