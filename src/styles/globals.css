@@ -21,6 +21,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Egg";
+  src: url("/assets/font/Pixel_Digivolve.otf") format("opentype");
+  /* Update the file name and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -59,6 +66,9 @@ body {
 }
 .angel-logo {
   font-family: "Angel", sans-serif;
+}
+.egg-logo {
+  font-family: "Egg", sans-serif;
 }
 
 nav li {

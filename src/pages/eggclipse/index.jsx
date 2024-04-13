@@ -27,7 +27,7 @@ export default function Eggs() {
         const jsonData = await response.json();
         // const jsonData2 = await res.json();
 
-        console.log(jsonData);
+        // console.log(jsonData);
         setData(jsonData);
         // setData2(jsonData2);
       } catch (error) {
@@ -129,7 +129,7 @@ export default function Eggs() {
     <Layout title="Eggclipse">
       <div className="container mx-auto text-white eggclipse">
         <section>
-          <div className="angel-logo  flex justify-center w-full md:pt-7 px-3  ">
+          <div className="egg-logo  flex justify-center w-full md:pt-7 px-3  ">
             <h1 className=" text-6xl ">Eggclipse</h1>
           </div>
           <div className="flex flex-col justify-center mt-3 items-center px-4 ">
