@@ -49,11 +49,10 @@ export default function EggModal({ info, img }) {
                 </div>
               )}
             </button>
-            
-              <p className="whitespace-wrap text-xs break-words text-center max-w-xs ">
-                Inscription ID: {info?.inscriptionId}
-              </p>
-            
+
+            <p className="whitespace-wrap text-xs break-words text-center max-w-xs ">
+              Inscription ID: {info?.inscriptionId}
+            </p>
 
             {/* <marquee className="whitespace-wrap mt-1">dna: {info.dna}</marquee> */}
           </div>
